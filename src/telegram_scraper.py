@@ -1,111 +1,124 @@
 import os
 import yaml
-import asyncio
+import requests
+from bs4 import BeautifulSoup
 from datetime import datetime, timedelta, timezone
-from telethon import TelegramClient
-from telethon.sessions import StringSession
-from telethon.tl.types import MessageService, MessageMediaPoll
+import time
 
-# ۱. بارگذاری تنظیمات از فایل YAML
+# ۱. بارگذاری تنظیمات
 def load_settings():
     if not os.path.exists('config/settings.yaml'):
-        # مقادیر پیش‌فرض در صورت عدم وجود فایل
-        return {'scraping': {'lookback_days': 7, 'max_messages_per_channel': 500}, 'storage': {'base_path': 'src/telegram'}}
-    
+        return {'scraping': {'lookback_days': 7}, 'storage': {'base_path': 'src/telegram'}}
     with open('config/settings.yaml', 'r', encoding='utf-8') as f:
         return yaml.safe_load(f)
 
 # ۲. بارگذاری لیست کانال‌ها
 def load_channels():
     if not os.path.exists('config/channels.txt'):
-        print("خطا: فایل config/channels.txt یافت نشد.")
         return []
     with open('config/channels.txt', 'r', encoding='utf-8') as f:
-        return [line.strip() for line in f if line.strip() and not line.startswith('#')]
+        # استخراج نام کاربری از لینک (مثلا از https://t.me/akharinkhabar نام akharinkhabar را می‌گیرد)
+        channels = []
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith('#'):
+                username = line.split('/')[-1].replace('@', '')
+                channels.append(username)
+        return channels
 
-# ۳. تمیز کردن نام برای پوشه‌ها
-def get_safe_name(name):
-    return "".join([c for c in name if c.isalnum() or c in (' ', '_')]).rstrip()
-
-async def main():
-    # بارگذاری کانفیگ‌ها
-    settings = load_settings()
-    channels = load_channels()
+# ۳. تبدیل HTML تلگرام به Markdown
+def html_to_md(element):
+    if not element:
+        return ""
     
-    # دریافت اطلاعات حساس از محیط (Environment Variables / GitHub Secrets)
-    api_id = os.getenv('TG_API_ID')
-    api_hash = os.getenv('TG_API_HASH')
-    session_string = os.getenv('TG_SESSION_STRING')
+    # جایگزینی تگ‌های متداول با معادل Markdown
+    for b in element.find_all('b'):
+        b.replace_with(f"**{b.get_text()}**")
+    for i in element.find_all('i'):
+        i.replace_with(f"*{i.get_text()}*")
+    for code in element.find_all('code'):
+        code.replace_with(f"`{code.get_text()}`")
+    for a in element.find_all('a'):
+        href = a.get('href', '')
+        a.replace_with(f"[{a.get_text()}]({href})")
     
-    if not api_id or not api_hash or not session_string:
-        print("خطا: متغیرهای محیطی TG_API_ID، TG_API_HASH یا TG_SESSION_STRING تنظیم نشده‌اند.")
-        return
+    return element.get_text(separator='\n').strip()
 
-    lookback_days = settings['scraping'].get('lookback_days', 7)
-    max_msgs = settings['scraping'].get('max_messages_per_channel', 500)
-    base_path = settings['storage'].get('base_path', 'src/telegram')
-    
-    # تعیین بازه زمانی (پیام‌های چند روز گذشته)
-    time_threshold = datetime.now(timezone.utc) - timedelta(days=lookback_days)
-
-    # مقداردهی کلاینت تلگرام (استفاده از StringSession برای GitHub Actions)
-    client = TelegramClient(StringSession(session_string), int(api_id), api_hash)
+def scrape_channel(username, lookback_days, base_path):
+    print(f"--- Processing Channel: @{username} ---")
+    url = f"https://t.me/s/{username}"
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
     
     try:
-        await client.connect()
-        if not await client.is_user_authorized():
-            print("خطا: نشست (Session) معتبر نیست.")
+        response = requests.get(url, headers=headers, timeout=15)
+        if response.status_code != 200:
+            print(f"Error: Could not access @{username}. Status: {response.status_code}")
             return
 
-        for channel_url in channels:
-            try:
-                print(f"در حال پردازش: {channel_url}")
-                entity = await client.get_entity(channel_url)
-                channel_title = get_safe_name(entity.title)
-                
-                # ایجاد مسیر پوشه‌بندی برای هر کانال
-                channel_dir = os.path.join(base_path, channel_title)
-                os.makedirs(channel_dir, exist_ok=True)
-                
-                md_path = os.path.join(channel_dir, "messages.md")
-                
-                # خواندن پیام‌ها
-                with open(md_path, "w", encoding="utf-8") as md_file:
-                    md_file.write(f"# آرشیو متنی: {entity.title}\n")
-                    md_file.write(f"بروزرسانی شده در: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S')} UTC\n\n")
-                    md_file.write("---\n\n")
+        soup = BeautifulSoup(response.text, 'lxml')
+        messages = soup.find_all('div', class_='tgme_widget_message')
+        
+        if not messages:
+            print(f"No public messages found for @{username}.")
+            return
 
-                    # دریافت پیام‌ها (Telethon به صورت خودکار Entities را به Markdown تبدیل می‌کند)
-                    async for message in client.iter_messages(entity, limit=max_msgs):
-                        # بررسی بازه زمانی
-                        if message.date < time_threshold:
-                            break
-                        
-                        # نادیده گرفتن پیام‌های سیستمی و نظرسنجی‌ها
-                        if isinstance(message, MessageService) or isinstance(message.media, MessageMediaPoll):
-                            continue
+        channel_title = soup.find('div', class_='tgme_channel_info_header_title').get_text().strip()
+        safe_title = "".join([c for c in channel_title if c.isalnum() or c in (' ', '_')]).rstrip()
+        
+        channel_dir = os.path.join(base_path, safe_title)
+        os.makedirs(channel_dir, exist_ok=True)
+        
+        time_threshold = datetime.now(timezone.utc) - timedelta(days=lookback_days)
+        
+        count = 0
+        with open(os.path.join(channel_dir, "messages.md"), "w", encoding="utf-8") as f:
+            f.write(f"# Archive: {channel_title} (@{username})\n\n")
+            
+            # معکوس کردن لیست برای ذخیره از قدیم به جدید (یا حذف سورت برای جدید به قدیم)
+            for msg in reversed(messages):
+                try:
+                    # استخراج زمان
+                    time_element = msg.find('time', class_='time')
+                    if not time_element: continue
+                    
+                    msg_date = datetime.fromisoformat(time_element.get('datetime').replace('Z', '+00:00'))
+                    
+                    if msg_date < time_threshold:
+                        continue
 
-                        timestamp = message.date.strftime('%Y-%m-%d %H:%M:%S')
-                        
-                        # استخراج متن اصلی یا کپشن (شامل تمام استایل‌های Bold, Italic, Link و غیره)
-                        # ویژگی message.text در Telethon محتوا را با حفظ Entities به فرمت Markdown برمی‌گرداند
-                        content = message.text if message.text else ""
+                    # استخراج متن
+                    text_area = msg.find('div', class_='tgme_widget_message_text')
+                    content = html_to_md(text_area) if text_area else "[No text content]"
+                    
+                    # بررسی فوروارد
+                    is_forwarded = msg.find('div', class_='tgme_widget_message_forwarded_from')
+                    
+                    f.write(f"### 🕒 {msg_date.strftime('%Y-%m-%d %H:%M:%S')} UTC\n")
+                    if is_forwarded:
+                        f.write(f"> ↪️ **Forwarded Message**\n\n")
+                    f.write(f"{content}\n\n")
+                    f.write("---\n\n")
+                    count += 1
+                except Exception as e:
+                    continue
+        
+        print(f"Successfully saved {count} messages for @{username}.")
 
-                        if content:
-                            md_file.write(f"### 🕒 {timestamp}\n")
-                            if message.forward:
-                                md_file.write(f"> ↪️ **Forwarded Message**\n\n")
-                            
-                            md_file.write(f"{content}\n\n")
-                            md_file.write("---\n\n")
-                
-                print(f"تکمیل شد: {entity.title}")
+    except Exception as e:
+        print(f"Scraping failed for @{username}: {e}")
 
-            except Exception as e:
-                print(f"خطا در پردازش {channel_url}: {str(e)}")
-
-    finally:
-        await client.disconnect()
+def main():
+    settings = load_settings()
+    usernames = load_channels()
+    lookback_days = settings['scraping'].get('lookback_days', 7)
+    base_path = settings['storage'].get('base_path', 'src/telegram')
+    
+    for username in usernames:
+        scrape_channel(username, lookback_days, base_path)
+        # وقفه کوتاه برای جلوگیری از حساسیت تلگرام
+        time.sleep(5)
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
