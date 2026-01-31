@@ -1,19 +1,16 @@
-name: Telegram Channel Sync
+name: Telegram Web Scraper Sync
 
 on:
-#  schedule:
-   # - cron: '0 0 * * *' # هر شب ساعت ۱۲ به وقت UTC اجرا می‌شود
-  workflow_dispatch: # اجازه اجرای دستی را هم می‌دهد
+  #schedule:
+   # - cron: '0 */6 * * *' # هر ۶ ساعت یکبار چک می‌کند
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      with:
-        persist-credentials: true
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -25,15 +22,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run Telegram Scraper
-      env:
-        TG_API_ID: ${{ secrets.TG_API_ID }}
-        TG_API_HASH: ${{ secrets.TG_API_HASH }}
-        TG_SESSION_STRING: ${{ secrets.TG_SESSION_STRING }}
+    - name: Run Web Scraper
       run: python src/telegram_scraper.py
 
-    - name: Commit and Push changes
+    - name: Commit and Push
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: "Auto-update: Telegram messages [skip ci]"
+        commit_message: "Web Update: Telegram messages [skip ci]"
         file_pattern: 'src/telegram/*'
