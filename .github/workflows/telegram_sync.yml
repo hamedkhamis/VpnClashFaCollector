@@ -26,10 +26,18 @@ on:
         required: true
         type: boolean
         default: true
+      run_web:
+        description: 'Run Web Panel Generator?'
+        required: true
+        type: boolean
+        default: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # اجازه ثبت تغییرات در مخزن
+      
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -37,7 +45,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: '3.10' # نسخه پیشنهادی برای سازگاری بهتر
 
       - name: Install Dependencies
         run: |
@@ -64,10 +72,17 @@ jobs:
         if: github.event_name == 'schedule' || inputs.run_generator == true
         run: python src/sub_generator.py
 
+      # مرحله 5: تولید پنل وب حرفه‌ای
+      - name: 5. Run Web Panel Generator
+        if: github.event_name == 'schedule' || inputs.run_web == true
+        run: python src/web_generator.py
+
       # مرحله نهایی: ذخیره تغییرات در گیت‌هاب
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-update: Proxies & Subs [$(date)]"
-          # اگر می‌خواهید فقط فایل‌های خاصی ذخیره شوند فیلتر زیر را فعال کنید
-          # file_pattern: 'sub/* config/* src/telegram/*'
+          commit_message: "Auto-update: Proxies, Subs & Web Panel [$(date)]"
+          # ذخیره تمام تغییرات در پوشه sub و فایل index.html
+          file_pattern: 'sub/** index.html'
+          commit_user_name: github-actions[bot]
+          commit_user_email: github-actions[bot]@users.noreply.github.com
