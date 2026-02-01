@@ -3,8 +3,7 @@ trojan://JaQl9WpCIK@panel.follower-band.com:544?security=reality&pbk=5ijXwY7HR-v
 trojan://Szb%3D-Zguo53QhmivcJqEAWtpdPX6Y@95.179.184.71:13345?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=infiniteinjera.semanticstrainer.click
 trojan://bpb-trojan@94.140.0.1:443?path=%2Ftr%3Fed%3D2560&security=tls&alpn=h2&insecure=0&host=singbox.lu567890.us.kg&fp=chrome&type=ws&allowInsecure=0&sni=singbox.lu567890.us.kg
 trojan://bpb-trojan@94.140.0.1:443?path=%2Ftr%3Fed%3D2560&security=tls&host=singbox.lu567890.us.kg&fp=chrome&type=ws&sni=singbox.lu567890.us.kg#%F0%9F%91%BE%E2%9C%A836%20%40%43%6F%6E%66%69%67%50%69%78%65%6C%41%72%74
-trojan://bpb-trojan@94.140.0.1:443?path=%2Ftr%3Fed%3D2560&security=tls&host=singbox.lu567890.us.kg&fp=chrome&type=ws&sni=singbox.lu567890.us.kg#***🇩🇪***All⁴ | @BigSmoke_Config `
-trojan://bpb-trojan@94.140.0.1:443?path=%2Ftr%3Fed%3D2560&security=tls&host=singbox.lu567890.us.kg&fp=chrome&type=ws&sni=singbox.lu567890.us.kg#***🇩🇪***All⁴ | @BigSmoke_Config تلگرام و `
+trojan://bpb-trojan@94.140.0.1:443?path=%2Ftr%3Fed%3D2560&security=tls&host=singbox.lu567890.us.kg&fp=chrome&type=ws&sni=singbox.lu567890.us.kg#***🇩🇪***All⁴
 trojan://bpb-trojan@94.140.0.1:443?path=%2Ftr%3Fed%3D2560&security=tls&insecure=0&host=singbox.lu567890.us.kg&fp=chrome&type=ws&allowInsecure=0&sni=singbox.lu567890.us.kg
 trojan://bpb-trojan@94.140.0.1:443?path=%2Ftr%3Fed%3D2560&security=tls&insecure=0&host=singbox.lu567890.us.kg&fp=chrome&type=ws&allowInsecure=0&sni=singbox.lu567890.us.kg#%40KIA_NET
 trojan://bpb-trojan@94.140.0.1:443?path=%2Ftr%3Fed%3D2560&security=tls&insecure=0&host=singbox.lu567890.us.kg&fp=chrome&type=ws&allowInsecure=0&sni=singbox.lu567890.us.kg#%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20%40FreakConfig
@@ -14,7 +13,7 @@ trojan://bpb-trojan@ipbaz.ping-box.com:443?path=%2Ftr%3Fed%3D2560&security=tls&i
 trojan://bpb-trojan@ipbaz.ping-box.com:443?path=%2Ftr%3Fed%3D2560&security=tls&insecure=0&host=singbox.lu567890.us.kg&fp=chrome&type=ws&allowInsecure=0&sni=singbox.lu567890.us.kg#Alpha--4
 trojan://bpb-trojan@www.csgo.com:443?path=%2Ftr%3Fed%3D2560&security=tls&insecure=0&host=singbox.lu567890.us.kg&fp=chrome&type=ws&allowInsecure=0&sni=singbox.lu567890.us.kg#https://t.me/PeopleProxy
 trojan://humanity@104.18.32.47:443?path=%2Fassignment&security=tls&insecure=0&host=www.gossipglove.com&fp=chrome&type=ws&allowInsecure=0&sni=www.gossipglove.com#%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20%40FreakConfig
-trojan://humanity@172.64.152.23:443?path=%2Fassignment&security=tls&host=www.gossipglove.com&fp=chrome&type=ws&sni=www.gossipglove.com#***🇩🇪***All⁴ | @BigSmoke_Config تلگرام و روبیکا`
+trojan://humanity@172.64.152.23:443?path=%2Fassignment&security=tls&host=www.gossipglove.com&fp=chrome&type=ws&sni=www.gossipglove.com#***🇩🇪***All⁴
 trojan://humanity@172.64.152.23:443?path=%2Fassignment&security=tls&insecure=0&host=www.creationlong.org&type=ws&allowInsecure=0&sni=www.creationlong.org#https://t.me/PeopleProxy
 trojan://humanity@172.64.152.23:443?path=%2Fassignment&security=tls&insecure=1&host=www.calmlunch.com&type=ws&allowInsecure=1&sni=www.calmlunch.com#t.me/Gp_Config
 trojan://humanity@www.gossipglove.com:443?path=%2Fassignment&security=tls&fp=chrome&type=ws&sni=www.gossipglove.com#%40justforyo_u1

@@ -1,7 +1,7 @@
-https://t.me/proxy?server=207.148.4.93&amp;port=443&amp;secret=ce9c188cdfd9fbd7fc4d3382b980014c)
-https://t.me/proxy?server=207.246.79.25&amp;port=443&amp;secret=30ff031cce811c745f0572e0d6e76061)
-https://t.me/proxy?server=45.32.155.139&amp;port=443&amp;secret=118a07e4f54aee4d98ebb5a4e7a99962)
-https://t.me/proxy?server=45.76.246.19&amp;port=443&amp;secret=7b48d9ff650c3a8018267d47b8845a60)
-https://t.me/proxy?server=78.141.223.93&amp;port=443&amp;secret=ec3e57e6a70defcfb931bf5bba9344c0)
+https://t.me/proxy?server=207.148.4.93&port=443&secret=ce9c188cdfd9fbd7fc4d3382b980014c
+https://t.me/proxy?server=207.246.79.25&port=443&secret=30ff031cce811c745f0572e0d6e76061
+https://t.me/proxy?server=45.32.155.139&port=443&secret=118a07e4f54aee4d98ebb5a4e7a99962
+https://t.me/proxy?server=45.76.246.19&port=443&secret=7b48d9ff650c3a8018267d47b8845a60
+https://t.me/proxy?server=78.141.223.93&port=443&secret=ec3e57e6a70defcfb931bf5bba9344c0
 ss://ee4b0561-450d-4f5b-a8e2-f84c95def9b2@serveruwofl.samanidempire.org:443?type=ws&encryption=none&path=%2F1ab3537d&host=serveruwofl.samanidempire.org&security=tls&fp=chrome&alpn=http%2F1.1#CPI-CPI`
 vless://ee4b0561-450d-4f5b-a8e2-f84c95def9b2@serveruwofl.samanidempire.org:443?type=ws&encryption=none&path=%2F1ab3537d&host=serveruwofl.samanidempire.org&security=tls&fp=chrome&alpn=http%2F1.1#CPI-CPI`
