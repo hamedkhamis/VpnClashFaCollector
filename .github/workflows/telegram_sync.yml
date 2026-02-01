@@ -2,27 +2,26 @@ name: Auto Proxy Update and Convert
 
 on:
   schedule:
-    # اجرا هر 5 ساعت یک بار
-    - cron: '0 */5 * * *'
+    - cron: '0 */6 * * *'
   workflow_dispatch:
     inputs:
-      run_fetch:
-        description: 'اجرای اسکریپت جمع‌آوری (fetcher)'
+      run_scraper:
+        description: 'اجرای اسکریپت جمع‌آوری تلگرام (telegram_scraper)'
+        required: true
+        type: boolean
+        default: true
+      run_extractor:
+        description: 'اجرای اسکریپت استخراج (config_extractor)'
         required: true
         type: boolean
         default: true
       run_tester:
-        description: 'اجرای اسکریپت تست سرعت (tester)'
+        description: 'اجرای اسکریپت تست سرعت (config_tester)'
         required: true
         type: boolean
         default: true
       run_generator:
-        description: 'اجرای اسکریپت تبدیل کلاینت‌ها (generator)'
-        required: true
-        type: boolean
-        default: true
-      run_cleaner:
-        description: 'اجرای اسکریپت پاکسازی (cleaner)'
+        description: 'اجرای اسکریپت تبدیل کلاینت‌ها (sub_generator)'
         required: true
         type: boolean
         default: true
@@ -44,25 +43,25 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      # مرحله 1: جمع‌آوری لینک‌ها
-      - name: Run Proxy Fetcher
-        if: github.event_name == 'schedule' || inputs.run_fetch == true
-        run: python src/proxy_fetcher.py
+      # مرحله 1: جمع‌آوری از تلگرام
+      - name: Run Telegram Scraper
+        if: github.event_name == 'schedule' || inputs.run_scraper == true
+        run: python src/telegram_scraper.py
 
-      # مرحله 2: تست سرعت و کیفیت
+      # مرحله 2: استخراج کانفیگ‌ها
+      - name: Run Config Extractor
+        if: github.event_name == 'schedule' || inputs.run_extractor == true
+        run: python src/config_extractor.py
+
+      # مرحله 3: تست سرعت و کیفیت
       - name: Run Speed Tester
         if: github.event_name == 'schedule' || inputs.run_tester == true
         run: python src/config_tester.py
 
-      # مرحله 3: تبدیل به فرمت‌های مختلف (Clash, V2Ray, etc.)
+      # مرحله 4: تبدیل به فرمت‌های مختلف (Clash, V2Ray, etc.)
       - name: Run Sub Generator
         if: github.event_name == 'schedule' || inputs.run_generator == true
         run: python src/sub_generator.py
-
-      # مرحله 4: پاکسازی فایل‌های اضافی (در صورت وجود اسکریپت)
-      - name: Run Cleanup
-        if: github.event_name == 'schedule' || inputs.run_cleaner == true
-        run: python src/cleaner.py || echo "No cleaner script found, skipping."
 
       # مرحله نهایی: آپلود تغییرات در ریپازیتوری
       - name: Commit and Push
