@@ -1,5 +1,76 @@
 # آرشیو کانال: @wiki_tajrobe
-بروزرسانی: 2026-02-01 08:09:22 UTC
+بروزرسانی: 2026-02-01 17:48:44 UTC
+
+### 🕒 2026-02-01 16:23:16 UTC
+همراه اول:
+vless://fef4a93d-eb4f-4657-b56b-32a0dc060045@188.114.98.0:443?encryption=none&security=tls&sni=dev.twistsparrow.xyz&type=ws&path=%2F#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
+vless://8edaa2ae-7c08-4370-93b5-a3c2637bad9d@199.232.11.238:80?encryption=mlkem768x25519plus.native.0rtt.AQyUbbOYcuQkbAymidfXiqxpfC8UsX1tnoyPE_ljFg0&security=none&type=xhttp&host=iranclicks23.global.ssl.fastly.net&path=%2F&mode=auto#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
+vless://fef4a93d-eb4f-4657-b56b-32a0dc060045@188.114.98.0:443?encryption=none&security=tls&sni=dev.twistsparrow.xyz&type=ws&host=dev.twistsparrow.xyz&path=%2F#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
+vless://1d1d7240-60d1-40c8-b89d-f0c8f5c04952@cdn.mahoshid.ir:443?encryption=none&security=tls&sni=mx.mahoshid.ir&alpn=h2&fp=chrome&type=ws&host=mx.mahoshid.ir&path=%2F%3Fed%3D2560#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
+vless://5151b892-de2f-4e8a-bf4d-e3fa8315b841@v-sub.easyrain.ir:2053?encryption=none&security=tls&sni=a8J99pWd.lInOlEuMgArDeN.com&alpn=h2%2Chttp%2F1.1&fp=chrome&type=ws&host=a8J99pWd.lInOlEuMgArDeN.com&path=%2F%3Fed%3D8443#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
+vless://a2368c08-527f-4af6-855a-1dc6e42fad35@188.114.98.0:2086?encryption=none&security=none&type=httpupgrade&host=nigclone.narkhesanj.ir&path=%2F%3Fed%3D2056#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
+vless://829658bf-03c4-4c28-81e9-dd6ea141b2d0@188.114.98.0:443?encryption=none&security=tls&sni=5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net&alpn=http%2F1.1&fp=chrome&type=ws&host=5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net&path=%2F%3Fed%3D2560#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
+vless://4525c260-df3c-4f62-b8f1-f4f5f305694b@188.114.98.0:443?encryption=none&security=tls&sni=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net&fp=chrome&type=ws&host=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net&path=%2F%3Fed%3D2560#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
+vless://d84c0e47-7575-44cb-bc05-b55de8b51ca0@188.114.98.0:2053?encryption=none&security=tls&sni=hz.badomzamini.uk&type=ws&path=%2Flatest%3Fed%3D2560#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
+vless://bb8c74a1-abc1-4511-b100-9876e30cb65c@188.114.98.0:443?encryption=none&security=tls&sni=xfjd79v2tjscrm6jqo.zjde5.de5.net&alpn=http%2F1.1&type=ws&host=xfjd79v2tjscrm6jqo.zjde5.de5.net&path=%2FTelegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2%3Fed%3D2048#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
+vless://f85f60b1-2b96-49e9-8bde-b656d1516df0@188.114.98.0:8443?encryption=none&security=tls&sni=gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net&alpn=http%2F1.1&fp=chrome&type=ws&host=gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net&path=%2F%40OnNetVpn#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
+vless://bb8c74a1-abc1-4511-b100-9876e30cb65c@188.114.98.0:443?encryption=none&security=tls&sni=xfjd79v2tjscrm6jqo.zjde5.de5.net&alpn=http%2F1.1&type=ws&host=xfjd79v2tjscrm6jqo.zjde5.de5.net&path=%2FTelegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2%3Fed%3D2048#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
+vless://fac7209e-6da0-4489-9566-0bd13aeb0c3d@turkey1.bio4cdn.com:443?encryption=none&security=tls&sni=tr.bio4cdn.com&alpn=h2%2Chttp%2F1.1&fp=chrome&type=ws&host=tr.bio4cdn.com&path=%2Fwebcdn#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
+
+---
+
+### 🕒 2026-02-01 14:09:23 UTC
+***📣***
+ مجددا محدودیت های شدیدی روی اینترنت بین الملل دیتاسنتر ها اعمال شده…
+
+---
+
+### 🕒 2026-02-01 14:00:06 UTC
+طنز کوتاه 
+کوییک، خودروی اقتصادی
+قیمت: حدود ۱ میلیارد
+معادل ۱۰ سال حقوق کارگر ایرانی
+از این به بعد تعاریف اقتصادی بر حسب پول نیست 
+بر حسب عمرمونه
+***✍🏻***
+ ecoehsan
+
+---
+
+### 🕒 2026-02-01 10:05:55 UTC
+**چرا نباید برای فیلترشکن از Hetzner، DigitalOcean و Vultr سرور بخرید؟**
+اگر قصد راه‌اندازی سرویس شخصی دارید، اکیداً توصیه می‌شود از این دیتاسنترهای مشهور دوری کنید. IPهای این شرکت‌ها به دلیل محبوبیت بیش‌ازحد، اکنون به شدت Dirty (آلوده) و زیر ذره‌بین هستند.
+سیستم فیلترینگ فعلی، دیگر وقت خود را صرف مسدود کردن تک‌تک IPها نمی‌کند؛ بلکه کل ASN (شماره شناسایی شبکه) این دیتاسنترها را «مارک‌دار» کرده است.
+دلیل این موضوع سه فاکتور فنی است:
+شناسایی گروهی (Mass Detection): به دلیل هجوم کاربران ایرانی به این دیتاسنترها، رنج‌های IP آن‌ها به سرعت شناسایی و در لیست سیاه قرار می‌گیرند.
+تگ DCH (دیتاسنتر): دیتابیس‌های جهانی این IPها را به عنوان Data Center Hosting می‌شناسند. این یعنی ترافیک شما "ماشینی" تشخیص داده می‌شود، نه ترافیک یک کاربر واقعی خانگی (Residential)، که باعث اختلال سریع‌تر می‌شود.
+بلاک فله‌ای (Subnet Ban): وقتی یک IP از هتزنر تحت فشار قرار می‌گیرد، فایروال به جای مسدود کردن همان یک آدرس، کل Subnet (زیرشبکه) را کند یا مسدود می‌کند و سرور شما هم "تر و خشک" با هم می‌سوزد.
+**لیست پیشنهادی جایگزین:**
+[**1. Netcup (آلمان - netcup.com)**](https://www.netcup.com/en/server/arm-server)
+مشخصات پورت: 2.5Gbps (روی سری Root Server) و 1Gbps (روی VPSهای معمولی).
+توضیحات: تضمین آپتایم و کیفیت سخت‌افزار بالا.
+نکته مهم: احراز هویت (KYC) سخت‌گیری دارد و برای ثبت‌نام نیاز به مدارک و هویت غیر ایرانی است.
+[**2. V.PS (زیرمجموعه xTom - v.ps / xtom.com)**](https://v.ps/pricing/)
+مشخصات پورت: 1Gbps تا 10Gbps (بسته به لوکیشن و پلن - سری Mini Pro معمولاً 1Gbps است).
+توضیحات: xTom مادر این شرکت است و پروایدر زیرساخت (Infrastructure Provider) محسوب می‌شود، نه یک ریسلر ساده. لوکیشن‌های استونی، توکیو (Softbank) و سن‌خوزه روتینگ فوق‌العاده‌ای دارند.
+[**3. LisaHost (تایوان / آمریکا)**](https://www.lisahost.com/)
+مشخصات پورت: معمولاً 300Mbps تا 1Gbps (کاملاً اختصاصی برای عبور از فیلترینگ).
+توضیحات: برخلاف بقیه که پورت‌های ۱۰ گیگابیتی اشتراکی می‌دهند، این شرکت تمرکزش روی کیفیت IP است تا سرعت بالا. بهترین گزینه برای داشتن IP ثابت و تمیز.
+[**4. BandwagonHost (آمریکا / هنگ‌کنگ - bandwagonhost.com)**](https://bandwagonhost.com/order/basic)
+مشخصات پورت: 2.5Gbps تا 10Gbps (Enterprise grade).
+توضیحات: قیمت بالایی دارد (گاهی بالای ۵۰ دلار در ماه) اما پایدارترین خطوط ارتباطی بین قاره‌ای را ارائه می‌دهد. کمتر دچار افت سرعت (Packet Loss) در ساعات اوج مصرف می‌شود.
+[**5. OneProvider (سراسر جهان - oneprovider.com)**](https://oneprovider.com/en/)
+وضعیت: توزیع‌کننده (Aggregator) هزاران دیتاسنتر کوچک.
+مشخصات پورت: استاندارد 1Gbps.
+توضیحات: چون سرورهایش را از دیتاسنترهای محلی و ناشناس در کشورهای مختلف تامین می‌کند، می‌توانید سرورهایی پیدا کنید که IP آن‌ها اصلاً در لیست سیاه ایران نیست (مثلاً در کشورهای اروپای شرقی یا آسیای مرکزی).
+[**6. PQ Hosting (جهانی - pq.hosting)**](https://pq.hosting/en)
+مشخصات پورت: 1Gbps تا 10Gbps (بسیاری از لوکیشن‌ها اخیراً به ۱۰ گیگابیت ارتقا یافته‌اند).
+توضیحات: مناسب برای پیدا کردن لوکیشن‌های خاص و دور از دسترس فیلترینگ (مثل مولداوی، قزاقستان، صربستان و...). قیمت بسیار ارزان، عدم سخت‌گیری نسبت به قوانین (DMCA Ignored) و پشتیبانی از انواع رمزارزها از مزایای آن است.
+[**7. Aeza (روسیه / اروپا)**](https://aeza.net/)
+مشخصات پورت: تا 10Gbps (اشتراکی).
+توضیحات: پورت‌های بسیار قدرتمند حتی در پلن‌های ارزان. سرورهای لوکیشن مسکو، هلند و فنلاند آن پینگ و روتینگ عالی به ایران دارند.
+
+---
 
 ### 🕒 2026-02-01 07:40:57 UTC
 مخابرات، همراه اول، ایرانسل:
@@ -379,80 +450,6 @@ vless://3faffd2e-8901-415a-913c-d65dca1e6ea7@31.56.117.136:443?security=reality&
 vless://2a2a8023-3b4b-407d-a00a-7beb5a158148@104.20.1.252:80?path=%2F%3Fed&security=none&encryption=none&host=SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.&type=ws#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
 trojan://bpb-trojan@94.140.0.1:443?path=%2Ftr%3Fed%3D2560&security=tls&host=singbox.lu567890.us.kg&fp=chrome&type=ws&sni=singbox.lu567890.us.kg#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
 vless://9e685fe3-e0f9-482d-939c-200a3f89b363@172.64.145.38:8443?path=%2F%3Fed%3D2560fp%3Drandom&security=tls&alpn=http%2F1.1&encryption=none&host=vyznthvt7f5fr.zjde5.de5.net&fp=random&type=ws&sni=vyznthvt7f5fr.zjde5.de5.net#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-
----
-
-### 🕒 2026-01-30 17:19:12 UTC
-همراه اول:
-vless://dd0cfef0-fda9-47ec-8a65-49d7bc004f82@cf.narton.ir:8443?encryption=none&security=tls&sni=hitgram.ir&alpn=http%2F1.1&fp=chrome&type=ws&host=hitgram.ir&path=%2F---%40MiTiVPN%2F---%40MiTiVPN%2F---MiTiVPN%2F---%40MiTiVPN#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://67bad1be-8510-4703-91f2-b566d7213598@ir2.gitmaker.ir:777?encryption=none&security=none&type=tcp&headerType=none#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-
----
-
-### 🕒 2026-01-30 17:16:23 UTC
-همراه اول:
-vless://b89696d2-68ec-4812-bd95-a8f017ad8b4b@new.cdn.torprospeed.ir:2087?encryption=none&security=tls&sni=kxfuftoukfxfuk.xuiprospeed.ir&fp=chrome&type=ws&host=kxfuftoukfxfuk.xuiprospeed.ir&path=%2F#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-
----
-
-### 🕒 2026-01-30 15:21:58 UTC
-همراه اول:
-vless://abff18b4-949f-4660-ae69-c2610890736a@TUNNEL6.TORPROSPEED.IR:211?security=none&encryption=none&host=S7R.IR&headerType=http&type=tcp#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://c31d941d-da9a-41eb-885f-b3d3aa6ff22c@zone.li.f2zone.ir:50334?security=none&encryption=none&host=skyroom.online&headerType=http&type=tcp#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://8f1a15bf-a352-4c32-aee2-957039a6847b@ipbaz.ping-box.com:8443?path=%2F%3FTELEGRAM--KANAL--JKVPN--JKVPN--JKVPN--JKVPN--JKVPN--JKVPN%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&host=6nwf5rauksz8126xm.zjde5.de5.net&fp=chrome&type=ws&sni=6nwf5rauksz8126xm.zjde5.de5.net#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://6ee147a0-87b4-48c9-b5b7-79a8c9134898@79.175.133.143:2080?security=none&encryption=none&headerType=none&type=tcp#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://8f1a15bf-a352-4c32-aee2-957039a6847b@ipbaz.ping-box.com:8443?path=%2F%40OnNetVpn&security=tls&alpn=http%2F1.1&encryption=none&host=6nwf5rauksz8126xm.zjde5.de5.net&fp=chrome&type=ws&sni=6nwf5rauksz8126xm.zjde5.de5.net#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://4525c260-df3c-4f62-b8f1-f4f5f305694b@ipbaz.ping-box.com:443?path=%2F%40OnNetVpn&security=tls&encryption=none&host=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net&fp=chrome&type=ws&sni=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://8f1a15bf-a352-4c32-aee2-957039a6847b@ipbaz.ping-box.com:8443?path=%2F%3Fed&security=tls&alpn=http%2F1.1&encryption=none&host=6nwf5rauksz8126xm.zjde5.de5.net&fp=chrome&type=ws&sni=6nwf5rauksz8126xm.zjde5.de5.net#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://9e685fe3-e0f9-482d-939c-200a3f89b363@cf.narton.ir:8443?path=%2F%3Fed%3D2560fp%3Dchrome&security=tls&alpn=http%2F1.1&encryption=none&host=vyznthvt7f5fr.zjde5.de5.net&fp=chrome&type=ws&sni=vyznthvt7f5fr.zjde5.de5.net#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://71c89341-559f-46ea-8684-8f06e3a65a39@srv10.bestforcast.com:11550?security=&encryption=none&type=ws#%40filembad
-
----
-
-### 🕒 2026-01-30 12:17:32 UTC
-همراه اول:
-vless://bd661e52-e402-47a1-a88e-fb34df68ba2c@connect.cleverbot.top:8443?security=none&encryption=none&headerType=none&type=tcp#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://8f1a15bf-a352-4c32-aee2-957039a6847b@ipbaz.ping-box.com:8443?path=%2F%3FTELEGRAM--KANAL--JKVPN--JKVPN--JKVPN--JKVPN--JKVPN--JKVPN%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&host=6nwf5rauksz8126xm.zjde5.de5.net&type=ws&sni=6nwf5rauksz8126xm.zjde5.de5.net#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://d6bf6e21-f19c-4aaf-b4a5-c3a9a18a08f2@185.239.1.55:42535?security=none&encryption=none&host=aparat.com&headerType=http&type=tcp#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://d6bf6e21-f19c-4aaf-b4a5-c3a9a18a08f2@t.aparat-movies-download.ir:42535?security=none&encryption=none&host=aparat.com&headerType=http&type=tcp#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://f85f60b1-2b96-49e9-8bde-b656d1516df0@ipbaz.ping-box.com:8443?path=%2Fvpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&host=gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net&fp=chrome&type=ws&sni=gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://8f1a15bf-a352-4c32-aee2-957039a6847b@ipbaz.ping-box.com:8443?path=%2Fvpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&host=6nwf5rauksz8126xm.zjde5.de5.net&fp=chrome&type=ws&sni=6nwf5rauksz8126xm.zjde5.de5.net#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-
----
-
-### 🕒 2026-01-30 12:09:55 UTC
-همراه اول:
-vless://dd0cfef0-fda9-47ec-8a65-49d7bc004f82@cf.narton.ir:8443?path=%2F---%40MiTiVPN%2F---%40MiTiVPN%2F---MiTiVPN%2F---%40MiTiVPN&security=tls&alpn=http%2F1.1&encryption=none&host=hitgram.ir&fp=chrome&type=ws&sni=hitgram.ir#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://8f1a15bf-a352-4c32-aee2-957039a6847b@ipbaz.ping-box.com:8443?path=%2F%3Fed&security=tls&alpn=http%2F1.1&encryption=none&host=6nwf5rauksz8126xm.zjde5.de5.net&fp=chrome&type=ws&sni=6nwf5rauksz8126xm.zjde5.de5.net#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://4525c260-df3c-4f62-b8f1-f4f5f305694b@ipbaz.ping-box.com:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&host=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net&fp=chrome&type=ws&sni=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://d2fd9d9f-bafb-4f9c-8dac-89c5a1f2ecf8@fox3.wizard2shop.org:443?path=%2F&security=tls&alpn=http%2F1.1&encryption=none&fp=chrome&type=ws&sni=gfrdsllls.wordperessweb.ir#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://0e7f8cd2-ac99-4879-bcdc-78b1f836a38a@baby3.nardonga.sbs:54687?security=none&encryption=none&host=speedtest.net&headerType=http&type=tcp#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://7864317a-5c8b-434b-eb5a-78c330968dd9@78.39.182.74:59833?security=none&encryption=none&headerType=none&type=tcp#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-
----
-
-### 🕒 2026-01-30 10:46:11 UTC
-همراه اول: 
-vless://dd0cfef0-fda9-47ec-8a65-49d7bc004f82@ip.elcump.top:8443?path=%2F---%40MiTiVPN%2F---%40MiTiVPN%2F---MiTiVPN%2F---%40MiTiVPN&security=tls&alpn=http%2F1.1&encryption=none&host=hitgram.ir&fp=chrome&type=ws&sni=hitgram.ir#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://dd0cfef0-fda9-47ec-8a65-49d7bc004f82@cf.narton.ir:8443?path=%2F---%40MiTiVPN%2F---%40MiTiVPN%2F---MiTiVPN%2F---%40MiTiVPN&security=tls&alpn=http%2F1.1&encryption=none&host=hitgram.ir&fp=chrome&type=ws&sni=hitgram.ir#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://d6bf6e21-f19c-4aaf-b4a5-c3a9a18a08f2@t.aparat-movies-download.ir:42535?security=none&encryption=none&host=aparat.com&headerType=http&type=tcp#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://0e7f8cd2-ac99-4879-bcdc-78b1f836a38a@baby3.nardonga.sbs:54687?security=none&encryption=none&host=speedtest.net&headerType=http&type=tcp#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vless://d082b5e0-2435-4599-b935-d2c2b70beb67@cloudflare-ip.mofashi.ltd:443?path=%2F&security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&encryption=none&host=purple-mrvpn294x.mrvpnandamir294.workers.dev&fp=chrome&type=ws&sni=purple-mrvpn294x.mrvpnandamir294.workers.dev#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vmess://eyJhZGQiOiJjYWxsbWV2cG44LmNhbGxtZXNob3AuZnVuIiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6ImIzZjgwYWI3LTlkZTEtNDk5Yi04NzAzLTY4MWZlYzhjYzcxZCIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiMTIxMjgiLCJwcyI6IvCflKUgVGVsZWdyYW06IEB3aWtpX3RhanJvYmUgdyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
-vless://38cc3dff-5114-429f-9a45-fed484086c47@fi1.persianhostnet.ir:5121?security=none&encryption=none&headerType=none&type=tcp#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-
----
-
-### 🕒 2026-01-30 08:56:38 UTC
-همراه اول:  vless://d082b5e0-2435-4599-b935-d2c2b70beb67@cloudflare-ip.mofashi.ltd:443?path=%2F&security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&encryption=none&host=purple-mrvpn294x.mrvpnandamir294.workers.dev&fp=chrome&type=ws&sni=purple-mrvpn294x.mrvpnandamir294…
-
----
-
-### 🕒 2026-01-30 08:52:16 UTC
-همراه اول:
-vless://d082b5e0-2435-4599-b935-d2c2b70beb67@cloudflare-ip.mofashi.ltd:443?path=%2F&security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&encryption=none&host=purple-mrvpn294x.mrvpnandamir294.workers.dev&fp=chrome&type=ws&sni=purple-mrvpn294x.mrvpnandamir294.workers.dev#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
-vmess://eyJhZGQiOiJjYWxsbWV2cG44LmNhbGxtZXNob3AuZnVuIiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6ImIzZjgwYWI3LTlkZTEtNDk5Yi04NzAzLTY4MWZlYzhjYzcxZCIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiMTIxMjgiLCJwcyI6IvCflKUgVGVsZWdyYW06IEB3aWtpX3RhanJvYmUiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-vless://38cc3dff-5114-429f-9a45-fed484086c47@fi1.persianhostnet.ir:5121?security=none&encryption=none&headerType=none&type=tcp#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe
 
 ---
 

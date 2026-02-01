@@ -1,5 +1,46 @@
 # آرشیو کانال: @Capoit
-بروزرسانی: 2026-02-01 08:03:36 UTC
+بروزرسانی: 2026-02-01 17:42:56 UTC
+
+### 🕒 2026-02-01 17:25:18 UTC
+کانفیگ NapsternetV
+[برنامه NApsternetV](https://t.me/Capoit/31225)
+[آموزش وارد کردن](https://t.me/Capoit/31230)
+[@Capoit](https://t.me/Capoit)
+[@CapoPingBot](https://t.me/CapoPingBot)
+
+---
+
+### 🕒 2026-02-01 16:13:30 UTC
+کانفیگ NapsternetV
+[برنامه NApsternetV](https://t.me/Capoit/31225)
+[آموزش وارد کردن](https://t.me/Capoit/31230)
+[@Capoit](https://t.me/Capoit)
+[@CapoPingBot](https://t.me/CapoPingBot)
+
+---
+
+### 🕒 2026-02-01 15:04:38 UTC
+New V2Ray
+`vless://bb8c74a1-abc1-4511-b100-9876e30cb65c@172.64.152.23:443?path=%2F2%3Fed%3D2048&security=tls&alpn=http%2F1.1&encryption=none&host=xfjd79v2tjscrm6jqo.zjde5.de5.net&fp=chrome&type=ws&sni=xfjd79v2tjscrm6jqo.zjde5.de5.net#@Capoitvless://396c904b-4b62-4334-b793-ee25fc0c61cc@172.64.152.23:443?path=%2FeyJqdW5rIjoiTHczMWlhREZIb0ljUDhoaCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0&security=tls&encryption=none&host=8vmU06cxdz59m931xnREgj8qpnoq1-06.pages.dev&fp=chrome&type=ws&sni=pages.dev#@Capoitvless://83f03646-fb28-44cc-9d2c-8853f6c09285@104.18.4.130:8443?path=%2FXIXVPN%3Fed&security=tls&alpn=http%2F1.1&encryption=none&host=r4fnviw9jl4i4rx.zjde5.de5.net&fp=random&type=ws&sni=r4fnviw9jl4i4rx.zjde5.de5.net#@Capoit`
+[@Capoit](https://t.me/Capoit)
+
+---
+
+### 🕒 2026-02-01 14:06:13 UTC
+خب جدا از اینکه روزای قبل سرورای مستقیم و رایگانو‌ فیلتر میکردن
+امروز دارن سرورای تانل (یا همون پولیو) فیلتر میکنن
+عجب تنوعی داره این سریالی که توش زندگی میکنیم.
+
+---
+
+### 🕒 2026-02-01 13:43:47 UTC
+کانفیگ NapsternetV
+[برنامه NApsternetV](https://t.me/Capoit/31225)
+[آموزش وارد کردن](https://t.me/Capoit/31230)
+[@Capoit](https://t.me/Capoit)
+[@CapoPingBot](https://t.me/CapoPingBot)
+
+---
 
 ### 🕒 2026-02-01 05:18:15 UTC
 کانفیگ NapsternetV
@@ -186,38 +227,6 @@ C:iroproxy
 ---
 
 ### 🕒 2026-01-30 18:21:24 UTC
-کانفیگ NapsternetV
-[برنامه NApsternetV](https://t.me/Capoit/31225)
-[آموزش وارد کردن](https://t.me/Capoit/31230)
-[@Capoit](https://t.me/Capoit)
-[@CapoPingBot](https://t.me/CapoPingBot)
-
----
-
-### 🕒 2026-01-30 17:18:17 UTC
-خبریه این همخ اختلال زدن؟
-
----
-
-### 🕒 2026-01-30 16:21:04 UTC
-کانفیگ NapsternetV
-[برنامه NApsternetV](https://t.me/Capoit/31225)
-[آموزش وارد کردن](https://t.me/Capoit/31230)
-[@Capoit](https://t.me/Capoit)
-[@CapoPingBot](https://t.me/CapoPingBot)
-
----
-
-### 🕒 2026-01-30 14:18:27 UTC
-کانفیگ NapsternetV
-[برنامه NApsternetV](https://t.me/Capoit/31225)
-[آموزش وارد کردن](https://t.me/Capoit/31230)
-[@Capoit](https://t.me/Capoit)
-[@CapoPingBot](https://t.me/CapoPingBot)
-
----
-
-### 🕒 2026-01-30 13:36:18 UTC
 کانفیگ NapsternetV
 [برنامه NApsternetV](https://t.me/Capoit/31225)
 [آموزش وارد کردن](https://t.me/Capoit/31230)

@@ -15,5 +15,3 @@ trojan://humanity@172.64.152.23:443?path=%2Fassignment&security=tls&insecure=0&h
 trojan://humanity@172.64.152.23:443?path=%2Fassignment&security=tls&insecure=0&host=www.gossipglove.com&fp=chrome&type=ws&allowInsecure=0&sni=www.gossipglove.com#***🆔***
 trojan://humanity@www.multiplydose.com:443?path=%2Fassignment&security=tls&insecure=1&fp=chrome&type=ws&allowInsecure=1&sni=www.multiplydose.com#
 trojan://n875vm39ii96@104.17.163.123:8443?allowInsecure=0&alpn=http%2F1.1&fp=random&host=fflved5b71of0dhntg2ier40sswwuydkqf.zjde5.de5.net&insecure=0&path=%2F%3Fed%3D2560&security=tls&sni=fflved5b71of0dhntg2ier40sswwuydkqf.zjde5.de5.net&type=ws#***🆔***
-trojan://telegram-id-directvpn@15.236.119.70:22223?alpn=http%2F1.1&headerType=none&security=tls&sni=trojan.burgerip.co.uk&type=tcp#***🆔***
-trojan://telegram-id-privatevpns@15.236.119.70:22222?alpn=http%2F1.1&headerType=none&security=tls&sni=trojan.burgerip.co.uk&type=tcp#***🆔***

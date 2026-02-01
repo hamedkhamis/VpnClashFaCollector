@@ -1,5 +1,5 @@
 # آرشیو کانال: @merlinvpn
-بروزرسانی: 2026-02-01 08:08:56 UTC
+بروزرسانی: 2026-02-01 17:48:20 UTC
 
 ### 🕒 2026-01-31 17:24:02 UTC
 `vless://5fc41f2c-8e78-4c7d-a572-cae85cb9b063@ipv4-all-2.beraghsa1.sbs:1325?security=none&encryption=none&headerType=none&type=tcp#T.me%2FMerlinVpn%20%E2%9D%A4%EF%B8%8F%E2%80%8D%F0%9F%94%A5`

@@ -1,5 +1,75 @@
 # آرشیو کانال: @MARAMBASHI
-بروزرسانی: 2026-02-01 08:08:19 UTC
+بروزرسانی: 2026-02-01 17:47:38 UTC
+
+### 🕒 2026-02-01 15:49:58 UTC
+***🌊***
+کانفیگ NPV TUNNEL
+***⚫️***
+کانفیگ منطقه ای هست(یعنی امکان داره یک منطقه کار بده یک منطقه کار نده)
+***🛜***
+***🛜***
+***🛜***
+***🛜***
+***🛜***
+***⚫️***
+[لینک دانلود برنامه داخل کانال](https://t.me/MARAMBASHI/39139)
+***⚫️***
+***▶***
+[لینک دانلود برنامه از گوگل](https://play.google.com/store/apps/details?id=com.napsternetlabs.napsternetv)
+***▶***
+***🍏***
+[لینک دانلود برنامه برای ایفون](https://apps.apple.com/us/app/npv-tunnel/id1629465476)
+***🍏***
+***⚪️***
+[خرید سرور اختصاصی کلیک کن](https://t.me/MARAMBASHI/39265)
+***⚫️***
+***🍁***
+ 
+[@MARAMBASHI](https://t.me/MARAMBASHI)
+ 
+***🍁***
+
+---
+
+### 🕒 2026-02-01 14:01:19 UTC
+گروهمون رو هم عضو باشید
+***♥️***
+[https://t.me/MARAMBASHI1](https://t.me/MARAMBASHI1)
+
+---
+
+### 🕒 2026-02-01 10:27:14 UTC
+***🔶***
+کانفیگ ویتوری همه اپراتورا
+***🔶***
+``
+`ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo4ZDkwMDA5ZmE1MDIzY2Zh@148.113.143.102:11201#%40MARAMBASHI%20%F0%9F%90%B3vless://960ec49e-9248-4b64-a0e1-023a2c3d63a9@199.232.6.38:443?path=%2FH%3Fed%3D%23TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D2048&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&insecure=1&host=isirikashan.ir&fp=randomized&type=ws&allowInsecure=1&sni=isirikashan.ir#%40MARAMBASHI%20%F0%9F%90%B3vless://960ec49e-9248-4b64-a0e1-023a2c3d63a9@199.232.33.62:443?path=%2FH%3Fed%3D%23TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D2560&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&insecure=1&host=isirikashan.ir&fp=randomized&type=ws&allowInsecure=1&sni=isirikashan.ir#%40MARAMBASHI%20%F0%9F%90%B3vless://960ec49e-9248-4b64-a0e1-023a2c3d63a9@199.232.5.79:443?path=%2FH%3Fed%3D%23TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D512&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&insecure=1&host=isirikashan.ir&fp=randomized&type=ws&allowInsecure=1&sni=isirikashan.ir#%40MARAMBASHI%20%F0%9F%90%B3vless://3200012b-b38b-4184-b503-1bad9a52b2d6@104.17.162.123:8443?path=%2F%3Fed%3D%23TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D512&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=kf6e9f48l1a98c4tcclaj4f9vz3rqui9y4.zjde5.de5.net&fp=chrome&type=ws&allowInsecure=0&sni=kf6e9f48l1a98c4tcclaj4f9vz3rqui9y4.zjde5.de5.net#%40MARAMBASHI%20%F0%9F%90%B3vless://c9b0932d-8d1c-43c5-b64b-e9a74719c76d@104.18.32.47:443?path=%2Fhsdgsws%23TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=freuddd.info&fp=chrome&type=ws&allowInsecure=0&sni=freuddd.info#%40MARAMBASHI%20%F0%9F%90%B3vless://4525c260-df3c-4f62-b8f1-f4f5f305694b@66.81.247.155:443?path=%2F%3Fed%23TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D512&security=tls&encryption=none&insecure=0&host=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net&fp=chrome&type=ws&allowInsecure=0&sni=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net#%40MARAMBASHI%20%F0%9F%90%B3`
+منطقه ای
+***🛜***
+***🛜***
+***🛜***
+***🛜***
+***🛜***
+***📶***
+همراه اولی ها برای اتصال حتما فرگمنت فعال کنید تا وصل بشه(
+[آموزش](https://t.me/MARAMBASHI/31359)
+)
+***🛜***
+***🛜***
+***🔶***
+[لینک دانلود ویتوری داخل کانال](https://t.me/MARAMBASHI/39140)
+***🔶***
+ 
+***⚪️***
+[خرید سرور اختصاصی کلیک کن](https://t.me/MARAMBASHI/39265)
+***⚫️***
+***✅***
+ 
+[@MARAMBASHI](https://t.me/MARAMBASHI)
+ 
+***✅***
+
+---
 
 ### 🕒 2026-02-01 05:13:01 UTC
 ***🌊***
@@ -342,127 +412,6 @@
 [@MARAMBASHI](https://t.me/MARAMBASHI)
  
 ***✅***
-
----
-
-### 🕒 2026-01-30 17:06:14 UTC
-***🔶***
-کانفیگ ویتوری همه اپراتورا
-***🔶***
-``
-`vless://bbdab850-9164-43f3-adf9-26f7c5458e9d@66.81.247.155:8443?path=%2F%3Fed%3D%23TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D512&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&insecure=0&host=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net&fp=chrome&type=ws&allowInsecure=0&sni=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net#%40MARAMBASHI%20%F0%9F%92%9Cvless://546e91b5-c33e-4b04-b20c-c0fc8f6d9d7f@nodejs.org:80?path=%2F%3Fed%3D%23TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D2560&security=none&encryption=none&host=bIZARRe-CEntEryZCvddNcfJ.spORtLand.COmPANY.&type=ws#%40MARAMBASHI%20%F0%9F%87%B3%F0%9F%87%B1vless://29f89c05-7a9b-49b4-8fa0-59e0b857cbbf@193.228.168.138:8844?security=none&encryption=none&host=p30download.ir%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=http&type=tcp#%40MARAMBASHI%20%F0%9F%87%B3%F0%9F%87%B1vless://b89696d2-68ec-4812-bd95-a8f017ad8b4b@NEW.CDN.TORPROSPEED.IR:2087?path=%2F%3FTELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D512&security=tls&encryption=none&insecure=0&host=kxfuftoukfxfuk.xuiprospeed.ir&fp=chrome&type=ws&allowInsecure=0&sni=kxfuftoukfxfuk.xuiprospeed.ir#%40MARAMBASHI%20%F0%9F%87%B3%F0%9F%87%B1vless://83f03646-fb28-44cc-9d2c-8853f6c09285@104.17.162.123:8443?path=%2F%3Fed%3D%23TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D2048&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=r4fnviw9jl4i4rx.zjde5.de5.net&fp=random&type=ws&allowInsecure=0&sni=r4fnviw9jl4i4rx.zjde5.de5.net#%40MARAMBASHI%20%F0%9F%87%B3%F0%9F%87%B1vless://807e5f27-fac3-474a-84c6-89a0ffacc839@8.6.112.0:443?path=%2F62.60.229.255%3D443%2F%3FTELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D512&security=tls&encryption=none&insecure=0&host=gainsboro.qzz.io&fp=chrome&type=ws&allowInsecure=0&sni=gainsboro.qzz.io#%40MARAMBASHI%20%F0%9F%92%9Cvless://f3de8142-e882-454a-9823-43ec1c15a4ce@please-ts1.mimkiscx.ir:443?path=%2F&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&insecure=0&host=%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&fp=chrome&type=ws&allowInsecure=0&sni=harro-likeh1.sdcards1.ir#%40MARAMBASHI%20%F0%9F%92%9C`
-منطقه ای
-***🛜***
-***🛜***
-***🛜***
-***🛜***
-***🛜***
-***📶***
-همراه اولی ها برای اتصال حتما فرگمنت فعال کنید تا وصل بشه(
-[آموزش](https://t.me/MARAMBASHI/31359)
-)
-***🛜***
-***🛜***
-***🔶***
-[لینک دانلود ویتوری داخل کانال](https://t.me/MARAMBASHI/39140)
-***🔶***
-***⚪️***
-[خرید سرور اختصاصی کلیک کن](https://t.me/MARAMBASHI/39265)
-***⚫️***
-***✅***
- 
-[@MARAMBASHI](https://t.me/MARAMBASHI)
- 
-***✅***
-
----
-
-### 🕒 2026-01-30 16:53:21 UTC
-خب امیدوارم اونایی ک گزینه دومیو زدن خوشحالم کنن
-***😂***
-
----
-
-### 🕒 2026-01-30 15:20:59 UTC
-***🌊***
-کانفیگ NPV TUNNEL
-***⚫️***
-کانفیگ منطقه ای هست(یعنی امکان داره یک منطقه کار بده یک منطقه کار نده)
-***🛜***
-***🛜***
-***🛜***
-***🛜***
-***🛜***
-***⚫️***
-[لینک دانلود برنامه داخل کانال](https://t.me/MARAMBASHI/39139)
-***⚫️***
-***▶***
-[لینک دانلود برنامه از گوگل](https://play.google.com/store/apps/details?id=com.napsternetlabs.napsternetv)
-***▶***
-***🍏***
-[لینک دانلود برنامه برای ایفون](https://apps.apple.com/us/app/npv-tunnel/id1629465476)
-***🍏***
- 
-***⚪️***
-[خرید سرور اختصاصی کلیک کن](https://t.me/MARAMBASHI/39265)
-***⚫️***
-***🍁***
- 
-[@MARAMBASHI](https://t.me/MARAMBASHI)
- 
-***🍁***
-
----
-
-### 🕒 2026-01-30 13:43:38 UTC
-دوستانی ک تو اتصال مشکل دارید همراه اول از همه بهتره خیلیا گفتن وصل نشده بعد متوجه شدم ک apn نساختن یا خودکار روی گوشی بوده خیلی تاثیر داره همگی
-بزنین رو ی لینک زیر و apn طبق اپراتورتون بسازید  و بدون مشکل وصل شید
-[https://t.me/MARAMBASHI/9983](https://t.me/MARAMBASHI/9983)
-اینی ک بهتون میگم خودم با اپراتورای دیگه تست زدم حتمیه
-***❤️***
- ارادت
-
----
-
-### 🕒 2026-01-30 12:12:41 UTC
-***🔶***
-کانفیگ ویتوری همه اپراتورا
-***🔶***
-``
-`ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.89:8080#%40MARAMBASHI%20%F0%9F%92%9Cvless://e929f51d-5a95-5432-b66f-cfe725ea1f61@188.253.26.39:442?security=reality&encryption=none&pbk=T_gyZwngrYUe24q6-mieGT9WJfzja0PQad_y_SnhBk0&host=%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=yahoo.com&sid=6ac998b514#%40MARAMBASHI%20%F0%9F%92%9Cvless://2ddeb056-17d4-421e-a318-39428733d4a2@172.64.149.99:8443?path=%2F%3FTELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D2048&security=tls&alpn=http%2F1.1&encryption=none&insecure=1&host=8p3cfl0ripm.zjde5.de5.net&fp=chrome&type=ws&allowInsecure=1&sni=8p3cfl0ripm.zjde5.de5.net#%40MARAMBASHI%20%F0%9F%92%9Cvless://d4d031ec-0ba6-486a-aa0c-dce2b7cb8933@212.111.84.187:8443?security=reality&encryption=none&pbk=Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc&host=%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=887c0d72e771a934#%40MARAMBASHI%20%F0%9F%92%9Cvless://0665cf1e-0df8-4981-a8de-a366e37c0866@104.18.15.19:8443?path=%2F%3Fed%3D%23TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=xdol7mayq6wu5kil7wjyrni7o8tnydsafcmhfhn7g6rimbw5o2g6mlm.zjde5.de5.net&fp=chrome&type=ws&allowInsecure=0&sni=xdol7mayq6wu5kil7wjyrni7o8tnydsafcmhfhn7g6rimbw5o2g6mlm.zjde5.de5.net#%40MARAMBASHI%20%F0%9F%92%9Cvless://829658bf-03c4-4c28-81e9-dd6ea141b2d0@147.78.140.0:8443?path=%2F%3Fed%3D%23TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&insecure=1&host=5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net&fp=chrome&type=ws&allowInsecure=1&sni=5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net#%40MARAMBASHI%20%F0%9F%92%9Cvless://3f0f36f5-f091-45c5-88c9-4bcc545b922c@188.114.98.0:443?path=%2F45.76.183.217%3D49292%2F%3FTELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D2560&security=tls&encryption=none&insecure=0&host=hetz.x-smm.com&fp=chrome&type=ws&allowInsecure=0&sni=hetz.x-smm.com#%40MARAMBASHI%20%F0%9F%92%9Cvless://e6af2417-0a79-4521-aa2a-de1c2f105188@85.235.149.184:500?security=reality&encryption=none&pbk=NGrcCvAGrXu9QMiu2QNZy2HBqbvL7j-cFQuTFbE-AjM&host=%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=none&fp=firefox&type=tcp&sni=stackoverflow.com&sid=bea5eb2fcf6b183c#%40MARAMBASHI%20%F0%9F%92%9C`
-منطقه ای
-***🛜***
-***🛜***
-***🛜***
-***🛜***
-***🛜***
-***📶***
-همراه اولی ها برای اتصال حتما فرگمنت فعال کنید تا وصل بشه(
-[آموزش](https://t.me/MARAMBASHI/31359)
-)
-***🛜***
-***🛜***
-***🔶***
-[لینک دانلود ویتوری داخل کانال](https://t.me/MARAMBASHI/39140)
-***🔶***
- 
-***⚪️***
-[خرید سرور اختصاصی کلیک کن](https://t.me/MARAMBASHI/39265)
-***⚫️***
-***✅***
- 
-[@MARAMBASHI](https://t.me/MARAMBASHI)
- 
-***✅***
-
----
-
-### 🕒 2026-01-30 10:45:34 UTC
-سلام دوستان خسته نباشید اینکه هنوز سرور نزدیم اینه ک سعی میکنیم تا نزدیک صبح بیدار باشیم سرور  رایگان بزاریم برا شما عزیزان وقتی میخابیم تا 4 5 بعد از ظهر خابمون میبره حالا فروشمونم باز شده اگه قابل دونستید میتونید برید از پشتیبانی خرید بزنین  سرور رایگانم میزارم  یکم دیگه ممنون
-***❤️***
-[@CHOQONI](https://t.me/CHOQONI)
- 
-***👩‍💻***
 
 ---
 

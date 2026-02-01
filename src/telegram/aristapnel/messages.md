@@ -1,5 +1,82 @@
 # آرشیو کانال: @aristapnel
-بروزرسانی: 2026-02-01 08:03:53 UTC
+بروزرسانی: 2026-02-01 17:43:10 UTC
+
+### 🕒 2026-02-01 15:54:03 UTC
+***🔰***
+ 
+**پروکسی تلگرام**
+[https://t.me/proxy?server=85.133.194.112&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=85.133.194.112&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=85.133.194.113&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=85.133.194.113&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=85.133.194.112&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=85.133.194.112&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=85.133.194.116&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=85.133.194.116&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=85.133.194.113&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=85.133.194.113&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=95.217.15.226&port=443&secret=eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdhttps://t.me/proxy?server=185.215.247.60&port=2053&secret=ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6Di5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA](https://t.me/proxy?server=95.217.15.226&port=443&secret=eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdhttps://t.me/proxy?server=185.215.247.60&port=2053&secret=ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6Di5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+[https://t.me/proxy?server=185.215.247.60&port=2053&secret=ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D](https://t.me/proxy?server=185.215.247.60&port=2053&secret=ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D)
+
+---
+
+### 🕒 2026-02-01 14:33:09 UTC
+> ↪️ **Forwarded**
+
+[https://github.com/2dust/v2rayN/releases/tag/7.17.3](https://github.com/2dust/v2rayN/releases/tag/7.17.3)
+
+---
+
+### 🕒 2026-02-01 14:28:42 UTC
+[ایفون](https://t.me/proxy?server=185.115.161.240&amp;port=77777&amp;secret=EERigv%2F%2F%2F%2F%2F%2F+AAA%2F%2FgAAA%3D%3D)
+ | 
+[ایفون](https://t.me/proxy?server=185.115.161.241&amp;port=77777&amp;secret=EERigv%2F%2F%2F%2F%2F%2F+AAA%2F%2FgAAA%3D%3D)
+ 
+[پروکسی](https://t.me/proxy?server=185.115.161.233&amp;port=9443&amp;secret=3RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt0%3D)
+ | 
+[پروکسی](https://t.me/proxy?server=185.115.161.234&amp;port=9443&amp;secret=3RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt0%3D)
+ | 
+[پروکسی](https://t.me/proxy?server=185.115.161.254&amp;port=9443&amp;secret=dd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3add)
+ 
+[پروکسی](https://t.me/proxy?server=185.115.161.251&amp;port=9443&amp;secret=dd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3add)
+ | 
+[پروکسی](https://t.me/proxy?server=185.115.161.252&amp;port=9443&amp;secret=3RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt0%3D)
+ | 
+[پروکسی](https://t.me/proxy?server=185.115.161.253&amp;port=9443&amp;secret=dd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3adddd1603010200010001fc030386e24c3add)
+[پروکسی](https://t.me/proxy?server=185.115.161.237&amp;port=9443&amp;secret=3RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt0%3D)
+ | 
+[پروکسی](https://t.me/proxy?server=185.115.161.238&amp;port=9443&amp;secret=dd104462821249bd7ac519130220c25d09)
+ | 
+[پروکسی](https://t.me/proxy?server=185.115.161.230&amp;port=9443&amp;secret=3RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt0%3D)
+[پروکسی](https://t.me/proxy?server=185.115.161.245&amp;port=9443&amp;secret=dd104462821249bd7ac519130220c25d09)
+ | 
+[پروکسی](https://t.me/proxy?server=185.115.161.244&amp;port=9443&amp;secret=dd104462821249bd7ac519130220c25d09)
+ | 
+[پروکسی](https://t.me/proxy?server=185.115.161.242&amp;port=9443&amp;secret=dd104462821249bd7ac519130220c25d09)
+[پروکسی](https://t.me/proxy?server=87.248.132.2&amp;port=7443&amp;secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ)
+ | 
+[پروکسی](https://t.me/proxy?server=31.24.253.2&amp;port=7443&amp;secret=104462821249bd7ac519130220c25d09)
+ | 
+[پروکسی](https://t.me/proxy?server=185.115.161.232&amp;port=9443&amp;secret=3RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt03RYDAQIAAQAB_AMDhuJMOt0%3D)
+[پروکسی](https://t.me/proxy?server=31.24.253.3&amp;port=7443&amp;secret=104462821249bd7ac519130220c25d09)
+ | 
+[پروکسی](https://t.me/proxy?server=185.115.161.250&amp;port=9443&amp;secret=dd104462821249bd7ac519130220c25d09)
+ | 
+[پروکسی](https://t.me/proxy?server=185.115.161.45&amp;port=9443&amp;secret=dd1603010200010001fc030386e24c3add)
+[پروکسی |](https://t.me/proxy?server=185.115.161.248&amp;port=9443&amp;secret=dd104462821249bd7ac519130220c25d09)
+ 
+[پروکسی](https://t.me/proxy?server=31.24.253.4&amp;port=7443&amp;secret=1603010200010001fc030386e24c3add)
+
+---
+
+### 🕒 2026-02-01 14:18:10 UTC
+> ↪️ **Forwarded**
+
+کلاینت ZedSecure در بروزرسانی جدیدش امکان مدیریت کانفیگ‌ها، وارد کردن کانفیگ به شکل Json، پشتیبانی از Hysteria2 و WireGuard و همینطور تنظیمات پیشرفته رو اضافه کرد.
+***👉***
+ 
+[github.com/CluvexStudio/ZedSecure/releases/latest](http://github.com/CluvexStudio/ZedSecure/releases/latest)
+***🔍***
+ 
+[ircf.space](http://ircf.space/)
+[@ircfspace](https://t.me/ircfspace)
+
+---
 
 ### 🕒 2026-02-01 02:52:26 UTC
 [https://t.me/proxy?server=85.133.194.113&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=85.133.194.113&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
@@ -60,34 +137,6 @@
 **🔴 نت بلاکس در جدیدترین به روزرسانی وضعیت اینترنت ایران: **
 ***🔺***
 جمعه‌شب است و ۲۲ روزِ کامل پس از آغاز قطع سراسری اینترنت در ایران، همچنان اینترنت به‌شدت فیلتر و محدود است؛ دسترسی فقط با لیست سفید و قطع و وصل شدن‌های مقطعی، تماس ایرانیان با جهان بیرون را به حداقل رسانده است.
-[@aristapnel](https://t.me/aristapnel)
-
----
-
-### 🕒 2026-01-30 15:49:50 UTC
-> ↪️ **Forwarded**
-
-اطلاعات ۱۷.۵ میلیون اکانت اینستاگرام افشا شده و به صورت عمومی درحال پخش شدن هست.
-این اطلاعات شامل یوزرنیم، نام کامل، ایمیل، شماره تلفن، آدرس جزئی و User ID بوده و فیشینگ حرفه‌ای، دزدی اکانت، داکسینگ و حتی خطر فیزیکی (به خاطر آدرس) وجود داره. اگر فعال سیاسی بودی/هستی و در کشور پرریسکی زندگی میکنی، خطر بازداشت جدی هست!
-اقدام فوری اینه که رمز قوی و جدید بذاری (از داخل اپ، نه لینک ایمیل!) و اینکه 2FA رو با اپ Authenticator فعال کنی (SMS نه!).
-دیتابیس افشا شده از کاربران اینستاگرام بررسی شده و تعداد ۲۱,۴۴۷ کاربر شماره ایران داشتن. هشدار رو جدی بگیرید.
-***©***
- jorjandii
-***🔍***
- 
-[ircf.space](http://ircf.space/)
-[@ircfspace](https://t.me/ircfspace)
-
----
-
-### 🕒 2026-01-30 09:03:39 UTC
-***🚨***
-***🚨***
-***🚨***
-***🚨***
-***🔰***
- زومیت: 
-اطلاعات بیش از ۱۷ میلیون کاربر اینستاگرام فاش شده. بهتره زودتر رمزهاتون رو عوض کنید.
 [@aristapnel](https://t.me/aristapnel)
 
 ---

@@ -1,7 +1,7 @@
 # آرشیو کانال: @rahgozar94725_ip
-بروزرسانی: 2026-02-01 08:04:31 UTC
+بروزرسانی: 2026-02-01 17:43:44 UTC
 
-### 🕒 2026-02-01 08:03:04 UTC
+### 🕒 2026-02-01 14:03:04 UTC
 ***🚀***
  لیست جدید و بروز شده پروکسی‌های تلگرام
 ***♻️***
@@ -145,11 +145,6 @@ nm-vless://e6Pcn01nF/vd2e4WYyaFGXXGmfSFFbTLhvQC4vTGbVtIEIQI6Oa7Y7L6pTLVFhFJ9ZPo8
 ### 🕒 2026-01-30 18:47:27 UTC
 دوستان یه اسکنر جدید بهم معرفی کردن که خیلی جالبه. به صورت تک رنج اسکن میکنه و در نهایت لینک کانفیگ خودتون رو میدید و با ایپی هایی که پیدا کرده یه لیست از کانفیگ شما میسازه. میتونید این لیست رو توی نرم افزار ویتوری خودتون ایمپورت کنید و داخلش پینگ بگیرید یا تست سرعت بگیرید.
 [https://github.com/cy33r/IR_CF](https://github.com/cy33r/IR_CF)
-
----
-
-### 🕒 2026-01-30 15:04:10 UTC
-nm-vless://e6Pcn01nF/vd2e4WYyaFGXXGmfSFFbTLhvQC4vTGbVtIEIQI6Oa7Y7L6pTLVFhFJ9ZPo8DEnvaJQ29hT4gC55a21E1/yfab2CxB4nhXWrUdxi0ql/HaP/uyRRghOFSpT+Aw4q+uoLyG5sUJa3Z+vUAbkAd5GjpYl67MUWhueE2I5ErPAymVCE1eAZO+KveABRV2pUZU1Qei4jweMVABsDxfXQtdeFz8kdKkPHFOgeQdBnMHhfE0c…
 
 ---
 

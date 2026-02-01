@@ -1,5 +1,85 @@
 # آرشیو کانال: @ProxyDaemi
-بروزرسانی: 2026-02-01 08:09:47 UTC
+بروزرسانی: 2026-02-01 17:49:08 UTC
+
+### 🕒 2026-02-01 11:11:01 UTC
+نیروی دلتا فورس در تهران 
+البته made in iran 
+[پروکسی](https://t.me/proxy?server=85.133.194.120&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+  
+[پروکسی](https://t.me/proxy?server=85.133.194.121&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+  
+[پروکسی](https://t.me/proxy?server=85.133.194.106&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+  
+[پروکسی](https://t.me/proxy?server=85.133.194.109&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[پروکسی](https://t.me/proxy?server=85.133.194.108&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+  
+[پروکسی](https://t.me/proxy?server=85.133.194.115&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+  
+[پروکسی](https://t.me/proxy?server=85.133.194.116&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+  
+[پروکسی](https://t.me/proxy?server=85.133.194.117&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[@ProxyDaemi](https://t.me/ProxyDaemi)
+ 
+***📱***
+
+---
+
+### 🕒 2026-02-01 10:10:47 UTC
+تا صبح حق …
+[پروکسی](https://t.me/proxy?server=85.133.194.120&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+  
+[پروکسی](https://t.me/proxy?server=85.133.194.121&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+  
+[پروکسی](https://t.me/proxy?server=85.133.194.106&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+  
+[پروکسی](https://t.me/proxy?server=85.133.194.109&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[پروکسی](https://t.me/proxy?server=85.133.194.108&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+  
+[پروکسی](https://t.me/proxy?server=85.133.194.115&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+  
+[پروکسی](https://t.me/proxy?server=85.133.194.116&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+  
+[پروکسی](https://t.me/proxy?server=85.133.194.117&amp;port=8443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[@ProxyDaemi](https://t.me/ProxyDaemi)
+ 
+***📱***
+
+---
+
+### 🕒 2026-02-01 10:10:25 UTC
+***💵***
+**دربی بت**
+ اولین کمپانی معتبر بین المللی فعال در ایران
+***💵***
+***⭐***
+وقتشه با امنیت کامل توی سایت جهانی فعالیت کنی و خیالت راحت باشه
+***⭐***
+***💎***
+ویژگی های سایت جهانی Derby Bet:
+***⬅️***
+امکان شارژ امن با کارت بانکی
+***⬅️***
+واریز اول دوبل شارژ می شوید
+***⬅️***
+پر اپشن ترین سایت فعال در ایران
+***⬅️***
+تسویه حساب کمتر از 5 دقیقه
+***⬅️***
+برگشت بخشی از باخت به صورت هفتگی
+همچنین مجوز رسمی curacao
+***🚨***
+کد هدیه ثبت نام:
+**GG007**
+***⚠️***
+[برای دانلود اپلکیشن کلیک کنید](https://t.me/derbybetm/18512)
+***👉***
+***🔔***
+کانال دربی بت :r12
+***🅰***
+***🪙***
+[https://t.me/+y5OmYywsbVEzMmM0](https://t.me/+y5OmYywsbVEzMmM0)
+
+---
 
 ### 🕒 2026-01-31 21:44:01 UTC
 واقعا ذهنم خسته‌ست خیلی خسته... هر لحظه دلم میخواد گریه کنم و میکنم و باز هم خالی نمی‌شم 
@@ -258,21 +338,6 @@
  | 
 [پروکسی](tg://proxy?server=185.215.247.33&amp;port=4455&amp;secret=ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D)
 [@ProxyDaemi](https://t.me/ProxyDaemi)
-
----
-
-### 🕒 2026-01-30 13:05:08 UTC
-پروکسی جدید 
-[https://t.me/proxy?server=153.51.190.5&port=2053&secret=ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D](https://t.me/proxy?server=153.51.190.5&port=2053&secret=ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D)
-
----
-
-### 🕒 2026-01-30 08:16:08 UTC
-ایرانسل های جدید 
-***💎***
-[https://t.me/proxy?server=153.51.190.17&port=2053&secret=ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D](https://t.me/proxy?server=153.51.190.17&port=2053&secret=ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D)
-[https://t.me/proxy?server=153.51.190.18&port=2053&secret=ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D](https://t.me/proxy?server=153.51.190.18&port=2053&secret=ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D)
-[https://t.me/proxy?server=153.51.190.23&port=2053&secret=ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D](https://t.me/proxy?server=153.51.190.23&port=2053&secret=ee1603010200010001fc030386e24c3add626973636F7474692E79656B74616E65742E636F6D)
 
 ---
 
