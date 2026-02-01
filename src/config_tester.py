@@ -1,6 +1,7 @@
 import os, subprocess, logging, zipfile, requests, csv, base64, json, sys
 from urllib.parse import quote, unquote
 
+# تنظیمات لاگ حرفه‌ای
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s', datefmt='%H:%M:%S')
 logger = logging.getLogger("ProxyLab")
 
@@ -13,6 +14,7 @@ def get_flag(cc):
 
 def download_engine():
     if os.path.exists("xray-knife"): return
+    logger.info("Downloading Xray-knife Engine...")
     url = "https://github.com/lilendian0x00/xray-knife/releases/latest/download/Xray-knife-linux-64.zip"
     r = requests.get(url, timeout=30)
     with open("engine.zip", "wb") as f: f.write(r.content)
@@ -47,56 +49,69 @@ def test_process():
     os.makedirs(raw_dir, exist_ok=True)
     download_engine()
 
-    # --- مرحله ۱: پینگ ---
-    logger.info("Phase 1: Ping Testing...")
+    # --- فاز ۱: پینگ سریع برای فیلتر کردن ۱۰۰۰۰ کانفیگ ---
+    logger.info("--- Phase 1: Filtering 10,000 configs by Latency ---")
     p_csv = os.path.join(raw_dir, "ping_raw.csv")
-    subprocess.run(["./xray-knife", "http", "-f", input_file, "-t", "100", "-o", p_csv, "-x", "csv"])
+    # استفاده از ۱۰۰ ترد برای پینگ سریع
+    subprocess.run(["./xray-knife", "http", "-f", input_file, "-t", "100", "-o", p_csv, "-x", "csv"], stdout=subprocess.DEVNULL)
 
-    top_300_links = []
+    top_candidates = []
     if os.path.exists(p_csv):
         with open(p_csv, "r", encoding="utf-8-sig") as f:
-            reader = csv.DictReader(f)
-            # فیلتر کردن ردیف‌های سالم و مرتب‌سازی بر اساس پینگ
-            rows = []
-            for r in reader:
-                d = r.get('delay')
-                if d and str(d).isdigit() and int(d) > 0:
-                    rows.append(r)
+            reader = list(csv.DictReader(f))
+            valid_rows = [r for r in reader if r.get('delay') and str(r['delay']).isdigit() and int(r['delay']) > 0]
+            valid_rows.sort(key=lambda x: int(x['delay']))
             
-            rows.sort(key=lambda x: int(x['delay']))
-            top_300_links = [r.get('link') or r.get('Config') for r in rows[:300]]
-            
-            ping_passed = [rename_config(r.get('link') or r.get('Config'), {'cc': r.get('location', 'UN'), 'ping': r.get('delay')}) for r in rows]
+            # ذخیره همه کانفیگ‌های سالم در فایل پینگ
+            ping_passed = [rename_config(r.get('link') or r.get('Config'), {'cc': r.get('location', 'UN'), 'ping': r.get('delay')}) for r in valid_rows]
             p_text = "\n".join(filter(None, ping_passed))
             with open(os.path.join(base_dir, "ping_passed.txt"), "w", encoding="utf-8") as f: f.write(p_text)
             with open(os.path.join(base_dir, "ping_passed_base64.txt"), "w", encoding="utf-8") as f: f.write(to_base64(p_text))
+            
+            top_candidates = [r.get('link') or r.get('Config') for r in valid_rows[:300]]
+            logger.info(f"Phase 1 done. Found {len(valid_rows)} alive. Top 300 selected for speed test.")
 
-    # --- مرحله ۲: سرعت ---
-    if top_300_links:
-        tmp_txt = "top300.txt"
-        with open(tmp_txt, "w") as f: f.write("\n".join(filter(None, top_300_links)))
+    # --- فاز ۲: تست سرعت واقعی (دقیق و ۵ تایی) ---
+    if top_candidates:
+        tmp_txt = "top300_tmp.txt"
+        with open(tmp_txt, "w") as f: f.write("\n".join(filter(None, top_candidates)))
         
-        logger.info("Phase 2: Speed Testing (Top 300)...")
+        logger.info("--- Phase 2: Real Speed Test (5 Threads, 5MB Payload) ---")
         s_csv = os.path.join(raw_dir, "speed_raw.csv")
         
-        # حذف سوئیچ -x json چون خطا می‌دهد
-        subprocess.run(["./xray-knife", "http", "-f", tmp_txt, "-t", "10", "-o", s_csv, "-x", "csv", "-p", "-a", "15000"])
+        # لینک تست سرعت واقعی از کلودفلر (۵ مگابایت)
+        speed_url = "https://speed.cloudflare.com/__down?bytes=5000000"
+        
+        cmd = [
+            "./xray-knife", "http", 
+            "-f", tmp_txt, 
+            "-t", "5",          # فقط ۵ تست همزمان برای دقت پهنای باند
+            "-o", s_csv, 
+            "-x", "csv", 
+            "-p",               # فعال‌سازی مد تست سرعت
+            "-u", speed_url, 
+            "-a", "5000"        # مقدار دیتا به کیلوبایت
+        ]
+        
+        # اجرای فاز دوم و نمایش لاگ‌های مهم
+        process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+        for line in process.stdout:
+            if "Real Delay" in line or "finished" in line:
+                print(f"  {line.strip()}")
 
         speed_final = []
         if os.path.exists(s_csv):
             with open(s_csv, "r", encoding="utf-8-sig") as f:
-                reader = csv.DictReader(f)
-                for row in reader:
+                for row in csv.DictReader(f):
                     lnk = row.get('link') or row.get('Config')
-                    # استخراج مقدار دانلود (این مقدار در خروجی xray-knife به صورت بایت است)
-                    down_raw = row.get('download') or row.get('speed') or "0"
+                    raw_down = row.get('download') or "0"
                     dly = row.get('delay') or "0"
                     cc = row.get('location') or "UN"
                     
                     try:
-                        spd_val = float(down_raw)
-                        if spd_val > 500: # اگر بیشتر از ۵۰۰ بایت بود (برای حذف لو اسپیدهای کاذب)
-                            mbps = f"{spd_val / (1024 * 1024):.2f}MB"
+                        spd_bytes = float(raw_down)
+                        if spd_bytes > 1000: # اگر بیشتر از ۱ کیلوبایت بود
+                            mbps = f"{spd_bytes / (1024 * 1024):.2f}MB"
                             speed_final.append(rename_config(lnk, {'cc': cc, 'ping': dly, 'speed': mbps}))
                         else:
                             speed_final.append(rename_config(lnk, {'cc': cc, 'ping': dly, 'speed': "LowSpeed"}))
@@ -107,7 +122,8 @@ def test_process():
         with open(os.path.join(base_dir, "speed_passed.txt"), "w", encoding="utf-8") as f: f.write(s_text)
         with open(os.path.join(base_dir, "speed_passed_base64.txt"), "w", encoding="utf-8") as f: f.write(to_base64(s_text))
 
-    logger.info("Process Finished successfully.")
+    if os.path.exists(tmp_txt): os.remove(tmp_txt)
+    logger.info("Testing process finished successfully. All files updated.")
 
 if __name__ == "__main__":
     test_process()
