@@ -1,1 +1,1 @@
-[{"route":"bypass-lan-china","remote_dns":"dns.google","ipv6":false,"metered":false,"proxy_apps":{"enabled":false,"bypass":true,"android_list":["com.eg.android.AlipayGphone","com.wudaokou.hippo","com.zhihu.android"]},"udpdns":false,"remarks":"Telegram: @wiki_tajrobe","server":"54.36.174.140","server_port":443,"method":"chacha20-ietf-poly1305","password":"pvgz9pq","plugin":"","plugin_opts":""}]
+[]
