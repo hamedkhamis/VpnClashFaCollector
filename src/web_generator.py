@@ -6,8 +6,9 @@ def generate_web_page():
     final_root = "sub/final"
     output_html = "index.html"
     repo_raw_url = "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main"
+    favicon_url = "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/refs/heads/main/config/favicon.ico"
     
-    # ترتیب دقیق فایل‌ها برای بخش تست شده (برای روبروی هم قرار گرفتن)
+    # ترتیب دقیق فایل‌ها برای بخش تست شده
     tested_file_order = [
         "speed_passed.txt", "speed_passed_base64.txt",
         "ping_passed.txt", "ping_passed_base64.txt",
@@ -16,7 +17,7 @@ def generate_web_page():
         "quantumult.conf", "surge4.conf",
         "ss_android.txt", "ss_sip002.txt",
         "loon.config", "ssr.txt",
-        "ssd.txt", "" # جای خالی برای حفظ تراز
+        "ssd.txt", "" 
     ]
 
     # ترتیب دقیق فایل‌ها برای بقیه منابع
@@ -51,6 +52,7 @@ def generate_web_page():
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>VpnClashFa Manager</title>
+        <link rel="icon" type="image/x-icon" href="{favicon_url}">
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <style>
@@ -63,11 +65,14 @@ def generate_web_page():
             .tab-active {{ border-bottom: 4px solid #3b82f6; color: #3b82f6; font-weight: 900; }}
             .file-card {{ background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 12px; }}
             .btn-action {{ transition: all 0.2s; font-size: 14px; font-weight: 700; }}
+            .social-card {{ transition: all 0.3s; border: 1px solid rgba(255,255,255,0.05); }}
+            .social-card:hover {{ background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.4); transform: translateY(-2px); }}
         </style>
     </head>
     <body class="p-4 md:p-10">
         <div class="max-w-6xl mx-auto">
             <header class="text-center mb-12">
+                <img src="{favicon_url}" alt="Logo" class="w-16 h-16 mx-auto mb-4 rounded-xl shadow-lg shadow-blue-500/20">
                 <h1 class="text-4xl font-black text-blue-500 mb-2">VpnClashFa Collector</h1>
                 <p class="text-slate-500 text-sm italic">بروزرسانی: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}</p>
             </header>
@@ -89,22 +94,19 @@ def generate_web_page():
             <div class="space-y-6">
     """
 
-    # یافتن پوشه‌ها و اعمال منطق اولویت‌بندی عددی
     folders = [d for d in os.listdir(sub_root) if os.path.isdir(os.path.join(sub_root, d)) and d != "final"]
     
     def get_priority(name):
         n = name.lower()
-        if n == 'tested': return 1 # اولویت ۲ (بعد از پروکسی)
-        if n == 'all': return 2    # اولویت ۳ (میکس همه کانفیگا)
-        return 3                   # اولویت ۴ (بقیه منابع)
+        if n == 'tested': return 1 
+        if n == 'all': return 2    
+        return 3                   
 
-    # مرتب‌سازی ابتدا بر اساس رتبه اولویت و سپس الفبا برای منابع رتبه ۳
     sorted_folders = sorted(folders, key=lambda x: (get_priority(x), x.lower()))
 
     for folder in sorted_folders:
         is_all = folder.lower() == 'all'
         is_tested = folder.lower() == 'tested'
-        
         display_name = "تست شده (Ping & Speed)" if is_tested else ("میکس همه کانفیگا" if is_all else folder)
         border_class = "border-emerald-500" if is_tested else ("border-blue-600" if is_all else "border-slate-700")
         
@@ -123,7 +125,6 @@ def generate_web_page():
         current_order = tested_file_order if is_tested else source_file_order
         available_files = {}
         
-        # جمع‌آوری لینک‌ها
         p1 = os.path.join(sub_root, folder)
         if os.path.exists(p1):
             for f in os.listdir(p1): available_files[f] = f"{repo_raw_url}/sub/{folder}/{f}"
@@ -133,10 +134,9 @@ def generate_web_page():
         if os.path.exists(p2):
             for f in os.listdir(p2): available_files[f] = f"{repo_raw_url}/sub/final/{final_folder_name}/{f}"
 
-        # فیلتر کردن و نمایش فایل‌ها طبق ترتیب درخواستی
         for target in current_order:
-            if target == "raw_results": continue # حذف raw_results
-            if not target: # جای خالی برای تراز ردیف
+            if target == "raw_results": continue 
+            if not target:
                 html_content += '<div class="hidden md:block"></div>'
                 continue
                 
@@ -159,7 +159,40 @@ def generate_web_page():
         html_content += "</div></div></div>"
 
     html_content += """
+            </div>
+
+            <footer class="mt-16 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="https://t.me/vpnclashfa" target="_blank" class="social-card glass rounded-2xl p-6 flex items-center justify-between group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-sky-500/20 rounded-full flex items-center justify-center text-sky-400 text-2xl group-hover:bg-sky-500 group-hover:text-white transition-all">
+                                <i class="fa-brands fa-telegram"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">کانال تلگرام</h3>
+                                <p class="text-slate-500 text-sm">@vpnclashfa</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 group-hover:text-sky-400 transition-all"></i>
+                    </a>
+
+                    <a href="https://x.com/coldwater_10" target="_blank" class="social-card glass rounded-2xl p-6 flex items-center justify-between group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 text-2xl group-hover:bg-blue-500 group-hover:text-white transition-all">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">توییتر (X)</h3>
+                                <p class="text-slate-500 text-sm">@coldwater_10</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 group-hover:text-blue-400 transition-all"></i>
+                    </a>
+                </div>
+                <p class="text-center mt-12 text-slate-600 text-xs font-bold uppercase tracking-widest">Powered by Gemini AI & Open Source Tools</p>
+            </footer>
         </div>
+
         <script>
             let tgData = { android: '', windows: '', mixed: '' };
             async function loadTGData() {
