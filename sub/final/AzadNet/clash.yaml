@@ -465,11 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@AzadNet", server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b, servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net, network: ws, ws-opts: {path: /V2ynpv-V2ynpv-V2ynpv-V2ynpv-V2ynpv, headers: {Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@AzadNet\ufeff", server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b, servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net, network: ws, ws-opts: {path: /V2ynpv-V2ynpv-V2ynpv-V2ynpv-V2ynpv, headers: {Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@AzadNet 2", server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 829658bf-03c4-4c28-81e9-dd6ea141b2d0, servername: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: t.me/AzadNet***😜***, server: TUN-NL.Net-Plus.ir, port: 8004, type: vless, tls: true, packet-encoding: xudp, uuid: debf4e52-4f0b-4710-a44f-32463c004ed5, host: TUN-NL.Net-Plus.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@AzadNet\ufeff`", server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@AzadNet"
-      - "@AzadNet\ufeff"
-      - "@AzadNet 2"
       - t.me/AzadNet***😜***
-      - "@AzadNet\ufeff`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@AzadNet"
-      - "@AzadNet\ufeff"
-      - "@AzadNet 2"
       - t.me/AzadNet***😜***
-      - "@AzadNet\ufeff`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@AzadNet"
-      - "@AzadNet\ufeff"
-      - "@AzadNet 2"
       - t.me/AzadNet***😜***
-      - "@AzadNet\ufeff`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@AzadNet"
-      - "@AzadNet\ufeff"
-      - "@AzadNet 2"
       - t.me/AzadNet***😜***
-      - "@AzadNet\ufeff`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@AzadNet"
-      - "@AzadNet\ufeff"
-      - "@AzadNet 2"
       - t.me/AzadNet***😜***
-      - "@AzadNet\ufeff`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@AzadNet"
-      - "@AzadNet\ufeff"
-      - "@AzadNet 2"
       - t.me/AzadNet***😜***
-      - "@AzadNet\ufeff`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
