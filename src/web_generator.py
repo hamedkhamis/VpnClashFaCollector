@@ -10,7 +10,7 @@ def generate_web_page():
     
     # فایل‌هایی که نباید نمایش داده شوند
     exclude_files = [
-        "README.md", "LICENSE", ".gitignore", "web_gen.py", "index.html", "raw_results"
+        "README.md", "LICENSE", ".gitignore", "web_gen.py", "index.html", "ssr.txt", "ssr_base64.txt", "tg_android_base64.txt", "tg_base64.txt", "tg_windows_base64.txt", "raw_results"
     ]
 
     # ترتیب اولویت نمایش (فایل‌هایی که در این لیست باشند اول نمایش داده می‌شوند)
@@ -21,8 +21,7 @@ def generate_web_page():
         "surfboard.conf", "v2ray.txt",
         "quantumult.conf", "surge4.conf",
         "ss_android.txt", "ss_sip002.txt",
-        "loon.config", "ssr.txt",
-        "ssd.txt", "" 
+        "loon.config", "ssd.txt"
     ]
 
     source_file_order = [
@@ -33,7 +32,6 @@ def generate_web_page():
         "ss.txt", "ss_base64.txt",
         "hysteria2.txt", "hysteria2_base64.txt",
         "anytls.txt", "anytls_base64.txt",
-        "ssr.txt", "ssr_base64.txt",
         "ssh.txt", "ssh_base64.txt",
         "wireguard.txt", "wireguard_base64.txt",
         "warp.txt", "warp_base64.txt",
