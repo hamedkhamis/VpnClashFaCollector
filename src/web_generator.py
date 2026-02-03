@@ -8,7 +8,7 @@ def generate_web_page():
     repo_raw_url = "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main"
     favicon_url = "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/refs/heads/main/config/favicon.ico"
     
-    # فایل‌هایی که نباید به هیچ وجه در صفحه نمایش داده شوند
+    # فایل‌هایی که نباید نمایش داده شوند
     exclude_files = [
         "README.md", "LICENSE", ".gitignore", "web_gen.py", "index.html", "raw_results"
     ]
@@ -18,13 +18,31 @@ def generate_web_page():
         "speed_passed.txt", "speed_passed_base64.txt",
         "ping_passed.txt", "ping_passed_base64.txt",
         "clash.yaml", "clashr.yaml",
-        "surfboard.conf", "v2ray.txt"
+        "surfboard.conf", "v2ray.txt",
+        "quantumult.conf", "surge4.conf",
+        "ss_android.txt", "ss_sip002.txt",
+        "loon.config", "ssr.txt",
+        "ssd.txt", "" 
     ]
 
     source_file_order = [
         "mixed.txt", "mixed_base64.txt",
         "vless.txt", "vless_base64.txt",
-        "vmess.txt", "vmess_base64.txt"
+        "vmess.txt", "vmess_base64.txt",
+        "trojan.txt", "trojan_base64.txt",
+        "ss.txt", "ss_base64.txt",
+        "hysteria2.txt", "hysteria2_base64.txt",
+        "anytls.txt", "anytls_base64.txt",
+        "ssr.txt", "ssr_base64.txt",
+        "ssh.txt", "ssh_base64.txt",
+        "wireguard.txt", "wireguard_base64.txt",
+        "warp.txt", "warp_base64.txt",
+        "clash.yaml", "clashr.yaml",
+        "tg_android.txt", "tg_windows.txt",
+        "v2ray.txt", "surfboard.conf",
+        "quantumult.conf", "surge4.conf",
+        "ss_sip002.txt", "ss_android.txt",
+        "loon.config", "quanx.conf"
     ]
 
     client_icons = {
@@ -32,6 +50,7 @@ def generate_web_page():
         "base64": "fa-code", "txt": "fa-file-lines", "yaml": "fa-file-code", "conf": "fa-gear"
     }
 
+    # شروع HTML
     html_content = f"""
     <!DOCTYPE html>
     <html lang="fa" dir="rtl" class="scroll-smooth">
@@ -41,7 +60,7 @@ def generate_web_page():
         <title>VpnClashFa Manager</title>
         <link rel="icon" type="image/x-icon" href="{favicon_url}">
         <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap');
             body {{ font-family: 'Vazirmatn', sans-serif; background: #0b0f1a; color: #e2e8f0; font-size: 18px; }}
@@ -54,17 +73,40 @@ def generate_web_page():
             .btn-action {{ transition: all 0.2s; font-size: 14px; font-weight: 700; }}
             .social-card {{ transition: all 0.3s; border: 1px solid rgba(255,255,255,0.05); }}
             .social-card:hover {{ background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.4); transform: translateY(-2px); }}
-            #toast {{ visibility: hidden; min-width: 200px; background-color: #3b82f6; color: #fff; text-align: center; border-radius: 10px; padding: 12px; position: fixed; z-index: 100; left: 50%; bottom: 30px; transform: translateX(-50%); font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }}
-            #toast.show {{ visibility: visible; animation: fadein 0.5s, fadeout 0.5s 1.5s; }}
-            @keyframes fadein {{ from {{ bottom: 0; opacity: 0; }} to {{ bottom: 30px; opacity: 1; }} }}
-            @keyframes fadeout {{ from {{ bottom: 30px; opacity: 1; }} to {{ bottom: 0; opacity: 0; }} }}
-            .nav-btn {{ position: fixed; right: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 50; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: 0.3s; color: white; }}
+            
+            /* استایل پیام کپی (Toast) */
+            #toast {{ 
+                visibility: hidden; 
+                min-width: 200px; 
+                background-color: #10b981; 
+                color: #fff; 
+                text-align: center; 
+                border-radius: 12px; 
+                padding: 12px; 
+                position: fixed; 
+                z-index: 100; 
+                left: 50%; 
+                bottom: 30px; 
+                transform: translateX(-50%); 
+                font-weight: bold; 
+                box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
+                opacity: 0;
+                transition: opacity 0.3s, bottom 0.3s;
+            }}
+            #toast.show {{ 
+                visibility: visible; 
+                opacity: 1; 
+                bottom: 50px; 
+            }}
+            
+            .nav-btn {{ position: fixed; right: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 50; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: 0.3s; color: white; cursor: pointer; }}
             .nav-btn:hover {{ transform: scale(1.1); }}
         </style>
     </head>
     <body class="p-4 md:p-10 relative">
-        <div id="toast">کپی شد!</div>
+        <div id="toast"><i class="fa-solid fa-check-circle ml-2"></i>کپی شد!</div>
 
+        <!-- دکمه‌های ناوبری -->
         <button onclick="window.scrollTo(0,0)" class="nav-btn bottom-20 bg-blue-600" title="برو به بالا">
             <i class="fa-solid fa-arrow-up"></i>
         </button>
@@ -78,6 +120,7 @@ def generate_web_page():
                 <p class="text-slate-500 text-sm italic">بروزرسانی: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}</p>
             </header>
 
+            <!-- بخش پروکسی تلگرام -->
             <section class="mb-12 glass p-6 rounded-3xl border-t-4 border-sky-500 shadow-2xl">
                 <h2 class="text-2xl font-black mb-6 flex items-center text-sky-400"><i class="fa-brands fa-telegram ml-3 text-3xl"></i> پروکسی‌های تلگرام</h2>
                 <div class="flex gap-6 mb-6 border-b border-white/10 text-lg">
@@ -86,7 +129,7 @@ def generate_web_page():
                     <button onclick="switchTG('mixed')" id="tab-mixed" class="pb-3 px-2 text-slate-400 transition-all">میکس</button>
                 </div>
                 <div id="proxy-display" class="proxy-box mb-6 shadow-inner">در حال دریافت پروکسی‌ها...</div>
-                <button onclick="copyCurrentProxy()" class="w-full bg-sky-600 hover:bg-sky-500 py-4 rounded-xl font-black transition flex items-center justify-center">
+                <button onclick="copyCurrentProxy()" class="w-full bg-sky-600 hover:bg-sky-500 py-4 rounded-xl font-black transition flex items-center justify-center active:scale-95">
                     <i class="fa-solid fa-copy ml-2 text-xl"></i> کپی تمام پروکسی‌ها
                 </button>
             </section>
@@ -123,17 +166,14 @@ def generate_web_page():
                 <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
         """
 
-        # پیدا کردن تمام فایل‌های موجود در پوشه‌ها
         available_files = {}
         
-        # ۱. پوشه اصلی در sub/
         p1 = os.path.join(sub_root, folder)
         if os.path.exists(p1):
             for f in os.listdir(p1):
                 if f not in exclude_files and os.path.isfile(os.path.join(p1, f)):
                     available_files[f] = f"{repo_raw_url}/sub/{folder}/{f}"
         
-        # ۲. پوشه در sub/final/
         final_folder_name = "tested_ping_passed" if is_tested else folder
         p2 = os.path.join(final_root, final_folder_name)
         if os.path.exists(p2):
@@ -141,23 +181,19 @@ def generate_web_page():
                 if f not in exclude_files and os.path.isfile(os.path.join(p2, f)):
                     available_files[f] = f"{repo_raw_url}/sub/final/{final_folder_name}/{f}"
 
-        # ساخت لیست نهایی برای نمایش: ابتدا اولویت‌دارها، سپس بقیه
         current_priority_list = tested_file_order if is_tested else source_file_order
         
-        # لیست فایل‌هایی که باید نمایش دهیم (بدون تکرار)
         display_list = []
         for target in current_priority_list:
             if target in available_files:
                 display_list.append(target)
         
-        # اضافه کردن بقیه فایل‌هایی که در پوشه بودند اما در لیست اولویت نبودند
         for f in sorted(available_files.keys()):
             if f not in display_list:
                 display_list.append(f)
 
         for target in display_list:
             furl = available_files[target]
-            # انتخاب آیکون بر اساس نام فایل
             icon = "fa-file-code"
             for key, val in client_icons.items():
                 if key in target.lower():
@@ -179,7 +215,8 @@ def generate_web_page():
         
         html_content += "</div></div></div>"
 
-    html_content += """
+    # اضافه کردن f قبل از string نهایی
+    html_content += f"""
             </div>
 
             <footer class="mt-16 mb-8">
@@ -217,10 +254,11 @@ def generate_web_page():
         <script>
             let tgData = {{ android: '', windows: '', mixed: '' }};
             
-            function showToast() {{
+            function showToast(msg = 'کپی شد!') {{
                 const t = document.getElementById("toast");
+                t.innerHTML = '<i class="fa-solid fa-check-circle ml-2"></i>' + msg;
                 t.className = "show";
-                setTimeout(() => {{ t.className = t.className.replace("show", ""); }}, 2000);
+                setTimeout(() => {{ t.className = t.className.replace("show", ""); }}, 2500);
             }}
 
             async function loadTGData() {{
@@ -252,7 +290,7 @@ def generate_web_page():
             function copyCurrentProxy() {{ 
                 if(!tgData[window.currentMode]) return;
                 navigator.clipboard.writeText(tgData[window.currentMode]); 
-                showToast();
+                showToast('پروکسی‌ها کپی شدند');
             }}
 
             function toggleAccordion(btn) {{
@@ -266,7 +304,7 @@ def generate_web_page():
 
             function copyText(t) {{ 
                 navigator.clipboard.writeText(t); 
-                showToast();
+                showToast('لینک کپی شد');
             }}
 
             async function copyContent(url) {{
@@ -274,7 +312,7 @@ def generate_web_page():
                     const r = await fetch(url); 
                     const t = await r.text();
                     navigator.clipboard.writeText(t); 
-                    showToast();
+                    showToast('متن کپی شد');
                 }} catch(e) {{ console.error("Copy error:", e); }}
             }}
 
