@@ -8,37 +8,23 @@ def generate_web_page():
     repo_raw_url = "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main"
     favicon_url = "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/refs/heads/main/config/favicon.ico"
     
-    # ترتیب دقیق فایل‌ها برای بخش تست شده
+    # فایل‌هایی که نباید به هیچ وجه در صفحه نمایش داده شوند
+    exclude_files = [
+        "README.md", "LICENSE", ".gitignore", "web_gen.py", "index.html", "raw_results"
+    ]
+
+    # ترتیب اولویت نمایش (فایل‌هایی که در این لیست باشند اول نمایش داده می‌شوند)
     tested_file_order = [
         "speed_passed.txt", "speed_passed_base64.txt",
         "ping_passed.txt", "ping_passed_base64.txt",
         "clash.yaml", "clashr.yaml",
-        "surfboard.conf", "v2ray.txt",
-        "quantumult.conf", "surge4.conf",
-        "ss_android.txt", "ss_sip002.txt",
-        "loon.config", "ssr.txt",
-        "ssd.txt", "" 
+        "surfboard.conf", "v2ray.txt"
     ]
 
-    # ترتیب دقیق فایل‌ها برای بقیه منابع
     source_file_order = [
         "mixed.txt", "mixed_base64.txt",
         "vless.txt", "vless_base64.txt",
-        "vmess.txt", "vmess_base64.txt",
-        "trojan.txt", "trojan_base64.txt",
-        "ss.txt", "ss_base64.txt",
-        "hysteria2.txt", "hysteria2_base64.txt",
-        "anytls.txt", "anytls_base64.txt",
-        "ssr.txt", "ssr_base64.txt",
-        "ssh.txt", "ssh_base64.txt",
-        "wireguard.txt", "wireguard_base64.txt",
-        "warp.txt", "warp_base64.txt",
-        "clash.yaml", "clashr.yaml",
-        "tg_android.txt", "tg_windows.txt",
-        "v2ray.txt", "surfboard.conf",
-        "quantumult.conf", "surge4.conf",
-        "ss_sip002.txt", "ss_android.txt",
-        "loon.config", "quanx.conf"
+        "vmess.txt", "vmess_base64.txt"
     ]
 
     client_icons = {
@@ -72,24 +58,22 @@ def generate_web_page():
             #toast.show {{ visibility: visible; animation: fadein 0.5s, fadeout 0.5s 1.5s; }}
             @keyframes fadein {{ from {{ bottom: 0; opacity: 0; }} to {{ bottom: 30px; opacity: 1; }} }}
             @keyframes fadeout {{ from {{ bottom: 30px; opacity: 1; }} to {{ bottom: 0; opacity: 0; }} }}
-            .nav-btn {{ position: fixed; right: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; items-center: center; justify-content: center; z-index: 50; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: 0.3s; }}
+            .nav-btn {{ position: fixed; right: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 50; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: 0.3s; color: white; }}
             .nav-btn:hover {{ transform: scale(1.1); }}
         </style>
     </head>
     <body class="p-4 md:p-10 relative">
-        <!-- Toast Notification -->
         <div id="toast">کپی شد!</div>
 
-        <!-- Scroll Buttons -->
-        <button onclick="window.scrollTo(0,0)" class="nav-btn bottom-20 bg-blue-600 text-white" title="برو به بالا">
+        <button onclick="window.scrollTo(0,0)" class="nav-btn bottom-20 bg-blue-600" title="برو به بالا">
             <i class="fa-solid fa-arrow-up"></i>
         </button>
-        <button onclick="window.scrollTo(0, document.body.scrollHeight)" class="nav-btn bottom-5 bg-slate-700 text-white" title="برو به پایین">
+        <button onclick="window.scrollTo(0, document.body.scrollHeight)" class="nav-btn bottom-5 bg-slate-700" title="برو به پایین">
             <i class="fa-solid fa-arrow-down"></i>
         </button>
 
         <div class="max-w-6xl mx-auto">
-            <header id="top" class="text-center mb-12">
+            <header class="text-center mb-12">
                 <h1 class="text-4xl font-black text-blue-500 mb-2">VpnClashFa Collector</h1>
                 <p class="text-slate-500 text-sm italic">بروزرسانی: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}</p>
             </header>
@@ -139,46 +123,66 @@ def generate_web_page():
                 <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
         """
 
-        current_order = tested_file_order if is_tested else source_file_order
+        # پیدا کردن تمام فایل‌های موجود در پوشه‌ها
         available_files = {}
         
+        # ۱. پوشه اصلی در sub/
         p1 = os.path.join(sub_root, folder)
         if os.path.exists(p1):
-            for f in os.listdir(p1): available_files[f] = f"{repo_raw_url}/sub/{folder}/{f}"
+            for f in os.listdir(p1):
+                if f not in exclude_files and os.path.isfile(os.path.join(p1, f)):
+                    available_files[f] = f"{repo_raw_url}/sub/{folder}/{f}"
         
+        # ۲. پوشه در sub/final/
         final_folder_name = "tested_ping_passed" if is_tested else folder
         p2 = os.path.join(final_root, final_folder_name)
         if os.path.exists(p2):
-            for f in os.listdir(p2): available_files[f] = f"{repo_raw_url}/sub/final/{final_folder_name}/{f}"
+            for f in os.listdir(p2):
+                if f not in exclude_files and os.path.isfile(os.path.join(p2, f)):
+                    available_files[f] = f"{repo_raw_url}/sub/final/{final_folder_name}/{f}"
 
-        for target in current_order:
-            if target == "raw_results": continue 
-            if not target:
-                html_content += '<div class="hidden md:block"></div>'
-                continue
-                
+        # ساخت لیست نهایی برای نمایش: ابتدا اولویت‌دارها، سپس بقیه
+        current_priority_list = tested_file_order if is_tested else source_file_order
+        
+        # لیست فایل‌هایی که باید نمایش دهیم (بدون تکرار)
+        display_list = []
+        for target in current_priority_list:
             if target in available_files:
-                furl = available_files[target]
-                icon = next((v for k, v in client_icons.items() if k in target.lower()), "fa-file-code")
-                html_content += f"""
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid {icon} text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">{target}</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('{furl}')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('{furl}')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('{furl}', '{target}')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>"""
+                display_list.append(target)
+        
+        # اضافه کردن بقیه فایل‌هایی که در پوشه بودند اما در لیست اولویت نبودند
+        for f in sorted(available_files.keys()):
+            if f not in display_list:
+                display_list.append(f)
+
+        for target in display_list:
+            furl = available_files[target]
+            # انتخاب آیکون بر اساس نام فایل
+            icon = "fa-file-code"
+            for key, val in client_icons.items():
+                if key in target.lower():
+                    icon = val
+                    break
+            
+            html_content += f"""
+            <div class="file-card flex flex-col gap-4">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid {icon} text-blue-400 text-xl"></i>
+                    <span class="text-sm font-bold truncate text-slate-300">{target}</span>
+                </div>
+                <div class="flex gap-1">
+                    <button onclick="copyText('{furl}')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                    <button onclick="copyContent('{furl}')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                    <button onclick="downloadFile('{furl}', '{target}')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>"""
         
         html_content += "</div></div></div>"
 
     html_content += """
             </div>
 
-            <footer id="bottom" class="mt-16 mb-8">
+            <footer class="mt-16 mb-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <a href="https://t.me/vpnclashfa" target="_blank" class="social-card glass rounded-2xl p-6 flex items-center justify-between group">
                         <div class="flex items-center gap-4">
@@ -226,28 +230,38 @@ def generate_web_page():
                         fetch('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/tg_windows.txt').then(r => r.text()),
                         fetch('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/tg.txt').then(r => r.text())
                     ]);
-                    tgData.android = a.trim(); tgData.windows = w.trim(); tgData.mixed = m.trim();
+                    tgData.android = a.trim(); 
+                    tgData.windows = w.trim(); 
+                    tgData.mixed = m.trim();
                     switchTG('android');
-                }} catch(e) {{ console.error(e); }}
+                }} catch(e) {{ console.error("Error loading Telegram data:", e); }}
             }}
 
             function switchTG(mode) {{
-                document.getElementById('proxy-display').innerText = tgData[mode].split('\\n').join('\\n\\n');
+                const display = document.getElementById('proxy-display');
+                if(display && tgData[mode]) {{
+                    display.innerText = tgData[mode].split('\\n').join('\\n\\n');
+                }}
                 ['android', 'windows', 'mixed'].forEach(m => {{
-                    document.getElementById('tab-' + m).className = 'pb-3 px-2 ' + (m === mode ? 'tab-active' : 'text-slate-400');
+                    const btn = document.getElementById('tab-' + m);
+                    if(btn) btn.className = 'pb-3 px-2 ' + (m === mode ? 'tab-active' : 'text-slate-400');
                 }});
                 window.currentMode = mode;
             }}
 
             function copyCurrentProxy() {{ 
+                if(!tgData[window.currentMode]) return;
                 navigator.clipboard.writeText(tgData[window.currentMode]); 
                 showToast();
             }}
 
             function toggleAccordion(btn) {{
                 btn.parentElement.classList.toggle('open');
-                btn.querySelector('.fa-solid:last-child').classList.toggle('fa-plus');
-                btn.querySelector('.fa-solid:last-child').classList.toggle('fa-minus');
+                const icon = btn.querySelector('.fa-solid:last-child');
+                if(icon) {{
+                    icon.classList.toggle('fa-plus');
+                    icon.classList.toggle('fa-minus');
+                }}
             }}
 
             function copyText(t) {{ 
@@ -257,19 +271,25 @@ def generate_web_page():
 
             async function copyContent(url) {{
                 try {{
-                    const r = await fetch(url); const t = await r.text();
+                    const r = await fetch(url); 
+                    const t = await r.text();
                     navigator.clipboard.writeText(t); 
                     showToast();
-                }} catch(e) {{ console.error(e); }}
+                }} catch(e) {{ console.error("Copy error:", e); }}
             }}
 
             async function downloadFile(url, name) {{
-                const r = await fetch(url); const b = await r.blob();
-                const a = document.createElement('a'); a.href = URL.createObjectURL(b);
-                a.download = name; a.click();
+                try {{
+                    const r = await fetch(url); 
+                    const b = await r.blob();
+                    const a = document.createElement('a'); 
+                    a.href = URL.createObjectURL(b);
+                    a.download = name; 
+                    a.click();
+                }} catch(e) {{ console.error("Download error:", e); }}
             }}
 
-            loadTGData();
+            window.onload = loadTGData;
         </script>
     </body>
     </html>
