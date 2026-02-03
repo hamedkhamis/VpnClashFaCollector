@@ -1,6 +1,6 @@
 
     <!DOCTYPE html>
-    <html lang="fa" dir="rtl">
+    <html lang="fa" dir="rtl" class="scroll-smooth">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,14 +20,30 @@
             .btn-action { transition: all 0.2s; font-size: 14px; font-weight: 700; }
             .social-card { transition: all 0.3s; border: 1px solid rgba(255,255,255,0.05); }
             .social-card:hover { background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.4); transform: translateY(-2px); }
+            #toast { visibility: hidden; min-width: 200px; background-color: #3b82f6; color: #fff; text-align: center; border-radius: 10px; padding: 12px; position: fixed; z-index: 100; left: 50%; bottom: 30px; transform: translateX(-50%); font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+            #toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 1.5s; }
+            @keyframes fadein { from { bottom: 0; opacity: 0; } to { bottom: 30px; opacity: 1; } }
+            @keyframes fadeout { from { bottom: 30px; opacity: 1; } to { bottom: 0; opacity: 0; } }
+            .nav-btn { position: fixed; right: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; items-center: center; justify-content: center; z-index: 50; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: 0.3s; }
+            .nav-btn:hover { transform: scale(1.1); }
         </style>
     </head>
-    <body class="p-4 md:p-10">
+    <body class="p-4 md:p-10 relative">
+        <!-- Toast Notification -->
+        <div id="toast">کپی شد!</div>
+
+        <!-- Scroll Buttons -->
+        <button onclick="window.scrollTo(0,0)" class="nav-btn bottom-20 bg-blue-600 text-white" title="برو به بالا">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        <button onclick="window.scrollTo(0, document.body.scrollHeight)" class="nav-btn bottom-5 bg-slate-700 text-white" title="برو به پایین">
+            <i class="fa-solid fa-arrow-down"></i>
+        </button>
+
         <div class="max-w-6xl mx-auto">
-            <header class="text-center mb-12">
-                <img src="https://raw.githubusercontent.com/10ium/VpnClashFaCollector/refs/heads/main/config/favicon.ico" alt="Logo" class="w-16 h-16 mx-auto mb-4 rounded-xl shadow-lg shadow-blue-500/20">
+            <header id="top" class="text-center mb-12">
                 <h1 class="text-4xl font-black text-blue-500 mb-2">VpnClashFa Collector</h1>
-                <p class="text-slate-500 text-sm italic">بروزرسانی: 2026-02-03 01:39</p>
+                <p class="text-slate-500 text-sm italic">بروزرسانی: 2026-02-03 02:11</p>
             </header>
 
             <section class="mb-12 glass p-6 rounded-3xl border-t-4 border-sky-500 shadow-2xl">
@@ -343,6 +359,72 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-file-lines text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">hysteria2.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/hysteria2.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/hysteria2.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/hysteria2.txt', 'hysteria2.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-code text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">hysteria2_base64.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/hysteria2_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/hysteria2_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/hysteria2_base64.txt', 'hysteria2_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-file-lines text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">anytls.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/anytls.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/anytls.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/anytls.txt', 'anytls.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-code text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">anytls_base64.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/anytls_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/anytls_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/anytls_base64.txt', 'anytls_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr_base64.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/ssr_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/ssr_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/ssr_base64.txt', 'ssr_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-key text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">ssh.txt</span>
                     </div>
@@ -410,28 +492,6 @@
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
                         <i class="fa-solid fa-file-lines text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">hysteria2.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/hysteria2.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/hysteria2.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/hysteria2.txt', 'hysteria2.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-code text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">hysteria2_base64.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/hysteria2_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/hysteria2_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/hysteria2_base64.txt', 'hysteria2_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-file-lines text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">tg_android.txt</span>
                     </div>
                     <div class="flex gap-1">
@@ -449,17 +509,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/tg_windows.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/tg_windows.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/tg_windows.txt', 'tg_windows.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div></div></div></div>
         <div class="glass rounded-3xl overflow-hidden accordion-item border-r-8 border-slate-700 shadow-lg">
@@ -584,6 +633,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AR14N24B/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AR14N24B/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AR14N24B/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -690,28 +750,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AR14N24B/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AR14N24B/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AR14N24B/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AR14N24B/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AR14N24B/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AR14N24B/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AR14N24B/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AR14N24B/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AR14N24B/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -868,6 +906,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/arshia_mod_fun/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/arshia_mod_fun/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/arshia_mod_fun/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -952,28 +1001,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/arshia_mod_fun/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/arshia_mod_fun/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/arshia_mod_fun/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/arshia_mod_fun/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/arshia_mod_fun/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/arshia_mod_fun/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/arshia_mod_fun/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/arshia_mod_fun/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/arshia_mod_fun/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -1098,6 +1125,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AzadNet/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AzadNet/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AzadNet/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -1182,28 +1220,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AzadNet/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AzadNet/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AzadNet/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AzadNet/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AzadNet/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AzadNet/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AzadNet/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AzadNet/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/AzadNet/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -1302,6 +1318,17 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/Canfing_VPN/ss_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/Canfing_VPN/ss_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/Canfing_VPN/ss_base64.txt', 'ss_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Canfing_VPN/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Canfing_VPN/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Canfing_VPN/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -1405,28 +1432,6 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Canfing_VPN/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Canfing_VPN/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Canfing_VPN/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Canfing_VPN/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Canfing_VPN/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Canfing_VPN/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-gear text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">loon.config</span>
                     </div>
@@ -1521,6 +1526,17 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/Capoit/ss_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/Capoit/ss_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/Capoit/ss_base64.txt', 'ss_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Capoit/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Capoit/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Capoit/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -1631,28 +1647,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Capoit/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Capoit/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Capoit/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Capoit/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Capoit/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Capoit/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Capoit/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Capoit/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/Capoit/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -1799,6 +1793,72 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-file-lines text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">hysteria2.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/hysteria2.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/hysteria2.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/hysteria2.txt', 'hysteria2.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-code text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">hysteria2_base64.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/hysteria2_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/hysteria2_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/hysteria2_base64.txt', 'hysteria2_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-file-lines text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">anytls.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/anytls.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/anytls.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/anytls.txt', 'anytls.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-code text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">anytls_base64.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/anytls_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/anytls_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/anytls_base64.txt', 'anytls_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configfa/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configfa/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configfa/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr_base64.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/ssr_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/ssr_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/ssr_base64.txt', 'ssr_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-key text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">ssh.txt</span>
                     </div>
@@ -1861,28 +1921,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/warp_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/warp_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/warp_base64.txt', 'warp_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-file-lines text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">hysteria2.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/hysteria2.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/hysteria2.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/hysteria2.txt', 'hysteria2.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-code text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">hysteria2_base64.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/hysteria2_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/hysteria2_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/configfa/hysteria2_base64.txt', 'hysteria2_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -1993,28 +2031,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configfa/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configfa/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configfa/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configfa/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configfa/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configfa/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configfa/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configfa/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configfa/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -2161,6 +2177,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configraygan/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configraygan/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configraygan/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -2271,28 +2298,6 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configraygan/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configraygan/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configraygan/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configraygan/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configraygan/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/configraygan/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-gear text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">loon.config</span>
                     </div>
@@ -2391,6 +2396,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/FG_Link/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/FG_Link/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/FG_Link/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -2475,28 +2491,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/FG_Link/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/FG_Link/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/FG_Link/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/FG_Link/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/FG_Link/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/FG_Link/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/FG_Link/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/FG_Link/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/FG_Link/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -2599,6 +2593,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/freenet_vt/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/freenet_vt/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/freenet_vt/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -2694,28 +2699,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/freenet_vt/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/freenet_vt/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/freenet_vt/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/freenet_vt/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/freenet_vt/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/freenet_vt/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/freenet_vt/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/freenet_vt/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/freenet_vt/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -2840,6 +2823,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/hamedvpns/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/hamedvpns/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/hamedvpns/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -2946,28 +2940,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/hamedvpns/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/hamedvpns/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/hamedvpns/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/hamedvpns/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/hamedvpns/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/hamedvpns/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/hamedvpns/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/hamedvpns/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/hamedvpns/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -3136,6 +3108,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/iphone02016vpn/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/iphone02016vpn/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/iphone02016vpn/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -3246,28 +3229,6 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/iphone02016vpn/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/iphone02016vpn/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/iphone02016vpn/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/iphone02016vpn/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/iphone02016vpn/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/iphone02016vpn/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-gear text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">loon.config</span>
                     </div>
@@ -3362,6 +3323,17 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/irancpi_vpn/ss_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/irancpi_vpn/ss_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/irancpi_vpn/ss_base64.txt', 'ss_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/irancpi_vpn/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/irancpi_vpn/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/irancpi_vpn/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -3472,28 +3444,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/irancpi_vpn/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/irancpi_vpn/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/irancpi_vpn/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/irancpi_vpn/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/irancpi_vpn/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/irancpi_vpn/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/irancpi_vpn/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/irancpi_vpn/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/irancpi_vpn/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -3618,6 +3568,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/MARAMBASHI/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/MARAMBASHI/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/MARAMBASHI/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -3702,28 +3663,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/MARAMBASHI/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/MARAMBASHI/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/MARAMBASHI/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/MARAMBASHI/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/MARAMBASHI/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/MARAMBASHI/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/MARAMBASHI/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/MARAMBASHI/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/MARAMBASHI/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -3849,28 +3788,6 @@
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
                         <i class="fa-solid fa-file-lines text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">wireguard.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/meliproxyy/wireguard.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/meliproxyy/wireguard.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/meliproxyy/wireguard.txt', 'wireguard.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-code text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">wireguard_base64.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/meliproxyy/wireguard_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/meliproxyy/wireguard_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/meliproxyy/wireguard_base64.txt', 'wireguard_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-file-lines text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">hysteria2.txt</span>
                     </div>
                     <div class="flex gap-1">
@@ -3888,6 +3805,39 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/meliproxyy/hysteria2_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/meliproxyy/hysteria2_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/meliproxyy/hysteria2_base64.txt', 'hysteria2_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/meliproxyy/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/meliproxyy/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/meliproxyy/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-file-lines text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">wireguard.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/meliproxyy/wireguard.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/meliproxyy/wireguard.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/meliproxyy/wireguard.txt', 'wireguard.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-code text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">wireguard_base64.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/meliproxyy/wireguard_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/meliproxyy/wireguard_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/meliproxyy/wireguard_base64.txt', 'wireguard_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -4002,28 +3952,6 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/meliproxyy/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/meliproxyy/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/meliproxyy/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/meliproxyy/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/meliproxyy/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/meliproxyy/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-gear text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">loon.config</span>
                     </div>
@@ -4118,6 +4046,17 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/merlinvpn/ss_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/merlinvpn/ss_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/merlinvpn/ss_base64.txt', 'ss_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/merlinvpn/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/merlinvpn/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/merlinvpn/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -4228,28 +4167,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/merlinvpn/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/merlinvpn/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/merlinvpn/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/merlinvpn/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/merlinvpn/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/merlinvpn/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/merlinvpn/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/merlinvpn/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/merlinvpn/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -4417,6 +4334,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/NetAccount/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/NetAccount/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/NetAccount/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -4523,28 +4451,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/NetAccount/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/NetAccount/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/NetAccount/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/NetAccount/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/NetAccount/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/NetAccount/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/NetAccount/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/NetAccount/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/NetAccount/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -4691,6 +4597,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/persianvpnhub/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/persianvpnhub/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/persianvpnhub/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -4797,28 +4714,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/persianvpnhub/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/persianvpnhub/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/persianvpnhub/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/persianvpnhub/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/persianvpnhub/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/persianvpnhub/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/persianvpnhub/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/persianvpnhub/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/persianvpnhub/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -4987,6 +4882,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/PewezaVPN/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/PewezaVPN/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/PewezaVPN/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -5093,28 +4999,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/PewezaVPN/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/PewezaVPN/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/PewezaVPN/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/PewezaVPN/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/PewezaVPN/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/PewezaVPN/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/PewezaVPN/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/PewezaVPN/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/PewezaVPN/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -5500,28 +5384,6 @@
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
                         <i class="fa-solid fa-file-lines text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">wireguard.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/SOSkeyNET/wireguard.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/SOSkeyNET/wireguard.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/SOSkeyNET/wireguard.txt', 'wireguard.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-code text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">wireguard_base64.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/SOSkeyNET/wireguard_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/SOSkeyNET/wireguard_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/SOSkeyNET/wireguard_base64.txt', 'wireguard_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-file-lines text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">hysteria2.txt</span>
                     </div>
                     <div class="flex gap-1">
@@ -5539,6 +5401,39 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/SOSkeyNET/hysteria2_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/SOSkeyNET/hysteria2_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/SOSkeyNET/hysteria2_base64.txt', 'hysteria2_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/SOSkeyNET/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/SOSkeyNET/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/SOSkeyNET/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-file-lines text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">wireguard.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/SOSkeyNET/wireguard.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/SOSkeyNET/wireguard.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/SOSkeyNET/wireguard.txt', 'wireguard.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-code text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">wireguard_base64.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/SOSkeyNET/wireguard_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/SOSkeyNET/wireguard_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/SOSkeyNET/wireguard_base64.txt', 'wireguard_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -5631,28 +5526,6 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/SOSkeyNET/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/SOSkeyNET/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/SOSkeyNET/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/SOSkeyNET/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/SOSkeyNET/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/SOSkeyNET/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-gear text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">loon.config</span>
                     </div>
@@ -5725,6 +5598,17 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/tikvpnir/ss_base64.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/tikvpnir/ss_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/tikvpnir/ss_base64.txt', 'ss_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/tikvpnir/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/tikvpnir/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/tikvpnir/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -5813,28 +5697,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/tikvpnir/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/tikvpnir/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/tikvpnir/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/tikvpnir/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/tikvpnir/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/tikvpnir/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/tikvpnir/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/tikvpnir/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/tikvpnir/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -5937,6 +5799,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/v2FreeHub/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/v2FreeHub/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/v2FreeHub/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -6032,28 +5905,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/v2FreeHub/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/v2FreeHub/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/v2FreeHub/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/v2FreeHub/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/v2FreeHub/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/v2FreeHub/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/v2FreeHub/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/v2FreeHub/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/v2FreeHub/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -6222,6 +6073,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/wiki_tajrobe/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/wiki_tajrobe/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/wiki_tajrobe/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -6306,28 +6168,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/wiki_tajrobe/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/wiki_tajrobe/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/wiki_tajrobe/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/wiki_tajrobe/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/wiki_tajrobe/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/wiki_tajrobe/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/wiki_tajrobe/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/wiki_tajrobe/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/wiki_tajrobe/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -6474,6 +6314,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/xsfilternet/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/xsfilternet/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/xsfilternet/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -6580,28 +6431,6 @@
                         <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/xsfilternet/ss_android.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
                         <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/xsfilternet/ss_android.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                         <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/xsfilternet/ss_android.txt', 'ss_android.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/xsfilternet/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/xsfilternet/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/xsfilternet/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/xsfilternet/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/xsfilternet/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/xsfilternet/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div class="file-card flex flex-col gap-4">
@@ -6748,6 +6577,17 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
+                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/YeBeKhe/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/YeBeKhe/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/YeBeKhe/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="file-card flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-circle-nodes text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">clash.yaml</span>
                     </div>
@@ -6858,28 +6698,6 @@
                 </div>
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssr.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/YeBeKhe/ssr.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/YeBeKhe/ssr.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/YeBeKhe/ssr.txt', 'ssr.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-key text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">ssd.txt</span>
-                    </div>
-                    <div class="flex gap-1">
-                        <button onclick="copyText('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/YeBeKhe/ssd.txt')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
-                        <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/YeBeKhe/ssd.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
-                        <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/YeBeKhe/ssd.txt', 'ssd.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
-                    </div>
-                </div>
-                <div class="file-card flex flex-col gap-4">
-                    <div class="flex items-center gap-3">
                         <i class="fa-solid fa-gear text-blue-400 text-xl"></i>
                         <span class="text-sm font-bold truncate text-slate-300">loon.config</span>
                     </div>
@@ -6902,7 +6720,7 @@
                 </div></div></div></div>
             </div>
 
-            <footer class="mt-16 mb-8">
+            <footer id="bottom" class="mt-16 mb-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <a href="https://t.me/vpnclashfa" target="_blank" class="social-card glass rounded-2xl p-6 flex items-center justify-between group">
                         <div class="flex items-center gap-4">
@@ -6935,9 +6753,16 @@
         </div>
 
         <script>
-            let tgData = { android: '', windows: '', mixed: '' };
-            async function loadTGData() {
-                try {
+            let tgData = {{ android: '', windows: '', mixed: '' }};
+            
+            function showToast() {{
+                const t = document.getElementById("toast");
+                t.className = "show";
+                setTimeout(() => {{ t.className = t.className.replace("show", ""); }}, 2000);
+            }}
+
+            async function loadTGData() {{
+                try {{
                     const [a, w, m] = await Promise.all([
                         fetch('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/tg_android.txt').then(r => r.text()),
                         fetch('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/tg_windows.txt').then(r => r.text()),
@@ -6945,33 +6770,47 @@
                     ]);
                     tgData.android = a.trim(); tgData.windows = w.trim(); tgData.mixed = m.trim();
                     switchTG('android');
-                } catch(e) { console.error(e); }
-            }
-            function switchTG(mode) {
+                }} catch(e) {{ console.error(e); }}
+            }}
+
+            function switchTG(mode) {{
                 document.getElementById('proxy-display').innerText = tgData[mode].split('\n').join('\n\n');
-                ['android', 'windows', 'mixed'].forEach(m => {
+                ['android', 'windows', 'mixed'].forEach(m => {{
                     document.getElementById('tab-' + m).className = 'pb-3 px-2 ' + (m === mode ? 'tab-active' : 'text-slate-400');
-                });
+                }});
                 window.currentMode = mode;
-            }
-            function copyCurrentProxy() { navigator.clipboard.writeText(tgData[window.currentMode]); alert('کپی شد'); }
-            function toggleAccordion(btn) {
+            }}
+
+            function copyCurrentProxy() {{ 
+                navigator.clipboard.writeText(tgData[window.currentMode]); 
+                showToast();
+            }}
+
+            function toggleAccordion(btn) {{
                 btn.parentElement.classList.toggle('open');
                 btn.querySelector('.fa-solid:last-child').classList.toggle('fa-plus');
                 btn.querySelector('.fa-solid:last-child').classList.toggle('fa-minus');
-            }
-            function copyText(t) { navigator.clipboard.writeText(t); alert('لینک کپی شد'); }
-            async function copyContent(url) {
-                try {
+            }}
+
+            function copyText(t) {{ 
+                navigator.clipboard.writeText(t); 
+                showToast();
+            }}
+
+            async function copyContent(url) {{
+                try {{
                     const r = await fetch(url); const t = await r.text();
-                    navigator.clipboard.writeText(t); alert('محتوای فایل کپی شد');
-                } catch(e) { alert('خطا در کپی متن'); }
-            }
-            async function downloadFile(url, name) {
+                    navigator.clipboard.writeText(t); 
+                    showToast();
+                }} catch(e) {{ console.error(e); }}
+            }}
+
+            async function downloadFile(url, name) {{
                 const r = await fetch(url); const b = await r.blob();
                 const a = document.createElement('a'); a.href = URL.createObjectURL(b);
                 a.download = name; a.click();
-            }
+            }}
+
             loadTGData();
         </script>
     </body>
