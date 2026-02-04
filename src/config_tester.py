@@ -1,6 +1,7 @@
 import os, subprocess, logging, zipfile, requests, csv, base64, json, sys, re
 from urllib.parse import quote, unquote
 
+# تنظیمات لاگ
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s', datefmt='%H:%M:%S')
 logger = logging.getLogger("ProxyLab")
 
@@ -25,8 +26,8 @@ def download_engine():
             for file in files:
                 if file == "xray-knife": os.rename(os.path.join(root, file), "xray-knife")
         os.chmod("xray-knife", 0o755)
-        # پاکسازی فایل‌های موقت
         if os.path.exists("engine.zip"): os.remove("engine.zip")
+        if os.path.exists("dir"): subprocess.run(["rm", "-rf", "dir"])
     except Exception as e:
         logger.error(f"Failed to download engine: {e}")
 
@@ -66,9 +67,10 @@ def test_process():
         return
 
     # --- Phase 1: Latency Test ---
-    logger.info("--- Phase 1: Latency Test (Threads: 50) ---")
+    # تغییر: Threads به 100 افزایش یافت
+    logger.info("--- Phase 1: Latency Test (Threads: 100) ---")
     p_csv = os.path.join(raw_dir, "ping_raw.csv")
-    subprocess.run(["./xray-knife", "http", "-f", input_file, "-t", "50", "-o", p_csv, "-x", "csv"], stdout=subprocess.DEVNULL)
+    subprocess.run(["./xray-knife", "http", "-f", input_file, "-t", "100", "-o", p_csv, "-x", "csv"], stdout=subprocess.DEVNULL)
 
     top_candidates = []
     if os.path.exists(p_csv):
@@ -80,30 +82,27 @@ def test_process():
             ping_passed_list = [rename_config(r.get('link') or r.get('Config'), {'cc': r.get('location', 'UN'), 'ping': r.get('delay')}) for r in valid_rows]
             ping_passed_text = "\n".join(filter(None, ping_passed_list))
             
-            # ذخیره نسخه معمولی پینگ
             with open(os.path.join(base_dir, "ping_passed.txt"), "w", encoding="utf-8") as f: 
                 f.write(ping_passed_text)
             
-            # اصلاحیه: ذخیره نسخه Base64 پینگ (مشکل قبلی اینجا بود)
             with open(os.path.join(base_dir, "ping_passed_base64.txt"), "w", encoding="utf-8") as f:
                 f.write(to_base64(ping_passed_text))
             
             logger.info(f"Ping test complete. {len(valid_rows)} configs passed.")
-            
-            # انتخاب ۳۰۰ تای برتر برای تست سرعت
             top_candidates = [r.get('link') or r.get('Config') for r in valid_rows[:300]]
 
-    # --- Phase 2: Speed Test (Sequential) ---
+    # --- Phase 2: Speed Test ---
     if top_candidates:
         tmp_txt = "top_candidates_tmp.txt"
         with open(tmp_txt, "w") as f: f.write("\n".join(filter(None, top_candidates)))
         
-        logger.info("--- Phase 2: Speed Test (5MB - Sequential) ---")
+        # تغییر: Threads به 2 افزایش یافت
+        logger.info("--- Phase 2: Speed Test (5MB - Threads: 2) ---")
         s_csv = os.path.join(raw_dir, "speed_raw.csv")
-        speed_url = "https://speed.cloudflare.com/__down?bytes=5000000" # 5MB
+        speed_url = "https://speed.cloudflare.com/__down?bytes=5000000"
         
-        # t=1 برای تست تک‌تک جهت دقت بالا و جلوگیری از بلاک شدن
-        subprocess.run(["./xray-knife", "http", "-f", tmp_txt, "-t", "1", "-o", s_csv, "-x", "csv", "-p", "-u", speed_url, "-a", "10000"], stdout=subprocess.DEVNULL)
+        # پارامتر -t به 2 تغییر کرد
+        subprocess.run(["./xray-knife", "http", "-f", tmp_txt, "-t", "2", "-o", s_csv, "-x", "csv", "-p", "-u", speed_url, "-a", "10000"], stdout=subprocess.DEVNULL)
 
         speed_results = []
         if os.path.exists(s_csv):
@@ -132,9 +131,7 @@ def test_process():
                 final_list.append(rename_config(res['link'], {'cc': res['cc'], 'ping': res['delay'], 'speed': f_speed}, rank=i))
 
             s_text = "\n".join(filter(None, final_list))
-            # ذخیره نسخه معمولی سرعت
             with open(os.path.join(base_dir, "speed_passed.txt"), "w", encoding="utf-8") as f: f.write(s_text)
-            # ذخیره نسخه Base64 سرعت
             with open(os.path.join(base_dir, "speed_passed_base64.txt"), "w", encoding="utf-8") as f: f.write(to_base64(s_text))
             
             logger.info(f"Speed test complete. {len(speed_results)} configs ranked.")
