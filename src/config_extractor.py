@@ -53,18 +53,23 @@ def is_windows_compatible(link):
 def is_behind_cloudflare(link):
     """
     بررسی می‌کند که آیا کانفیگ از دامنه‌های کلادفلر استفاده می‌کند یا خیر.
+    این تابع چک می‌کند که آیا دامنه یا زیردامنه‌ای به لیست دامنه‌های کلادفلر ختم می‌شود.
     """
+    def check_domain(domain):
+        if not domain: return False
+        domain = domain.lower()
+        return domain == "chatgpt.com" or any(domain.endswith(d) for d in CLOUDFLARE_DOMAINS)
+
     try:
         if not link.startswith('vmess://'):
             parsed = urlparse(link)
-            if parsed.hostname and parsed.hostname.lower().endswith(CLOUDFLARE_DOMAINS):
+            if check_domain(parsed.hostname):
                 return True
             query = parse_qs(parsed.query)
             for param in ['sni', 'host', 'peer']:
                 values = query.get(param, [])
-                for val in values:
-                    if val.lower().endswith(CLOUDFLARE_DOMAINS):
-                        return True
+                if any(check_domain(v) for v in values):
+                    return True
             return False
         else:
             b64_str = link[8:]
@@ -74,8 +79,7 @@ def is_behind_cloudflare(link):
                 decoded = base64.b64decode(b64_str).decode('utf-8')
                 data = json.loads(decoded)
                 for field in ['add', 'host', 'sni']:
-                    value = data.get(field, '')
-                    if value and str(value).lower().endswith(CLOUDFLARE_DOMAINS):
+                    if check_domain(data.get(field)):
                         return True
             except: return False
     except: return False
@@ -83,8 +87,16 @@ def is_behind_cloudflare(link):
 
 def generate_clean_ip_configs(link):
     """
-    دامین‌های کلادفلر را با دامین‌های تمیز جایگزین کرده و از هر کانفیگ دو نسخه می‌سازد.
+    دامین‌های کلادفلر را (شامل زیردامنه‌ها) با دامین‌های تمیز جایگزین کرده 
+    و از هر کانفیگ دو نسخه کاملاً اصلاح شده می‌سازد.
     """
+    def replace_domain(domain, new_domain):
+        if not domain: return domain
+        # اگر خود دامنه یا زیردامنه‌اش جزو لیست بود، کل فیلد با دامین تمیز جایگزین شود
+        if domain.lower() == "chatgpt.com" or any(domain.lower().endswith(d) for d in CLOUDFLARE_DOMAINS):
+            return new_domain
+        return domain
+
     new_configs = []
     try:
         for clean_domain in CLEAN_IP_DOMAINS:
@@ -92,14 +104,13 @@ def generate_clean_ip_configs(link):
                 parsed = urlparse(link)
                 query = parse_qs(parsed.query)
                 
-                # جایگزینی در بخش‌های مختلف
-                new_hostname = parsed.hostname
-                if new_hostname and new_hostname.lower().endswith(CLOUDFLARE_DOMAINS):
-                    new_hostname = clean_domain
+                # جایگزینی در Hostname (آدرس سرور)
+                new_hostname = replace_domain(parsed.hostname, clean_domain)
                 
+                # جایگزینی در تمام پارامترهای کوئری به صورت همزمان
                 for param in ['sni', 'host', 'peer']:
                     if param in query:
-                        query[param] = [clean_domain if v.lower().endswith(CLOUDFLARE_DOMAINS) else v for v in query[param]]
+                        query[param] = [replace_domain(v, clean_domain) for v in query[param]]
                 
                 # بازسازی URL
                 new_query_str = urlencode(query, doseq=True)
@@ -119,9 +130,10 @@ def generate_clean_ip_configs(link):
                 decoded = base64.b64decode(b64_str).decode('utf-8')
                 data = json.loads(decoded)
                 
+                # جایگزینی در تمام فیلدها به صورت همزمان
                 for field in ['add', 'host', 'sni']:
-                    if data.get(field, '').lower().endswith(CLOUDFLARE_DOMAINS):
-                        data[field] = clean_domain
+                    if field in data:
+                        data[field] = replace_domain(str(data[field]), clean_domain)
                 
                 # اضافه کردن تگ برای تمایز
                 if 'ps' in data:
@@ -151,7 +163,7 @@ def write_files(data_map, output_dir):
     
     mixed_content = set()
     cloudflare_content = set()
-    cloudflare_clean_ip_content = set() # خروجی جدید
+    cloudflare_clean_ip_content = set()
     
     for proto, lines in data_map.items():
         if not lines: continue
@@ -161,7 +173,6 @@ def write_files(data_map, output_dir):
             for line in lines:
                 if is_behind_cloudflare(line):
                     cloudflare_content.add(line)
-                    # تولید نسخه‌های IP تمیز
                     clean_versions = generate_clean_ip_configs(line)
                     cloudflare_clean_ip_content.update(clean_versions)
             
