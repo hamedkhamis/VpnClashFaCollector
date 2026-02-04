@@ -497,8 +497,6 @@ proxies:
   - {name: "***✅***@AR14N24b 7", server: 54.37.77.201, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 70fa4568f0fce450, udp: true, tfo: false}
   - {name: 51.75.89.203:13021, server: 51.75.89.203, port: 13021, type: ss, cipher: chacha20-ietf-poly1305, password: 7a57a403f1acaea1, udp: true, tfo: false}
   - {name: "***✅***@AR14N24b 8", server: 51.75.89.203, port: 13021, type: ss, cipher: chacha20-ietf-poly1305, password: 7a57a403f1acaea1, udp: true, tfo: false}
-  - {name: 147.135.77.6:11201, server: 147.135.77.6, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 7f9cb9aef317f096, udp: true, tfo: false}
-  - {name: "***🆔***", server: 147.135.77.6, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 7f9cb9aef317f096, udp: true, tfo: false}
   - {name: "@v2FreeHub 🇬🇧", server: 57.128.174.124, port: 5223, type: ss, cipher: chacha20-ietf-poly1305, password: 81pbVputi3b8lnB84LDfW4, udp: true, tfo: false}
   - {name: 148.113.143.102:11201, server: 148.113.143.102, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 8d90009fa5023cfa, udp: true, tfo: false}
   - {name: "@MARAMBASHI 🇧🇷", server: 148.113.143.102, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 8d90009fa5023cfa, udp: true, tfo: false}
@@ -527,7 +525,6 @@ proxies:
   - {name: "***✅***@AR14N24b` 5", server: 135.125.247.29, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 333c4cae01f8bacf, udp: true, tfo: false}
   - {name: 141.95.105.28:11201, server: 141.95.105.28, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 37ef4f029f1ac0ac, udp: true, tfo: false}
   - {name: "***✅***@AR14N24b 17", server: 141.95.105.28, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 37ef4f029f1ac0ac, udp: true, tfo: false}
-  - {name: Telegram:@config_proxy 2, server: 77.83.245.220, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: x9AB9dV6SzcTT_0vPybWbvo43kU2sMFk, udp: true, tfo: false}
   - {name: 95.163.211.158:1080, server: 95.163.211.158, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: x9AB9dV6SzcTT_0vPybWbvo43kU2sMFk, udp: true, tfo: false}
   - {name: "***✅***@AR14N24b 18", server: 95.163.211.158, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: x9AB9dV6SzcTT_0vPybWbvo43kU2sMFk, udp: true, tfo: false}
   - {name: 136.244.100.113:443, server: 136.244.100.113, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: yODLXVLz2FWNTFeSSng3Fm, udp: true, tfo: false}
@@ -584,7 +581,7 @@ proxies:
   - {name: 213.156.137.142:43662, server: 213.156.137.142, port: 43662, type: ss, cipher: chacha20-ietf-poly1305, password: cc27a3012d81a44c, udp: true, tfo: false}
   - {name: 213.156.137.142:43663, server: 213.156.137.142, port: 43663, type: ss, cipher: chacha20-ietf-poly1305, password: cc27a3012d81a44c, udp: true, tfo: false}
   - {name: 193.29.139.179:8080, server: 193.29.139.179, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: cvII85TrW6n0OGyfpHVS1u, udp: true, tfo: false}
-  - {name: Telegram:@config_proxy 3, server: 193.29.139.179, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: cvII85TrW6n0OGyfpHVS1u, udp: true, tfo: false}
+  - {name: Telegram:@config_proxy 2, server: 193.29.139.179, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: cvII85TrW6n0OGyfpHVS1u, udp: true, tfo: false}
   - {name: 193.29.139.189:8080, server: 193.29.139.189, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: cvII85TrW6n0OGyfpHVS1u, udp: true, tfo: false}
   - {name: 45.87.175.154:8080, server: 45.87.175.154, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: cvII85TrW6n0OGyfpHVS1u, udp: true, tfo: false}
   - {name: 45.87.175.164:8080, server: 45.87.175.164, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: cvII85TrW6n0OGyfpHVS1u, udp: true, tfo: false}
@@ -626,8 +623,6 @@ proxies:
   - {name: 141.95.105.163:11201 2, server: 141.95.105.163, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: edd359f594dea842, udp: true, tfo: false}
   - {name: "***✅***@AR14N24b 34", server: 141.95.105.163, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: edd359f594dea842, udp: true, tfo: false}
   - {name: 85.239.232.127:10026, server: 85.239.232.127, port: 10026, type: ss, cipher: chacha20-ietf-poly1305, password: ef33c53f6e9e3c1b, udp: true, tfo: false}
-  - {name: 85.239.232.127:10026 2, server: 85.239.232.127, port: 10026, type: ss, cipher: chacha20-ietf-poly1305, password: ef33c53f6e9e3c1b, udp: true, tfo: false}
-  - {name: "***🆔*** 2", server: 85.239.232.127, port: 10026, type: ss, cipher: chacha20-ietf-poly1305, password: ef33c53f6e9e3c1b, udp: true, tfo: false}
   - {name: 57.129.95.38:11201, server: 57.129.95.38, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: f54cdee10f8b25ce, udp: true, tfo: false}
   - {name: 51.161.33.111:11202, server: 51.161.33.111, port: 11202, type: ss, cipher: chacha20-ietf-poly1305, password: f6c4600d4d513857, udp: true, tfo: false}
   - {name: www.infe.com.br.infe.com.br:39884, server: www.infe.com.br.infe.com.br, port: 39884, type: ss, cipher: chacha20-ietf-poly1305, password: grLSRb7nmHoVep5Zb6CgtiDzLMy1d93mY3+8WZ5ogmE=, udp: true, tfo: false}
@@ -654,6 +649,7 @@ proxies:
   - {name: 82.38.31.184:8080, server: 82.38.31.184, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: "***✅***@AR14N24b 38", server: 82.38.31.184, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: "@meliproxyy 10", server: 82.38.31.184, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: NetAccount` 3, server: 82.38.31.184, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: •, server: 82.38.31.184, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: 82.38.31.184:8080 2, server: 82.38.31.184, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: "***✅***@AR14N24b 39", server: 82.38.31.184, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
@@ -667,7 +663,7 @@ proxies:
   - {name: ., server: 82.38.31.199, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: "@meliproxyy 11", server: 82.38.31.199, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: NetAccount 3, server: 82.38.31.199, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
-  - {name: NetAccount` 3, server: 82.38.31.199, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: NetAccount` 4, server: 82.38.31.199, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: 82.38.31.202:8080, server: 82.38.31.202, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: 82.38.31.208:8080, server: 82.38.31.208, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: 82.38.31.210:8080, server: 82.38.31.210, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
@@ -675,7 +671,7 @@ proxies:
   - {name: ⚡Telegram - @prrofile_purple, server: 82.38.31.210, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: 🇬🇧 GB | SS | 🆔 @iphone02016vpn`, server: 82.38.31.210, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: "***✅***@AR14N24b 41", server: 82.38.31.210, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
-  - {name: NetAccount` 4, server: 82.38.31.210, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: NetAccount` 5, server: 82.38.31.210, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: 82.38.31.210:8080 2, server: 82.38.31.210, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: "***✅***@AR14N24b 42", server: 82.38.31.210, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: 82.38.31.214:8080, server: 82.38.31.214, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
@@ -722,7 +718,7 @@ proxies:
   - {name: 193.29.139.151:8080, server: 193.29.139.151, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
   - {name: 193.29.139.177:8080, server: 193.29.139.177, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
   - {name: 193.29.139.188:8080, server: 193.29.139.188, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: Telegram:@config_proxy 4, server: 193.29.139.188, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: Telegram:@config_proxy 3, server: 193.29.139.188, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
   - {name: 193.29.139.202:8080, server: 193.29.139.202, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
   - {name: 193.29.139.235:8080, server: 193.29.139.235, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
   - {name: 193.29.139.240:8080, server: 193.29.139.240, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
@@ -768,7 +764,7 @@ proxies:
   - {name: 54.36.174.140:443, server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
   - {name: "@proxymelimon لطفا برای حمایت جوین شید", server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
   - {name: "***✅***@AR14N24b 62", server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
-  - {name: "***🆔*** 3", server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
+  - {name: "***🆔***", server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
   - {name: configraygan mci9, server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
   - {name: 54.36.174.140:443 2, server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
   - {name: "***✅***@AR14N24b 63", server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
@@ -791,8 +787,6 @@ proxies:
   - {name: 173.244.56.6:443, server: 173.244.56.6, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true, tfo: false}
   - {name: 173.244.56.9:443, server: 173.244.56.9, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true, tfo: false}
   - {name: 37.19.198.236:443, server: 37.19.198.236, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true, tfo: false}
-  - {name: 141.98.101.182:443 2, server: 141.98.101.182, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true, tfo: false}
-  - {name: "***🆔*** 4", server: 141.98.101.182, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true, tfo: false}
   - {name: 103.186.154.11:38388, server: 103.186.154.11, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true, tfo: false}
   - {name: 103.186.154.12:38388, server: 103.186.154.12, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true, tfo: false}
   - {name: 103.186.154.13:38388, server: 103.186.154.13, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true, tfo: false}
@@ -998,22 +992,22 @@ proxies:
   - {name: 103.186.155.83:38388, server: 103.186.155.83, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true, tfo: false}
   - {name: 103.186.155.85:38388, server: 103.186.155.85, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true, tfo: false}
   - {name: 216.250.97.82:38388, server: 216.250.97.82, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true, tfo: false}
-  - {name: Telegram:@config_proxy 5, server: 146.59.110.168, port: 443, type: ss, cipher: aes-256-cfb, password: asdKkaskJKfnsa, udp: true, tfo: false}
-  - {name: Telegram:@config_proxy 6, server: 146.59.111.209, port: 443, type: ss, cipher: aes-256-cfb, password: asdKkaskJKfnsa, udp: true, tfo: false}
-  - {name: Telegram:@config_proxy 7, server: 162.19.59.161, port: 443, type: ss, cipher: aes-256-cfb, password: asdKkaskJKfnsa, udp: true, tfo: false}
+  - {name: Telegram:@config_proxy 4, server: 146.59.110.168, port: 443, type: ss, cipher: aes-256-cfb, password: asdKkaskJKfnsa, udp: true, tfo: false}
+  - {name: Telegram:@config_proxy 5, server: 146.59.111.209, port: 443, type: ss, cipher: aes-256-cfb, password: asdKkaskJKfnsa, udp: true, tfo: false}
+  - {name: Telegram:@config_proxy 6, server: 162.19.59.161, port: 443, type: ss, cipher: aes-256-cfb, password: asdKkaskJKfnsa, udp: true, tfo: false}
   - {name: 194.116.173.21:9038, server: 194.116.173.21, port: 9038, type: ss, cipher: aes-256-cfb, password: gYCYXfkUQEs2TaJQ, udp: true, tfo: false}
   - {name: 223.165.4.173:989, server: 223.165.4.173, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
   - {name: 38.54.57.90:989, server: 38.54.57.90, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
   - {name: 51.15.17.169:989, server: 51.15.17.169, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
   - {name: 51.15.23.63:989, server: 51.15.23.63, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
   - {name: 79.127.233.170:989, server: 79.127.233.170, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
-  - {name: Telegram:@config_proxy 8, server: 218.237.185.230, port: 4652, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
+  - {name: Telegram:@config_proxy 7, server: 218.237.185.230, port: 4652, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
   - {name: 45.89.53.115:8443, server: 45.89.53.115, port: 8443, type: ss, cipher: aes-256-gcm, password: 8563411f-f04c-4a38-8753-11c34e599365, udp: true, tfo: false}
   - {name: "@MARAMBASHI 🐳", server: 45.89.53.115, port: 8443, type: ss, cipher: aes-256-gcm, password: 8563411f-f04c-4a38-8753-11c34e599365, udp: true, tfo: false}
   - {name: "@meliproxyy 13", server: 45.89.53.115, port: 8443, type: ss, cipher: aes-256-gcm, password: 8563411f-f04c-4a38-8753-11c34e599365, udp: true, tfo: false}
   - {name: "@MARAMBASHI 🐳 2", server: 89.44.113.169, port: 35591, type: ss, cipher: aes-256-gcm, password: 8IWOh9OEFLJu2KyJs2htA4beYLITyU7xAhR7PxgQVIc=, udp: true, tfo: false}
   - {name: ⚡Telegram***🆔*** 2, server: 89.44.113.169, port: 35591, type: ss, cipher: aes-256-gcm, password: 8IWOh9OEFLJu2KyJs2htA4beYLITyU7xAhR7PxgQVIc=, udp: true, tfo: false}
-  - {name: NetAccount` 5, server: 89.44.113.169, port: 35591, type: ss, cipher: aes-256-gcm, password: 8IWOh9OEFLJu2KyJs2htA4beYLITyU7xAhR7PxgQVIc=, udp: true, tfo: false}
+  - {name: NetAccount` 6, server: 89.44.113.169, port: 35591, type: ss, cipher: aes-256-gcm, password: 8IWOh9OEFLJu2KyJs2htA4beYLITyU7xAhR7PxgQVIc=, udp: true, tfo: false}
   - {name: 156.244.8.155:5004, server: 156.244.8.155, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true, tfo: false}
   - {name: "***✅***@AR14N24b 66", server: 156.244.8.155, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true, tfo: false}
   - {name: 137.184.174.93:8080, server: 137.184.174.93, port: 8080, type: ss, cipher: rc4-md5, password: 14fFPrbezE3HDZzsMOr6, udp: true, tfo: false}
@@ -1066,8 +1060,6 @@ proxy-groups:
       - "***✅***@AR14N24b 7"
       - 51.75.89.203:13021
       - "***✅***@AR14N24b 8"
-      - 147.135.77.6:11201
-      - "***🆔***"
       - "@v2FreeHub 🇬🇧"
       - 148.113.143.102:11201
       - "@MARAMBASHI 🇧🇷"
@@ -1096,7 +1088,6 @@ proxy-groups:
       - "***✅***@AR14N24b` 5"
       - 141.95.105.28:11201
       - "***✅***@AR14N24b 17"
-      - Telegram:@config_proxy 2
       - 95.163.211.158:1080
       - "***✅***@AR14N24b 18"
       - 136.244.100.113:443
@@ -1153,7 +1144,7 @@ proxy-groups:
       - 213.156.137.142:43662
       - 213.156.137.142:43663
       - 193.29.139.179:8080
-      - Telegram:@config_proxy 3
+      - Telegram:@config_proxy 2
       - 193.29.139.189:8080
       - 45.87.175.154:8080
       - 45.87.175.164:8080
@@ -1195,8 +1186,6 @@ proxy-groups:
       - 141.95.105.163:11201 2
       - "***✅***@AR14N24b 34"
       - 85.239.232.127:10026
-      - 85.239.232.127:10026 2
-      - "***🆔*** 2"
       - 57.129.95.38:11201
       - 51.161.33.111:11202
       - www.infe.com.br.infe.com.br:39884
@@ -1223,6 +1212,7 @@ proxy-groups:
       - 82.38.31.184:8080
       - "***✅***@AR14N24b 38"
       - "@meliproxyy 10"
+      - NetAccount` 3
       - •
       - 82.38.31.184:8080 2
       - "***✅***@AR14N24b 39"
@@ -1236,7 +1226,7 @@ proxy-groups:
       - .
       - "@meliproxyy 11"
       - NetAccount 3
-      - NetAccount` 3
+      - NetAccount` 4
       - 82.38.31.202:8080
       - 82.38.31.208:8080
       - 82.38.31.210:8080
@@ -1244,7 +1234,7 @@ proxy-groups:
       - ⚡Telegram - @prrofile_purple
       - 🇬🇧 GB | SS | 🆔 @iphone02016vpn`
       - "***✅***@AR14N24b 41"
-      - NetAccount` 4
+      - NetAccount` 5
       - 82.38.31.210:8080 2
       - "***✅***@AR14N24b 42"
       - 82.38.31.214:8080
@@ -1291,7 +1281,7 @@ proxy-groups:
       - 193.29.139.151:8080
       - 193.29.139.177:8080
       - 193.29.139.188:8080
-      - Telegram:@config_proxy 4
+      - Telegram:@config_proxy 3
       - 193.29.139.202:8080
       - 193.29.139.235:8080
       - 193.29.139.240:8080
@@ -1337,7 +1327,7 @@ proxy-groups:
       - 54.36.174.140:443
       - "@proxymelimon لطفا برای حمایت جوین شید"
       - "***✅***@AR14N24b 62"
-      - "***🆔*** 3"
+      - "***🆔***"
       - configraygan mci9
       - 54.36.174.140:443 2
       - "***✅***@AR14N24b 63"
@@ -1360,8 +1350,6 @@ proxy-groups:
       - 173.244.56.6:443
       - 173.244.56.9:443
       - 37.19.198.236:443
-      - 141.98.101.182:443 2
-      - "***🆔*** 4"
       - 103.186.154.11:38388
       - 103.186.154.12:38388
       - 103.186.154.13:38388
@@ -1567,22 +1555,22 @@ proxy-groups:
       - 103.186.155.83:38388
       - 103.186.155.85:38388
       - 216.250.97.82:38388
+      - Telegram:@config_proxy 4
       - Telegram:@config_proxy 5
       - Telegram:@config_proxy 6
-      - Telegram:@config_proxy 7
       - 194.116.173.21:9038
       - 223.165.4.173:989
       - 38.54.57.90:989
       - 51.15.17.169:989
       - 51.15.23.63:989
       - 79.127.233.170:989
-      - Telegram:@config_proxy 8
+      - Telegram:@config_proxy 7
       - 45.89.53.115:8443
       - "@MARAMBASHI 🐳"
       - "@meliproxyy 13"
       - "@MARAMBASHI 🐳 2"
       - ⚡Telegram***🆔*** 2
-      - NetAccount` 5
+      - NetAccount` 6
       - 156.244.8.155:5004
       - "***✅***@AR14N24b 66"
       - 137.184.174.93:8080
@@ -1625,8 +1613,6 @@ proxy-groups:
       - "***✅***@AR14N24b 7"
       - 51.75.89.203:13021
       - "***✅***@AR14N24b 8"
-      - 147.135.77.6:11201
-      - "***🆔***"
       - "@v2FreeHub 🇬🇧"
       - 148.113.143.102:11201
       - "@MARAMBASHI 🇧🇷"
@@ -1655,7 +1641,6 @@ proxy-groups:
       - "***✅***@AR14N24b` 5"
       - 141.95.105.28:11201
       - "***✅***@AR14N24b 17"
-      - Telegram:@config_proxy 2
       - 95.163.211.158:1080
       - "***✅***@AR14N24b 18"
       - 136.244.100.113:443
@@ -1712,7 +1697,7 @@ proxy-groups:
       - 213.156.137.142:43662
       - 213.156.137.142:43663
       - 193.29.139.179:8080
-      - Telegram:@config_proxy 3
+      - Telegram:@config_proxy 2
       - 193.29.139.189:8080
       - 45.87.175.154:8080
       - 45.87.175.164:8080
@@ -1754,8 +1739,6 @@ proxy-groups:
       - 141.95.105.163:11201 2
       - "***✅***@AR14N24b 34"
       - 85.239.232.127:10026
-      - 85.239.232.127:10026 2
-      - "***🆔*** 2"
       - 57.129.95.38:11201
       - 51.161.33.111:11202
       - www.infe.com.br.infe.com.br:39884
@@ -1782,6 +1765,7 @@ proxy-groups:
       - 82.38.31.184:8080
       - "***✅***@AR14N24b 38"
       - "@meliproxyy 10"
+      - NetAccount` 3
       - •
       - 82.38.31.184:8080 2
       - "***✅***@AR14N24b 39"
@@ -1795,7 +1779,7 @@ proxy-groups:
       - .
       - "@meliproxyy 11"
       - NetAccount 3
-      - NetAccount` 3
+      - NetAccount` 4
       - 82.38.31.202:8080
       - 82.38.31.208:8080
       - 82.38.31.210:8080
@@ -1803,7 +1787,7 @@ proxy-groups:
       - ⚡Telegram - @prrofile_purple
       - 🇬🇧 GB | SS | 🆔 @iphone02016vpn`
       - "***✅***@AR14N24b 41"
-      - NetAccount` 4
+      - NetAccount` 5
       - 82.38.31.210:8080 2
       - "***✅***@AR14N24b 42"
       - 82.38.31.214:8080
@@ -1850,7 +1834,7 @@ proxy-groups:
       - 193.29.139.151:8080
       - 193.29.139.177:8080
       - 193.29.139.188:8080
-      - Telegram:@config_proxy 4
+      - Telegram:@config_proxy 3
       - 193.29.139.202:8080
       - 193.29.139.235:8080
       - 193.29.139.240:8080
@@ -1896,7 +1880,7 @@ proxy-groups:
       - 54.36.174.140:443
       - "@proxymelimon لطفا برای حمایت جوین شید"
       - "***✅***@AR14N24b 62"
-      - "***🆔*** 3"
+      - "***🆔***"
       - configraygan mci9
       - 54.36.174.140:443 2
       - "***✅***@AR14N24b 63"
@@ -1919,8 +1903,6 @@ proxy-groups:
       - 173.244.56.6:443
       - 173.244.56.9:443
       - 37.19.198.236:443
-      - 141.98.101.182:443 2
-      - "***🆔*** 4"
       - 103.186.154.11:38388
       - 103.186.154.12:38388
       - 103.186.154.13:38388
@@ -2126,22 +2108,22 @@ proxy-groups:
       - 103.186.155.83:38388
       - 103.186.155.85:38388
       - 216.250.97.82:38388
+      - Telegram:@config_proxy 4
       - Telegram:@config_proxy 5
       - Telegram:@config_proxy 6
-      - Telegram:@config_proxy 7
       - 194.116.173.21:9038
       - 223.165.4.173:989
       - 38.54.57.90:989
       - 51.15.17.169:989
       - 51.15.23.63:989
       - 79.127.233.170:989
-      - Telegram:@config_proxy 8
+      - Telegram:@config_proxy 7
       - 45.89.53.115:8443
       - "@MARAMBASHI 🐳"
       - "@meliproxyy 13"
       - "@MARAMBASHI 🐳 2"
       - ⚡Telegram***🆔*** 2
-      - NetAccount` 5
+      - NetAccount` 6
       - 156.244.8.155:5004
       - "***✅***@AR14N24b 66"
       - 137.184.174.93:8080
@@ -2184,8 +2166,6 @@ proxy-groups:
       - "***✅***@AR14N24b 7"
       - 51.75.89.203:13021
       - "***✅***@AR14N24b 8"
-      - 147.135.77.6:11201
-      - "***🆔***"
       - "@v2FreeHub 🇬🇧"
       - 148.113.143.102:11201
       - "@MARAMBASHI 🇧🇷"
@@ -2214,7 +2194,6 @@ proxy-groups:
       - "***✅***@AR14N24b` 5"
       - 141.95.105.28:11201
       - "***✅***@AR14N24b 17"
-      - Telegram:@config_proxy 2
       - 95.163.211.158:1080
       - "***✅***@AR14N24b 18"
       - 136.244.100.113:443
@@ -2271,7 +2250,7 @@ proxy-groups:
       - 213.156.137.142:43662
       - 213.156.137.142:43663
       - 193.29.139.179:8080
-      - Telegram:@config_proxy 3
+      - Telegram:@config_proxy 2
       - 193.29.139.189:8080
       - 45.87.175.154:8080
       - 45.87.175.164:8080
@@ -2313,8 +2292,6 @@ proxy-groups:
       - 141.95.105.163:11201 2
       - "***✅***@AR14N24b 34"
       - 85.239.232.127:10026
-      - 85.239.232.127:10026 2
-      - "***🆔*** 2"
       - 57.129.95.38:11201
       - 51.161.33.111:11202
       - www.infe.com.br.infe.com.br:39884
@@ -2341,6 +2318,7 @@ proxy-groups:
       - 82.38.31.184:8080
       - "***✅***@AR14N24b 38"
       - "@meliproxyy 10"
+      - NetAccount` 3
       - •
       - 82.38.31.184:8080 2
       - "***✅***@AR14N24b 39"
@@ -2354,7 +2332,7 @@ proxy-groups:
       - .
       - "@meliproxyy 11"
       - NetAccount 3
-      - NetAccount` 3
+      - NetAccount` 4
       - 82.38.31.202:8080
       - 82.38.31.208:8080
       - 82.38.31.210:8080
@@ -2362,7 +2340,7 @@ proxy-groups:
       - ⚡Telegram - @prrofile_purple
       - 🇬🇧 GB | SS | 🆔 @iphone02016vpn`
       - "***✅***@AR14N24b 41"
-      - NetAccount` 4
+      - NetAccount` 5
       - 82.38.31.210:8080 2
       - "***✅***@AR14N24b 42"
       - 82.38.31.214:8080
@@ -2409,7 +2387,7 @@ proxy-groups:
       - 193.29.139.151:8080
       - 193.29.139.177:8080
       - 193.29.139.188:8080
-      - Telegram:@config_proxy 4
+      - Telegram:@config_proxy 3
       - 193.29.139.202:8080
       - 193.29.139.235:8080
       - 193.29.139.240:8080
@@ -2455,7 +2433,7 @@ proxy-groups:
       - 54.36.174.140:443
       - "@proxymelimon لطفا برای حمایت جوین شید"
       - "***✅***@AR14N24b 62"
-      - "***🆔*** 3"
+      - "***🆔***"
       - configraygan mci9
       - 54.36.174.140:443 2
       - "***✅***@AR14N24b 63"
@@ -2478,8 +2456,6 @@ proxy-groups:
       - 173.244.56.6:443
       - 173.244.56.9:443
       - 37.19.198.236:443
-      - 141.98.101.182:443 2
-      - "***🆔*** 4"
       - 103.186.154.11:38388
       - 103.186.154.12:38388
       - 103.186.154.13:38388
@@ -2685,22 +2661,22 @@ proxy-groups:
       - 103.186.155.83:38388
       - 103.186.155.85:38388
       - 216.250.97.82:38388
+      - Telegram:@config_proxy 4
       - Telegram:@config_proxy 5
       - Telegram:@config_proxy 6
-      - Telegram:@config_proxy 7
       - 194.116.173.21:9038
       - 223.165.4.173:989
       - 38.54.57.90:989
       - 51.15.17.169:989
       - 51.15.23.63:989
       - 79.127.233.170:989
-      - Telegram:@config_proxy 8
+      - Telegram:@config_proxy 7
       - 45.89.53.115:8443
       - "@MARAMBASHI 🐳"
       - "@meliproxyy 13"
       - "@MARAMBASHI 🐳 2"
       - ⚡Telegram***🆔*** 2
-      - NetAccount` 5
+      - NetAccount` 6
       - 156.244.8.155:5004
       - "***✅***@AR14N24b 66"
       - 137.184.174.93:8080
@@ -2752,8 +2728,6 @@ proxy-groups:
       - "***✅***@AR14N24b 7"
       - 51.75.89.203:13021
       - "***✅***@AR14N24b 8"
-      - 147.135.77.6:11201
-      - "***🆔***"
       - "@v2FreeHub 🇬🇧"
       - 148.113.143.102:11201
       - "@MARAMBASHI 🇧🇷"
@@ -2782,7 +2756,6 @@ proxy-groups:
       - "***✅***@AR14N24b` 5"
       - 141.95.105.28:11201
       - "***✅***@AR14N24b 17"
-      - Telegram:@config_proxy 2
       - 95.163.211.158:1080
       - "***✅***@AR14N24b 18"
       - 136.244.100.113:443
@@ -2839,7 +2812,7 @@ proxy-groups:
       - 213.156.137.142:43662
       - 213.156.137.142:43663
       - 193.29.139.179:8080
-      - Telegram:@config_proxy 3
+      - Telegram:@config_proxy 2
       - 193.29.139.189:8080
       - 45.87.175.154:8080
       - 45.87.175.164:8080
@@ -2881,8 +2854,6 @@ proxy-groups:
       - 141.95.105.163:11201 2
       - "***✅***@AR14N24b 34"
       - 85.239.232.127:10026
-      - 85.239.232.127:10026 2
-      - "***🆔*** 2"
       - 57.129.95.38:11201
       - 51.161.33.111:11202
       - www.infe.com.br.infe.com.br:39884
@@ -2909,6 +2880,7 @@ proxy-groups:
       - 82.38.31.184:8080
       - "***✅***@AR14N24b 38"
       - "@meliproxyy 10"
+      - NetAccount` 3
       - •
       - 82.38.31.184:8080 2
       - "***✅***@AR14N24b 39"
@@ -2922,7 +2894,7 @@ proxy-groups:
       - .
       - "@meliproxyy 11"
       - NetAccount 3
-      - NetAccount` 3
+      - NetAccount` 4
       - 82.38.31.202:8080
       - 82.38.31.208:8080
       - 82.38.31.210:8080
@@ -2930,7 +2902,7 @@ proxy-groups:
       - ⚡Telegram - @prrofile_purple
       - 🇬🇧 GB | SS | 🆔 @iphone02016vpn`
       - "***✅***@AR14N24b 41"
-      - NetAccount` 4
+      - NetAccount` 5
       - 82.38.31.210:8080 2
       - "***✅***@AR14N24b 42"
       - 82.38.31.214:8080
@@ -2977,7 +2949,7 @@ proxy-groups:
       - 193.29.139.151:8080
       - 193.29.139.177:8080
       - 193.29.139.188:8080
-      - Telegram:@config_proxy 4
+      - Telegram:@config_proxy 3
       - 193.29.139.202:8080
       - 193.29.139.235:8080
       - 193.29.139.240:8080
@@ -3023,7 +2995,7 @@ proxy-groups:
       - 54.36.174.140:443
       - "@proxymelimon لطفا برای حمایت جوین شید"
       - "***✅***@AR14N24b 62"
-      - "***🆔*** 3"
+      - "***🆔***"
       - configraygan mci9
       - 54.36.174.140:443 2
       - "***✅***@AR14N24b 63"
@@ -3046,8 +3018,6 @@ proxy-groups:
       - 173.244.56.6:443
       - 173.244.56.9:443
       - 37.19.198.236:443
-      - 141.98.101.182:443 2
-      - "***🆔*** 4"
       - 103.186.154.11:38388
       - 103.186.154.12:38388
       - 103.186.154.13:38388
@@ -3253,22 +3223,22 @@ proxy-groups:
       - 103.186.155.83:38388
       - 103.186.155.85:38388
       - 216.250.97.82:38388
+      - Telegram:@config_proxy 4
       - Telegram:@config_proxy 5
       - Telegram:@config_proxy 6
-      - Telegram:@config_proxy 7
       - 194.116.173.21:9038
       - 223.165.4.173:989
       - 38.54.57.90:989
       - 51.15.17.169:989
       - 51.15.23.63:989
       - 79.127.233.170:989
-      - Telegram:@config_proxy 8
+      - Telegram:@config_proxy 7
       - 45.89.53.115:8443
       - "@MARAMBASHI 🐳"
       - "@meliproxyy 13"
       - "@MARAMBASHI 🐳 2"
       - ⚡Telegram***🆔*** 2
-      - NetAccount` 5
+      - NetAccount` 6
       - 156.244.8.155:5004
       - "***✅***@AR14N24b 66"
       - 137.184.174.93:8080
@@ -3311,8 +3281,6 @@ proxy-groups:
       - "***✅***@AR14N24b 7"
       - 51.75.89.203:13021
       - "***✅***@AR14N24b 8"
-      - 147.135.77.6:11201
-      - "***🆔***"
       - "@v2FreeHub 🇬🇧"
       - 148.113.143.102:11201
       - "@MARAMBASHI 🇧🇷"
@@ -3341,7 +3309,6 @@ proxy-groups:
       - "***✅***@AR14N24b` 5"
       - 141.95.105.28:11201
       - "***✅***@AR14N24b 17"
-      - Telegram:@config_proxy 2
       - 95.163.211.158:1080
       - "***✅***@AR14N24b 18"
       - 136.244.100.113:443
@@ -3398,7 +3365,7 @@ proxy-groups:
       - 213.156.137.142:43662
       - 213.156.137.142:43663
       - 193.29.139.179:8080
-      - Telegram:@config_proxy 3
+      - Telegram:@config_proxy 2
       - 193.29.139.189:8080
       - 45.87.175.154:8080
       - 45.87.175.164:8080
@@ -3440,8 +3407,6 @@ proxy-groups:
       - 141.95.105.163:11201 2
       - "***✅***@AR14N24b 34"
       - 85.239.232.127:10026
-      - 85.239.232.127:10026 2
-      - "***🆔*** 2"
       - 57.129.95.38:11201
       - 51.161.33.111:11202
       - www.infe.com.br.infe.com.br:39884
@@ -3468,6 +3433,7 @@ proxy-groups:
       - 82.38.31.184:8080
       - "***✅***@AR14N24b 38"
       - "@meliproxyy 10"
+      - NetAccount` 3
       - •
       - 82.38.31.184:8080 2
       - "***✅***@AR14N24b 39"
@@ -3481,7 +3447,7 @@ proxy-groups:
       - .
       - "@meliproxyy 11"
       - NetAccount 3
-      - NetAccount` 3
+      - NetAccount` 4
       - 82.38.31.202:8080
       - 82.38.31.208:8080
       - 82.38.31.210:8080
@@ -3489,7 +3455,7 @@ proxy-groups:
       - ⚡Telegram - @prrofile_purple
       - 🇬🇧 GB | SS | 🆔 @iphone02016vpn`
       - "***✅***@AR14N24b 41"
-      - NetAccount` 4
+      - NetAccount` 5
       - 82.38.31.210:8080 2
       - "***✅***@AR14N24b 42"
       - 82.38.31.214:8080
@@ -3536,7 +3502,7 @@ proxy-groups:
       - 193.29.139.151:8080
       - 193.29.139.177:8080
       - 193.29.139.188:8080
-      - Telegram:@config_proxy 4
+      - Telegram:@config_proxy 3
       - 193.29.139.202:8080
       - 193.29.139.235:8080
       - 193.29.139.240:8080
@@ -3582,7 +3548,7 @@ proxy-groups:
       - 54.36.174.140:443
       - "@proxymelimon لطفا برای حمایت جوین شید"
       - "***✅***@AR14N24b 62"
-      - "***🆔*** 3"
+      - "***🆔***"
       - configraygan mci9
       - 54.36.174.140:443 2
       - "***✅***@AR14N24b 63"
@@ -3605,8 +3571,6 @@ proxy-groups:
       - 173.244.56.6:443
       - 173.244.56.9:443
       - 37.19.198.236:443
-      - 141.98.101.182:443 2
-      - "***🆔*** 4"
       - 103.186.154.11:38388
       - 103.186.154.12:38388
       - 103.186.154.13:38388
@@ -3812,22 +3776,22 @@ proxy-groups:
       - 103.186.155.83:38388
       - 103.186.155.85:38388
       - 216.250.97.82:38388
+      - Telegram:@config_proxy 4
       - Telegram:@config_proxy 5
       - Telegram:@config_proxy 6
-      - Telegram:@config_proxy 7
       - 194.116.173.21:9038
       - 223.165.4.173:989
       - 38.54.57.90:989
       - 51.15.17.169:989
       - 51.15.23.63:989
       - 79.127.233.170:989
-      - Telegram:@config_proxy 8
+      - Telegram:@config_proxy 7
       - 45.89.53.115:8443
       - "@MARAMBASHI 🐳"
       - "@meliproxyy 13"
       - "@MARAMBASHI 🐳 2"
       - ⚡Telegram***🆔*** 2
-      - NetAccount` 5
+      - NetAccount` 6
       - 156.244.8.155:5004
       - "***✅***@AR14N24b 66"
       - 137.184.174.93:8080
@@ -3870,8 +3834,6 @@ proxy-groups:
       - "***✅***@AR14N24b 7"
       - 51.75.89.203:13021
       - "***✅***@AR14N24b 8"
-      - 147.135.77.6:11201
-      - "***🆔***"
       - "@v2FreeHub 🇬🇧"
       - 148.113.143.102:11201
       - "@MARAMBASHI 🇧🇷"
@@ -3900,7 +3862,6 @@ proxy-groups:
       - "***✅***@AR14N24b` 5"
       - 141.95.105.28:11201
       - "***✅***@AR14N24b 17"
-      - Telegram:@config_proxy 2
       - 95.163.211.158:1080
       - "***✅***@AR14N24b 18"
       - 136.244.100.113:443
@@ -3957,7 +3918,7 @@ proxy-groups:
       - 213.156.137.142:43662
       - 213.156.137.142:43663
       - 193.29.139.179:8080
-      - Telegram:@config_proxy 3
+      - Telegram:@config_proxy 2
       - 193.29.139.189:8080
       - 45.87.175.154:8080
       - 45.87.175.164:8080
@@ -3999,8 +3960,6 @@ proxy-groups:
       - 141.95.105.163:11201 2
       - "***✅***@AR14N24b 34"
       - 85.239.232.127:10026
-      - 85.239.232.127:10026 2
-      - "***🆔*** 2"
       - 57.129.95.38:11201
       - 51.161.33.111:11202
       - www.infe.com.br.infe.com.br:39884
@@ -4027,6 +3986,7 @@ proxy-groups:
       - 82.38.31.184:8080
       - "***✅***@AR14N24b 38"
       - "@meliproxyy 10"
+      - NetAccount` 3
       - •
       - 82.38.31.184:8080 2
       - "***✅***@AR14N24b 39"
@@ -4040,7 +4000,7 @@ proxy-groups:
       - .
       - "@meliproxyy 11"
       - NetAccount 3
-      - NetAccount` 3
+      - NetAccount` 4
       - 82.38.31.202:8080
       - 82.38.31.208:8080
       - 82.38.31.210:8080
@@ -4048,7 +4008,7 @@ proxy-groups:
       - ⚡Telegram - @prrofile_purple
       - 🇬🇧 GB | SS | 🆔 @iphone02016vpn`
       - "***✅***@AR14N24b 41"
-      - NetAccount` 4
+      - NetAccount` 5
       - 82.38.31.210:8080 2
       - "***✅***@AR14N24b 42"
       - 82.38.31.214:8080
@@ -4095,7 +4055,7 @@ proxy-groups:
       - 193.29.139.151:8080
       - 193.29.139.177:8080
       - 193.29.139.188:8080
-      - Telegram:@config_proxy 4
+      - Telegram:@config_proxy 3
       - 193.29.139.202:8080
       - 193.29.139.235:8080
       - 193.29.139.240:8080
@@ -4141,7 +4101,7 @@ proxy-groups:
       - 54.36.174.140:443
       - "@proxymelimon لطفا برای حمایت جوین شید"
       - "***✅***@AR14N24b 62"
-      - "***🆔*** 3"
+      - "***🆔***"
       - configraygan mci9
       - 54.36.174.140:443 2
       - "***✅***@AR14N24b 63"
@@ -4164,8 +4124,6 @@ proxy-groups:
       - 173.244.56.6:443
       - 173.244.56.9:443
       - 37.19.198.236:443
-      - 141.98.101.182:443 2
-      - "***🆔*** 4"
       - 103.186.154.11:38388
       - 103.186.154.12:38388
       - 103.186.154.13:38388
@@ -4371,22 +4329,22 @@ proxy-groups:
       - 103.186.155.83:38388
       - 103.186.155.85:38388
       - 216.250.97.82:38388
+      - Telegram:@config_proxy 4
       - Telegram:@config_proxy 5
       - Telegram:@config_proxy 6
-      - Telegram:@config_proxy 7
       - 194.116.173.21:9038
       - 223.165.4.173:989
       - 38.54.57.90:989
       - 51.15.17.169:989
       - 51.15.23.63:989
       - 79.127.233.170:989
-      - Telegram:@config_proxy 8
+      - Telegram:@config_proxy 7
       - 45.89.53.115:8443
       - "@MARAMBASHI 🐳"
       - "@meliproxyy 13"
       - "@MARAMBASHI 🐳 2"
       - ⚡Telegram***🆔*** 2
-      - NetAccount` 5
+      - NetAccount` 6
       - 156.244.8.155:5004
       - "***✅***@AR14N24b 66"
       - 137.184.174.93:8080

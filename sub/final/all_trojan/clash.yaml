@@ -572,6 +572,7 @@ proxies:
   - {name: "@meliproxyy` 2", server: 188.114.98.0, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
   - {name: 208.103.161.110:443, server: 208.103.161.110, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
   - {name: "***✅***@AR14N24b 30", server: 208.103.161.110, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: 60@unvisible_drops, server: 208.103.161.110, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
   - {name: Telegram:@config_proxy 5, server: 208.103.161.110, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
   - {name: chatgpt.com:443, server: chatgpt.com, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
   - {name: "***✅***@AR14N24b 31", server: chatgpt.com, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
@@ -669,6 +670,7 @@ proxies:
   - {name: "***✅***@AR14N24b 61", server: 15.236.235.249, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 15.237.154.24:22222, server: 15.237.154.24, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 15.237.154.24:22222 2, server: 15.237.154.24, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 18.196.168.199:22222, server: 18.196.168.199, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 3.64.113.199:22222, server: 3.64.113.199, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "***✅***@AR14N24b 62", server: 3.64.113.199, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 3.64.113.199:22222 2, server: 3.64.113.199, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
@@ -830,6 +832,7 @@ proxy-groups:
       - "@meliproxyy` 2"
       - 208.103.161.110:443
       - "***✅***@AR14N24b 30"
+      - 60@unvisible_drops
       - Telegram:@config_proxy 5
       - chatgpt.com:443
       - "***✅***@AR14N24b 31"
@@ -927,6 +930,7 @@ proxy-groups:
       - "***✅***@AR14N24b 61"
       - 15.237.154.24:22222
       - 15.237.154.24:22222 2
+      - 18.196.168.199:22222
       - 3.64.113.199:22222
       - "***✅***@AR14N24b 62"
       - 3.64.113.199:22222 2
@@ -1078,6 +1082,7 @@ proxy-groups:
       - "@meliproxyy` 2"
       - 208.103.161.110:443
       - "***✅***@AR14N24b 30"
+      - 60@unvisible_drops
       - Telegram:@config_proxy 5
       - chatgpt.com:443
       - "***✅***@AR14N24b 31"
@@ -1175,6 +1180,7 @@ proxy-groups:
       - "***✅***@AR14N24b 61"
       - 15.237.154.24:22222
       - 15.237.154.24:22222 2
+      - 18.196.168.199:22222
       - 3.64.113.199:22222
       - "***✅***@AR14N24b 62"
       - 3.64.113.199:22222 2
@@ -1326,6 +1332,7 @@ proxy-groups:
       - "@meliproxyy` 2"
       - 208.103.161.110:443
       - "***✅***@AR14N24b 30"
+      - 60@unvisible_drops
       - Telegram:@config_proxy 5
       - chatgpt.com:443
       - "***✅***@AR14N24b 31"
@@ -1423,6 +1430,7 @@ proxy-groups:
       - "***✅***@AR14N24b 61"
       - 15.237.154.24:22222
       - 15.237.154.24:22222 2
+      - 18.196.168.199:22222
       - 3.64.113.199:22222
       - "***✅***@AR14N24b 62"
       - 3.64.113.199:22222 2
@@ -1583,6 +1591,7 @@ proxy-groups:
       - "@meliproxyy` 2"
       - 208.103.161.110:443
       - "***✅***@AR14N24b 30"
+      - 60@unvisible_drops
       - Telegram:@config_proxy 5
       - chatgpt.com:443
       - "***✅***@AR14N24b 31"
@@ -1680,6 +1689,7 @@ proxy-groups:
       - "***✅***@AR14N24b 61"
       - 15.237.154.24:22222
       - 15.237.154.24:22222 2
+      - 18.196.168.199:22222
       - 3.64.113.199:22222
       - "***✅***@AR14N24b 62"
       - 3.64.113.199:22222 2
@@ -1831,6 +1841,7 @@ proxy-groups:
       - "@meliproxyy` 2"
       - 208.103.161.110:443
       - "***✅***@AR14N24b 30"
+      - 60@unvisible_drops
       - Telegram:@config_proxy 5
       - chatgpt.com:443
       - "***✅***@AR14N24b 31"
@@ -1928,6 +1939,7 @@ proxy-groups:
       - "***✅***@AR14N24b 61"
       - 15.237.154.24:22222
       - 15.237.154.24:22222 2
+      - 18.196.168.199:22222
       - 3.64.113.199:22222
       - "***✅***@AR14N24b 62"
       - 3.64.113.199:22222 2
@@ -2079,6 +2091,7 @@ proxy-groups:
       - "@meliproxyy` 2"
       - 208.103.161.110:443
       - "***✅***@AR14N24b 30"
+      - 60@unvisible_drops
       - Telegram:@config_proxy 5
       - chatgpt.com:443
       - "***✅***@AR14N24b 31"
@@ -2176,6 +2189,7 @@ proxy-groups:
       - "***✅***@AR14N24b 61"
       - 15.237.154.24:22222
       - 15.237.154.24:22222 2
+      - 18.196.168.199:22222
       - 3.64.113.199:22222
       - "***✅***@AR14N24b 62"
       - 3.64.113.199:22222 2
