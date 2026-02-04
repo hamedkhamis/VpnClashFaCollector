@@ -466,8 +466,6 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: hamedvpns 😎, server: 104.18.8.232, port: 2086, type: trojan, password: fsJC%3Ca%292Atn;, skip-cert-verify: false, network: ws, ws-opts: {path: /eyJqdW5rIjoidm1qTWdrQzQxTyIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=}, udp: true, tfo: false}
-  - {name: "[🇩🇪] [vl-tl-ws] hamedp71", server: chatgpt.com, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 96d9bcb0-9ad2-48be-85a2-a9ab3a005261, servername: ds1-mx-fn154-protection.iranlease.com, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: ds1-mx-fn154-protection.iranlease.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "[🇺🇳] hamedvpns", server: chatgpt.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: b4bedcde-ff1e-4a80-b799-ff4bc712d6a4, servername: vaogtgnw6j9cx0yx5am7777t0lff1x21ovbyarobmu.zjde5.de5.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: vaogtgnw6j9cx0yx5am7777t0lff1x21ovbyarobmu.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,8 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - hamedvpns 😎
-      - "[🇩🇪] [vl-tl-ws] hamedp71"
-      - "[🇺🇳] hamedvpns"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -494,8 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - hamedvpns 😎
-      - "[🇩🇪] [vl-tl-ws] hamedp71"
-      - "[🇺🇳] hamedvpns"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -503,8 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - hamedvpns 😎
-      - "[🇩🇪] [vl-tl-ws] hamedp71"
-      - "[🇺🇳] hamedvpns"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -521,8 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - hamedvpns 😎
-      - "[🇩🇪] [vl-tl-ws] hamedp71"
-      - "[🇺🇳] hamedvpns"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -530,8 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - hamedvpns 😎
-      - "[🇩🇪] [vl-tl-ws] hamedp71"
-      - "[🇺🇳] hamedvpns"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -539,8 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - hamedvpns 😎
-      - "[🇩🇪] [vl-tl-ws] hamedp71"
-      - "[🇺🇳] hamedvpns"
   - name: دانلود منیجر 📥
     type: select
     proxies:
