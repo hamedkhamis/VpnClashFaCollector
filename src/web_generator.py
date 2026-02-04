@@ -35,6 +35,7 @@ def generate_web_page():
         "ssh.txt", "ssh_base64.txt",
         "wireguard.txt", "wireguard_base64.txt",
         "warp.txt", "warp_base64.txt",
+        "cloudflare.txt", "cloudflare_base64.txt",
         "clash.yaml", "clashr.yaml",
         "tg_android.txt", "tg_windows.txt",
         "v2ray.txt", "surfboard.conf",
