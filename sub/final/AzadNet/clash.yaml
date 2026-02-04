@@ -464,8 +464,7 @@ rule-providers:
     url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
-proxies:
-  - {name: t.me/AzadNet***😜***, server: TUN-NL.Net-Plus.ir, port: 8004, type: vless, tls: true, packet-encoding: xudp, uuid: debf4e52-4f0b-4710-a44f-32463c004ed5, host: TUN-NL.Net-Plus.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+proxies: ~
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +481,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - t.me/AzadNet***😜***
+      - DIRECT
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - t.me/AzadNet***😜***
+      - DIRECT
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - t.me/AzadNet***😜***
+      - DIRECT
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +511,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - t.me/AzadNet***😜***
+      - DIRECT
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - t.me/AzadNet***😜***
+      - DIRECT
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - t.me/AzadNet***😜***
+      - DIRECT
   - name: دانلود منیجر 📥
     type: select
     proxies:

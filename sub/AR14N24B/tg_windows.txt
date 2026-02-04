@@ -15,6 +15,13 @@ https://t.me/proxy?server=49.13.88.173&port=8443&secret=dd79e70102001e7807f01043
 https://t.me/proxy?server=5.78.41.13&port=4455&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=5.78.87.207&port=4455&secret=dd104462821249bd7ac519130220c25d09
 https://t.me/proxy?server=65.21.28.60&port=4455&secret=dd104462821249bd7ac519130220c25d09
+https://t.me/proxy?server=85.133.194.105&port=8443&secret=79e344818749bd7ac519130220c25d09
+https://t.me/proxy?server=85.133.194.107&port=8443&secret=79e344818749bd7ac519130220c25d09
+https://t.me/proxy?server=85.133.194.5&port=6443&secret=dd79e344818749bd7ac519130220c25d09
+https://t.me/proxy?server=87.248.132.145&port=65535&secret=10446282fffffffffff80000fff80000
+https://t.me/proxy?server=ams1.tlgfast.com&port=443&secret=083fe0c452e2407d835537872f097c54
 tg://proxy?server=141.11.87.223&port=443&secret=e8b7c6d5a4f3e2d1c0b9a8f7e6d5c4b3&bot=@mtpro_xyz_bot
 tg://proxy?server=156.226.172.211&port=443&secret=c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7&bot=@mtpro_xyz_bot
 tg://proxy?server=185.250.41.41&port=8443&secret=11768e4d7defbb964527b92a35c56f21
+tg://proxy?server=74.1.1.48&port=65535&secret=dd79e344818749bd7ac519130220c25d09
+tg://proxy?server=admin.talameh.ir&port=443&secret=141f3bc0c16bb4dadc6f7fb5163b7453&bot=@mtpro_xyz_bot

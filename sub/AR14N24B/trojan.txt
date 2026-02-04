@@ -1,7 +1,14 @@
 trojan://20ba0c60-0133-11f1-95ef-1239d0255272@172.64.152.23:443?path=%2Fhowdy&security=tls&insecure=1&host=uk1.test3.net&type=ws&allowInsecure=1&sni=uk1.test3.net#***✅***@AR14N24b
 trojan://712597a0-0156-11f1-8f11-1239d0255272@188.114.97.218:443?path=%2Fhowdy&security=tls&insecure=0&host=usa.test3.net&type=ws&allowInsecure=0&sni=usa.test3.net#***✅***@AR14N24b
+trojan://RPyW62_b9aH.ztJKeArou@83.143.87.9:18581?allowInsecure=1#***✅***@AR14N24b
 trojan://YwuvGJk36B@creativecommons.org:2053?alpn=http%2F1.1&fp=firefox&host=kotlet.arshiacomplus.dpdns.org&path=%2Fyamtekodasayahhh&security=tls&sni=kotlet.arshiacomplus.dpdns.org&type=ws#***✅***@AR14N24b
+trojan://c1d83c0c7d57cead4379ba14a82df69b@160.16.116.227:544?allowInsecure=1&sni=www.nintendogames.net#***✅***@AR14N24b
+trojan://c1d83c0c7d57cead4379ba14a82df69b@160.16.116.227:544?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1&sni=www.nintendogames.net#***✅***@AR14N24b
 trojan://c1d83c0c7d57cead4379ba14a82df69b@160.16.138.24:544?allowInsecure=1&sni=www.nintendogames.net#***✅***@AR14N24b
+trojan://c1d83c0c7d57cead4379ba14a82df69b@160.16.138.24:544?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1&sni=www.nintendogames.net#***✅***@AR14N24b
+trojan://c1d83c0c7d57cead4379ba14a82df69b@160.16.57.238:1933?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1&sni=www.nintendogames.net#***✅***@AR14N24b
+trojan://c1d83c0c7d57cead4379ba14a82df69b@38.180.137.196:443?allowInsecure=1&sni=www.nintendogames.net#***✅***@AR14N24b
+trojan://c1d83c0c7d57cead4379ba14a82df69b@38.180.137.196:443?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1&sni=www.nintendogames.net#***✅***@AR14N24b
 trojan://chslToBpxJ@209.200.246.248:22086?security=reality&sni=www.cloudflare.com&fp=chrome&pbk=Bo-0prp3Nlf3NX9egy-iCjLBONYo9j2lniXaEtET3ns&sid=4f69441f911943&type=grpc&path=%2f#***✅***@AR14N24b
 trojan://dQDQCtns4R@162.159.138.232:443?host=fadaei.movieland.top&path=static34528&security=tls&sni=fadaei.movieland.top&type=ws#***✅***@AR14N24b
 trojan://humanity@104.18.32.47:443?path=%2Fassignment&security=tls&host=www.gossipglove.com&fp=chrome&type=ws&sni=www.gossipglove.com#***✅***@AR14N24b
@@ -43,6 +50,7 @@ trojan://telegram-id-directvpn@3.77.16.196:22223?alpn=http%2F1.1&headerType=none
 trojan://telegram-id-directvpn@3.77.16.196:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#***✅***@AR14N24b
 trojan://telegram-id-directvpn@35.181.17.83:22223?alpn=http%2F1.1&headerType=none&security=tls&sni=trojan.burgerip.co.uk&type=tcp#***✅***@AR14N24b
 trojan://telegram-id-directvpn@35.181.17.83:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#***✅***@AR14N24b
+trojan://telegram-id-directvpn@35.181.222.78:22223?alpn=http%2F1.1&headerType=none&security=tls&sni=trojan.burgerip.co.uk&type=tcp#***✅***@AR14N24b
 trojan://telegram-id-directvpn@35.181.222.78:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#***✅***@AR14N24b
 trojan://telegram-id-privatevpns@13.39.147.136:22222?alpn=http%2F1.1&headerType=none&security=tls&sni=trojan.burgerip.co.uk&type=tcp#***✅***@AR14N24b
 trojan://telegram-id-privatevpns@13.39.147.136:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#***✅***@AR14N24b
@@ -60,4 +68,5 @@ trojan://telegram-id-privatevpns@3.77.16.196:22222?alpn=http%2F1.1&headerType=no
 trojan://telegram-id-privatevpns@3.77.16.196:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#***✅***@AR14N24b
 trojan://telegram-id-privatevpns@35.181.17.83:22222?alpn=http%2F1.1&headerType=none&security=tls&sni=trojan.burgerip.co.uk&type=tcp#***✅***@AR14N24b
 trojan://telegram-id-privatevpns@35.181.17.83:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#***✅***@AR14N24b
+trojan://telegram-id-privatevpns@35.181.222.78:22222?alpn=http%2F1.1&headerType=none&security=tls&sni=trojan.burgerip.co.uk&type=tcp#***✅***@AR14N24b
 trojan://telegram-id-privatevpns@35.181.222.78:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#***✅***@AR14N24b
