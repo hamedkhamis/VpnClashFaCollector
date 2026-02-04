@@ -5,21 +5,32 @@ import logging
 import html
 import json
 import copy
-from urllib.parse import urlparse, parse_qs, urlunparse, urlencode
+import yaml
+from urllib.parse import urlparse, parse_qs
+
+# --- بارگذاری تنظیمات از YAML ---
+def load_config(config_path="config.yaml"):
+    try:
+        with open(config_path, "r", encoding="utf-8") as f:
+            return yaml.safe_load(f)
+    except FileNotFoundError:
+        print(f"خطا: فایل {config_path} پیدا نشد!")
+        exit(1)
+
+# بارگذاری داده‌ها در ابتدای اجرای برنامه
+CONFIG = load_config()
+
+# استخراج متغیرها از فایل تنظیمات برای استفاده در سراسر اسکریپت
+PROTOCOLS = CONFIG['extraction']['protocols']
+CLOUDFLARE_DOMAINS = tuple(CONFIG['extraction']['cloudflare_domains'])
+SRC_DIR = CONFIG['paths']['telegram_src']
+OUT_DIR = CONFIG['paths']['output_sub']
 
 # --- تنظیمات لاگ ---
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 logger = logging.getLogger("Extractor")
 
-PROTOCOLS = [
-    'vmess', 'vless', 'trojan', 'ss', 'ssr', 'tuic', 'hysteria', 'hysteria2', 
-    'hy2', 'juicity', 'snell', 'anytls', 'ssh', 'wireguard', 'wg', 
-    'warp', 'socks', 'socks4', 'socks5', 'tg'
-]
-
-# دامنه‌هایی که نشان‌دهنده استفاده از سرویس‌های کلادفلر هستند
-CLOUDFLARE_DOMAINS = ('.workers.dev', '.pages.dev', '.trycloudflare.com', 'chatgpt.com')
-
+# ساخت الگوی نگاه به جلو برای رجکس بر اساس پروتکل‌های موجود در کانفیگ
 NEXT_CONFIG_LOOKAHEAD = r'(?=' + '|'.join([rf'{p}:\/\/' for p in PROTOCOLS if p != 'tg']) + r'|https:\/\/t\.me\/proxy\?|tg:\/\/proxy\?|[()\[\]"\'\s])'
 
 def clean_telegram_link(link):
@@ -52,7 +63,8 @@ def is_behind_cloudflare(link):
     def check_domain(domain):
         if not domain: return False
         domain = domain.lower()
-        return domain == "chatgpt.com" or any(domain.endswith(d) for d in CLOUDFLARE_DOMAINS)
+        # چک کردن بر اساس لیست موجود در کانفیگ
+        return any(domain.endswith(d) or domain == d.lstrip('.') for d in CLOUDFLARE_DOMAINS)
 
     try:
         if not link.startswith('vmess://'):
@@ -85,9 +97,13 @@ def save_content(directory, filename, content_list):
     content_sorted = sorted(list(set(content_list)))
     content_str = "\n".join(content_sorted)
     
+    os.makedirs(directory, exist_ok=True)
+    
+    # ذخیره فایل متنی معمولی
     with open(os.path.join(directory, f"{filename}.txt"), "w", encoding="utf-8") as f:
         f.write(content_str)
     
+    # ذخیره فایل Base64
     b64_str = base64.b64encode(content_str.encode("utf-8")).decode("utf-8")
     with open(os.path.join(directory, f"{filename}_base64.txt"), "w", encoding="utf-8") as f:
         f.write(b64_str)
@@ -95,7 +111,6 @@ def save_content(directory, filename, content_list):
 def write_files(data_map, output_dir):
     """مدیریت نوشتن فایل‌های تفکیک شده و میکس کردن هیستریا"""
     if not any(data_map.values()): return
-    os.makedirs(output_dir, exist_ok=True)
     
     mixed_content = set()
     cloudflare_content = set()
@@ -105,7 +120,6 @@ def write_files(data_map, output_dir):
     if 'hysteria2' in data_map: hy2_combined.update(data_map['hysteria2'])
     if 'hy2' in data_map: hy2_combined.update(data_map['hy2'])
     
-    # حذف hy2 تکی از نقشه داده‌ها برای جلوگیری از تکرار و جایگزینی با لیست ترکیبی
     processed_map = copy.deepcopy(data_map)
     if 'hy2' in processed_map: del processed_map['hy2']
     processed_map['hysteria2'] = hy2_combined
@@ -133,7 +147,7 @@ def write_files(data_map, output_dir):
         save_content(output_dir, "cloudflare", cloudflare_content)
 
 def auto_base64_all(directory):
-    """تولید نسخه Base64 برای تمامی فایل‌های متنی فاقد آن (مانند خروجی تستر)"""
+    """تولید نسخه Base64 برای تمامی فایل‌های متنی فاقد آن"""
     if not os.path.exists(directory): return
     for root, dirs, files in os.walk(directory):
         for file in files:
@@ -152,20 +166,39 @@ def auto_base64_all(directory):
                     except Exception as e:
                         logger.error(f"Auto-base64 error for {file}: {e}")
 
+def get_flexible_pattern(protocol_prefix):
+    """تولید الگوی Regex برای پروتکل‌ها"""
+    if protocol_prefix == 'tg':
+        prefix = rf'(?:tg:\/\/proxy\?|https:\/\/t\.me\/proxy\?)'
+    else:
+        prefix = rf'{protocol_prefix}:\/\/'
+    return rf'{prefix}(?:(?!\s{{4,}}|[()\[\]]).)+?(?={NEXT_CONFIG_LOOKAHEAD}|$)'
+
 def main():
-    src_dir = "src/telegram"
-    out_dir = "sub"
+    # استفاده از مسیرهای بارگذاری شده از فایل YAML
+    src_dir = SRC_DIR
+    out_dir = OUT_DIR
+    
     global_collection = {k: set() for k in PROTOCOLS}
-    if not os.path.exists(src_dir): return
+    
+    if not os.path.exists(src_dir):
+        logger.error(f"پوشه منبع یافت نشد: {src_dir}")
+        return
+
     patterns = {p: get_flexible_pattern(p) for p in PROTOCOLS}
 
+    # پیمایش پوشه‌های کانال‌ها
     for channel_name in os.listdir(src_dir):
         channel_path = os.path.join(src_dir, channel_name)
+        if not os.path.isdir(channel_path): continue
+        
         md_file = os.path.join(channel_path, "messages.md")
         if not os.path.isfile(md_file): continue
+        
         try:
             with open(md_file, "r", encoding="utf-8") as f:
                 content = f.read()
+            
             channel_collection = {k: set() for k in PROTOCOLS}
             for proto, pattern in patterns.items():
                 matches = re.finditer(pattern, content, re.MULTILINE | re.IGNORECASE)
@@ -175,22 +208,20 @@ def main():
                     if clean_link:
                         channel_collection[proto].add(clean_link)
                         global_collection[proto].add(clean_link)
+            
+            # ذخیره نتایج هر کانال در پوشه خودش
             write_files(channel_collection, os.path.join(out_dir, channel_name))
+            
         except Exception as e:
             logger.error(f"Error processing {channel_name}: {e}")
             
+    # ذخیره فایل تجمیعی (All)
     if sum(len(v) for v in global_collection.values()) > 0:
         write_files(global_collection, os.path.join(out_dir, "all"))
 
-    # نهایی‌سازی: تولید خودکار فایل‌های Base64 برای خروجی‌های تستر یا فایل‌های دستی
+    # نهایی‌سازی: تولید خودکار فایل‌های Base64
     auto_base64_all(out_dir)
-
-def get_flexible_pattern(protocol_prefix):
-    if protocol_prefix == 'tg':
-        prefix = rf'(?:tg:\/\/proxy\?|https:\/\/t\.me\/proxy\?)'
-    else:
-        prefix = rf'{protocol_prefix}:\/\/'
-    return rf'{prefix}(?:(?!\s{{4,}}|[()\[\]]).)+?(?={NEXT_CONFIG_LOOKAHEAD}|$)'
+    logger.info("عملیات با موفقیت پایان یافت.")
 
 if __name__ == "__main__":
     main()
