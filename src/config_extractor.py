@@ -40,7 +40,7 @@ SPLIT_SOURCES = [
     },
     {
         'url': 'https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/trojan.txt',
-        'name': 'trojan.',
+        'name': 'trojan',
         'chunk_size': 500
     },
     {
