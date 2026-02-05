@@ -1,3 +1,1 @@
-trojan://humanity@172.64.152.23:443?path=%2Fassignment&security=tls&host=www.calmlunch.com&type=ws&sni=www.calmlunch.com#YsZ%203%20%40Outline_Vpn
 trojan://humanity@www.gossipglove.com:443?path=%2Fassignment&security=tls&fp=chrome&type=ws&sni=www.gossipglove.com#%F0%9F%87%AE%F0%9F%87%B7%20IR%2013%20%40Outline_Vpn
-trojan://humanity@www.gossipglove.com:443?path=%2Fassignment&security=tls&type=ws#YMA%204%20%40Outline_Vpn

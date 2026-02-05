@@ -482,6 +482,7 @@ proxies:
   - {name: 82.38.31.122:8080, server: 82.38.31.122, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
   - {name: 82.38.31.122:8080 2, server: 82.38.31.122, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
   - {name: 82.38.31.61:8080, server: 82.38.31.61, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: 104.21.40.34:443, server: 104.21.40.34, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
   - {name: 172.64.152.23:443, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
   - {name: www.calmlunch.com:443, server: www.calmlunch.com, port: 443, type: trojan, password: humanity, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment}, udp: true, tfo: false}
   - {name: "@VpnMaan 5", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 00deb53e-b772-45f0-8cbe-d915b2f68ffd, servername: 639057258094400192.corolla-perma.info, network: ws, ws-opts: {path: "/jmslzhws?ed=2560", headers: {Host: 639057258094400192.corolla-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
@@ -500,9 +501,11 @@ proxies:
   - {name: 185.126.6.131:3446, server: 185.126.6.131, port: 3446, type: vless, tls: true, packet-encoding: xudp, uuid: 79b03434-d2c6-4ab5-9474-acf450eb7ab9, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 94.131.113.228:443, server: 94.131.113.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 82bf8df9-300f-4d65-a8b9-b300ccaeb930, servername: fast.strelkavpn.ru, host: fast.strelkavpn.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: gUDEXo3UPF5WlJdIvpKMZbcLfKxMkiDyWgXjleD0aA4, short-id: aa5d376d9d56}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 198.41.199.83:443, server: 198.41.199.83, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8388434b-bbc8-4e00-b497-69a7f56f6e24, servername: rAyAn-cOnFiG-it-1.pAriSa.dPdNs.oRg, network: ws, ws-opts: {path: /ws, headers: {Host: rAyAn-cOnFiG-it-1.pAriSa.dPdNs.oRg}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: yesok42v2.ip4exordir.shop:8880, server: yesok42v2.ip4exordir.shop, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: faqatchai.global.ssl.fastly.net:443, server: faqatchai.global.ssl.fastly.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a9bac46a-2037-4ad1-a192-08c70927f4ad, servername: faqatchai.global.ssl.fastly.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /containers/fi, headers: {Host: faqatchai.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 158.160.197.190:443, server: 158.160.197.190, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b3a0a76d-1794-4fd0-a283-bd4a0620bac9, servername: eh.vk.com, host: eh.vk.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 53np4dm7wFCgvoOfGCX2w6WHxq3590b62a2Yiq66N00, short-id: f1d8f4aa}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 44@proxy_kafee, server: 64.188.73.31, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bbed94d9-1120-4b54-8a9c-72d81e411fb8, servername: google.com, host: google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: cnY_-VQGJYosOMtWBxnq8ay71kO_dVB-IBBotP2AJn4, short-id: 243779c5c1c84b42}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: cdn.halazzon.ir:2053, server: cdn.halazzon.ir, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: c659ce22-0a02-4d75-8c89-58d99916b846, servername: ir6.hnbyme.online, network: ws, ws-opts: {path: /, headers: {Host: ir6.hnbyme.online}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: grdt.dtsantoor.com:40786, server: grdt.dtsantoor.com, port: 40786, type: vless, tls: true, packet-encoding: xudp, uuid: d027f2eb-3eea-4d84-8c67-73133136cacd, servername: grdt.dtsantoor.com, host: grdt.dtsantoor.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 178.250.246.80:1488, server: 178.250.246.80, port: 1488, type: vless, tls: true, packet-encoding: xudp, uuid: d6b1327d-2bec-4366-a3a1-9b1284f95841, servername: ads.x5.ru, host: ads.x5.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443, server: nl01-gmn02-vlr01.tcp-reset-club.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e108f3eb-4d3a-4e20-a09b-7008e333bc23, servername: hls-svod.itunes.apple.com, host: hls-svod.itunes.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg, short-id: 86e999a2cdc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
@@ -543,6 +546,7 @@ proxy-groups:
       - 82.38.31.122:8080
       - 82.38.31.122:8080 2
       - 82.38.31.61:8080
+      - 104.21.40.34:443
       - 172.64.152.23:443
       - www.calmlunch.com:443
       - "@VpnMaan 5"
@@ -561,9 +565,11 @@ proxy-groups:
       - 185.126.6.131:3446
       - 94.131.113.228:443
       - 198.41.199.83:443
+      - yesok42v2.ip4exordir.shop:8880
       - faqatchai.global.ssl.fastly.net:443
       - 158.160.197.190:443
       - 44@proxy_kafee
+      - cdn.halazzon.ir:2053
       - grdt.dtsantoor.com:40786
       - 178.250.246.80:1488
       - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
@@ -594,6 +600,7 @@ proxy-groups:
       - 82.38.31.122:8080
       - 82.38.31.122:8080 2
       - 82.38.31.61:8080
+      - 104.21.40.34:443
       - 172.64.152.23:443
       - www.calmlunch.com:443
       - "@VpnMaan 5"
@@ -612,9 +619,11 @@ proxy-groups:
       - 185.126.6.131:3446
       - 94.131.113.228:443
       - 198.41.199.83:443
+      - yesok42v2.ip4exordir.shop:8880
       - faqatchai.global.ssl.fastly.net:443
       - 158.160.197.190:443
       - 44@proxy_kafee
+      - cdn.halazzon.ir:2053
       - grdt.dtsantoor.com:40786
       - 178.250.246.80:1488
       - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
@@ -645,6 +654,7 @@ proxy-groups:
       - 82.38.31.122:8080
       - 82.38.31.122:8080 2
       - 82.38.31.61:8080
+      - 104.21.40.34:443
       - 172.64.152.23:443
       - www.calmlunch.com:443
       - "@VpnMaan 5"
@@ -663,9 +673,11 @@ proxy-groups:
       - 185.126.6.131:3446
       - 94.131.113.228:443
       - 198.41.199.83:443
+      - yesok42v2.ip4exordir.shop:8880
       - faqatchai.global.ssl.fastly.net:443
       - 158.160.197.190:443
       - 44@proxy_kafee
+      - cdn.halazzon.ir:2053
       - grdt.dtsantoor.com:40786
       - 178.250.246.80:1488
       - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
@@ -705,6 +717,7 @@ proxy-groups:
       - 82.38.31.122:8080
       - 82.38.31.122:8080 2
       - 82.38.31.61:8080
+      - 104.21.40.34:443
       - 172.64.152.23:443
       - www.calmlunch.com:443
       - "@VpnMaan 5"
@@ -723,9 +736,11 @@ proxy-groups:
       - 185.126.6.131:3446
       - 94.131.113.228:443
       - 198.41.199.83:443
+      - yesok42v2.ip4exordir.shop:8880
       - faqatchai.global.ssl.fastly.net:443
       - 158.160.197.190:443
       - 44@proxy_kafee
+      - cdn.halazzon.ir:2053
       - grdt.dtsantoor.com:40786
       - 178.250.246.80:1488
       - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
@@ -756,6 +771,7 @@ proxy-groups:
       - 82.38.31.122:8080
       - 82.38.31.122:8080 2
       - 82.38.31.61:8080
+      - 104.21.40.34:443
       - 172.64.152.23:443
       - www.calmlunch.com:443
       - "@VpnMaan 5"
@@ -774,9 +790,11 @@ proxy-groups:
       - 185.126.6.131:3446
       - 94.131.113.228:443
       - 198.41.199.83:443
+      - yesok42v2.ip4exordir.shop:8880
       - faqatchai.global.ssl.fastly.net:443
       - 158.160.197.190:443
       - 44@proxy_kafee
+      - cdn.halazzon.ir:2053
       - grdt.dtsantoor.com:40786
       - 178.250.246.80:1488
       - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
@@ -807,6 +825,7 @@ proxy-groups:
       - 82.38.31.122:8080
       - 82.38.31.122:8080 2
       - 82.38.31.61:8080
+      - 104.21.40.34:443
       - 172.64.152.23:443
       - www.calmlunch.com:443
       - "@VpnMaan 5"
@@ -825,9 +844,11 @@ proxy-groups:
       - 185.126.6.131:3446
       - 94.131.113.228:443
       - 198.41.199.83:443
+      - yesok42v2.ip4exordir.shop:8880
       - faqatchai.global.ssl.fastly.net:443
       - 158.160.197.190:443
       - 44@proxy_kafee
+      - cdn.halazzon.ir:2053
       - grdt.dtsantoor.com:40786
       - 178.250.246.80:1488
       - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
