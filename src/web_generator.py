@@ -72,7 +72,7 @@ def generate_web_page():
             .proxy-box {{ font-family: monospace; background: #000; padding: 20px; border-radius: 15px; height: 300px; overflow-y: auto; direction: ltr; text-align: left; font-size: 14px; border: 1px solid #1e293b; }}
             .tab-active {{ border-bottom: 4px solid #3b82f6; color: #3b82f6; font-weight: 900; }}
             .file-card {{ background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 12px; }}
-            .btn-action {{ transition: all 0.2s; font-size: 14px; font-weight: 700; }}
+            .btn-action {{ transition: all 0.2s; font-size: 13px; font-weight: 700; }}
             .social-card {{ transition: all 0.3s; border: 1px solid rgba(255,255,255,0.05); }}
             .social-card:hover {{ background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.4); transform: translateY(-2px); }}
             
@@ -103,7 +103,6 @@ def generate_web_page():
             .nav-btn {{ position: fixed; right: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 50; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: 0.3s; color: white; cursor: pointer; }}
             .nav-btn:hover {{ transform: scale(1.1); }}
             
-            /* استایل‌های اختصاصی بخش اسپلیت */
             .split-input {{ background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); color: white; text-align: center; border-radius: 8px; padding: 8px; width: 100%; transition: 0.3s; }}
             .split-input:focus {{ outline: none; border-color: #3b82f6; background: rgba(0,0,0,0.5); }}
         </style>
@@ -136,55 +135,12 @@ def generate_web_page():
                     <i class="fa-solid fa-copy ml-2 text-xl"></i> کپی تمام پروکسی‌ها
                 </button>
             </section>
-    """
 
-    # --- بخش جدید: پردازش فایل‌های Split ---
-    split_data = {}
-    if os.path.exists(split_normal_root):
-        for folder_name in os.listdir(split_normal_root):
-            folder_path = os.path.join(split_normal_root, folder_name)
-            if os.path.isdir(folder_path):
-                # شمارش تعداد فایل‌ها (فرض بر این است که فایل‌ها نام‌گذاری عددی دارند یا تمام فایل‌ها باید شمرده شوند)
-                files_count = len([name for name in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, name))])
-                if files_count > 0:
-                    split_data[folder_name] = files_count
-
-    if split_data:
-        html_content += f"""
-            <section class="mb-12 glass p-6 rounded-3xl border-t-4 border-amber-500 shadow-2xl">
-                <h2 class="text-2xl font-black mb-6 flex items-center text-amber-400">
-                    <i class="fa-solid fa-feather ml-3"></i> اشتراک سبک
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        """
-        
-        for name, count in split_data.items():
-            html_content += f"""
-                    <div class="file-card flex flex-col gap-3 border-amber-500/30">
-                        <div class="flex justify-between items-center border-b border-white/10 pb-2">
-                            <span class="font-bold text-lg text-amber-100">{name}</span>
-                            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">1 تا {count}</span>
-                        </div>
-                        <p class="text-xs text-slate-400">شماره بخش را وارد کنید:</p>
-                        <input type="text" id="split-input-{name}" class="split-input" placeholder="مثلاً: 1" inputmode="numeric">
-                        <div class="flex gap-2 mt-2">
-                            <button onclick="generateSplitLink('{name}', {count}, 'normal')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">لینک عادی</button>
-                            <button onclick="generateSplitLink('{name}', {count}, 'base64')" class="flex-1 bg-slate-700 text-slate-300 py-2 rounded-lg btn-action hover:bg-slate-600 hover:text-white transition-all">Base64</button>
-                        </div>
-                    </div>
-            """
-        
-        html_content += """
-                </div>
-            </section>
-        """
-    # ---------------------------------------
-
-    html_content += """
             <h2 class="text-2xl font-black mb-8 flex items-center text-blue-400"><i class="fa-solid fa-server ml-3"></i> لینک‌های اشتراک کامل</h2>
-            <div class="space-y-6">
+            <div class="space-y-6 mb-12">
     """
 
+    # --- بدنه اصلی: اشتراک کامل ---
     folders = [d for d in os.listdir(sub_root) if os.path.isdir(os.path.join(sub_root, d)) and d != "final" and d != "split"]
     
     def get_priority(name):
@@ -214,15 +170,12 @@ def generate_web_page():
         """
 
         available_files = {}
-        
-        # گام اول: خواندن از پوشه مستقیم در sub
         p1 = os.path.join(sub_root, folder)
         if os.path.exists(p1):
             for f in os.listdir(p1):
                 if f not in exclude_files and os.path.isfile(os.path.join(p1, f)):
                     available_files[f] = f"{repo_raw_url}/sub/{folder}/{f}"
         
-        # گام دوم: ترکیب با پوشه final
         if is_tested:
             final_folder_name = "tested_speed_passed"
             p2 = os.path.join(final_root, final_folder_name)
@@ -239,7 +192,6 @@ def generate_web_page():
                         available_files[f] = f"{repo_raw_url}/sub/final/{final_folder_name}/{f}"
 
         current_priority_list = tested_file_order if is_tested else source_file_order
-        
         display_list = []
         for target in current_priority_list:
             if target in available_files:
@@ -272,9 +224,71 @@ def generate_web_page():
         
         html_content += "</div></div></div>"
 
-    html_content += f"""
-            </div>
+    html_content += "</div>" # بستن تگ لینک‌های اشتراک کامل
 
+    # --- بخش جدید: اشتراک سبک (Split) - انتقال به پایین ---
+    split_data = {}
+    if os.path.exists(split_normal_root):
+        for folder_name in os.listdir(split_normal_root):
+            folder_path = os.path.join(split_normal_root, folder_name)
+            if os.path.isdir(folder_path):
+                files_count = len([name for name in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, name))])
+                if files_count > 0:
+                    split_data[folder_name] = files_count
+
+    if split_data:
+        html_content += f"""
+            <section class="mb-12 glass p-6 rounded-3xl border-t-4 border-amber-500 shadow-2xl">
+                <h2 class="text-2xl font-black mb-6 flex items-center text-amber-400">
+                    <i class="fa-solid fa-feather ml-3"></i> اشتراک سبک (بخش‌بندی شده)
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        """
+        
+        for name, count in split_data.items():
+            html_content += f"""
+                    <div class="file-card flex flex-col gap-3 border-amber-500/30">
+                        <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                            <span class="font-bold text-lg text-amber-100">{name}</span>
+                            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">1 تا {count}</span>
+                        </div>
+                        <input type="text" id="split-input-{name}" class="split-input mt-2" placeholder="شماره بخش (مثلاً: 1)" inputmode="numeric">
+                        
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-slate-400 mb-1"><i class="fa-solid fa-link"></i> لینک عادی:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('{name}', {count}, 'normal', 'copy')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('{name}', {count}, 'normal', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('{name}', {count}, 'normal', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-slate-400 mb-1"><i class="fa-solid fa-code"></i> اشتراک Base64:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('{name}', {count}, 'base64', 'copy')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('{name}', {count}, 'base64', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('{name}', {count}, 'base64', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-sky-400 mb-1"><i class="fa-solid fa-circle-nodes"></i> اشتراک Clash:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('{name}', {count}, 'clash', 'copy')" class="flex-1 bg-sky-600/20 text-sky-400 py-2 rounded-lg btn-action hover:bg-sky-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('{name}', {count}, 'clash', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('{name}', {count}, 'clash', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+                    </div>
+            """
+        
+        html_content += """
+                </div>
+            </section>
+        """
+
+    html_content += f"""
             <footer class="mt-16 mb-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <a href="https://t.me/vpnclashfa" target="_blank" class="social-card glass rounded-2xl p-6 flex items-center justify-between group">
@@ -318,13 +332,12 @@ def generate_web_page():
                 setTimeout(() => {{ t.className = t.className.replace("show", ""); }}, 2500);
             }}
             
-            // تبدیل اعداد فارسی به انگلیسی
             function toEnDigit(s) {{
                 return s.replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d));
             }}
 
-            // تولید لینک اشتراک اسپلیت
-            function generateSplitLink(name, max, type) {{
+            // تابع جدید برای مدیریت عملیات‌های مختلف در بخش اشتراک سبک
+            function generateSplitAction(name, max, type, action) {{
                 const inputId = 'split-input-' + name;
                 const rawVal = document.getElementById(inputId).value;
                 const val = toEnDigit(rawVal).trim();
@@ -332,17 +345,25 @@ def generate_web_page():
                 if (!val || isNaN(val)) {{
                     showToast('لطفا یک عدد وارد کنید');
                     return;
-                }}
+                }
                 
                 const num = parseInt(val);
                 if (num < 1 || num > max) {{
                     showToast('عدد باید بین ۱ تا ' + max + ' باشد');
                     return;
-                }}
+                }
                 
-                // ساخت لینک: sub/split/normal/Name/1
+                // ساخت آدرس بر اساس نوع
                 const finalUrl = `${{REPO_URL}}/sub/split/${{type}}/${{name}}/${{num}}`;
-                copyText(finalUrl);
+                const fileName = `${{name}}_part_${{num}}_${{type}}.yaml`;
+
+                if (action === 'copy') {{
+                    copyText(finalUrl);
+                }} else if (action === 'text') {{
+                    copyContent(finalUrl);
+                }} else if (action === 'file') {{
+                    downloadFile(finalUrl, fileName);
+                }
             }}
 
             async function loadTGData() {{
@@ -397,7 +418,10 @@ def generate_web_page():
                     const t = await r.text();
                     navigator.clipboard.writeText(t); 
                     showToast('متن کپی شد');
-                }} catch(e) {{ console.error("Copy error:", e); }}
+                }} catch(e) {{ 
+                    console.error("Copy error:", e);
+                    showToast('خطا در دریافت متن');
+                }}
             }}
 
             async function downloadFile(url, name) {{
@@ -408,7 +432,10 @@ def generate_web_page():
                     a.href = URL.createObjectURL(b);
                     a.download = name; 
                     a.click();
-                }} catch(e) {{ console.error("Download error:", e); }}
+                }} catch(e) {{ 
+                    console.error("Download error:", e);
+                    showToast('خطا در دانلود فایل');
+                }}
             }}
 
             window.onload = loadTGData;
