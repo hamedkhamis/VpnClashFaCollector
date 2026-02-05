@@ -1,5 +1,7 @@
 ss://0c0870b0-a253-4861-84b6-e6ce6777e97c@85.133.197.237:9829?encryption=none&security=none&type=tcp&headerType=http&host=pro30afzar.com#@Capoit`
 ss://2ddeb056-17d4-421e-a318-39428733d4a2@ipbaz.ping-box.com:8443?path=%2FTelegram%40V2rayAlpha%2F%3Fed%3D2048&security=tls&encryption=none&insecure=0&host=8p3cfl0ripm.zjde5.de5.net&type=ws&allowInsecure=0&sni=8p3cfl0ripm.zjde5.de5.net#@Capoit`
+ss://34dae96c-1a41-434f-94b6-5507c3a6d318@en2.persianhostnet.ir:3123?security=&encryption=none&host=filmnet.ir&headerType=http&type=tcp#@Capoit`
+ss://3aea5f27-bafd-4cef-bf43-4a68b0f65926@ns1.kernel-mirrors.org:443?path=%2F&security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=dlpkg.org#@Capoit`
 ss://42c63fdd-8f5f-42c5-8327-4fc7f80de4c2@188.114.98.0:2053?path=%2Flatest%3Fed%3D2560&security=tls&encryption=none&insecure=0&host=hz.badomzamini.uk&fp=chrome&type=ws&allowInsecure=0&sni=hz.badomzamini.uk#@Capoit`
 ss://4525c260-df3c-4f62-b8f1-f4f5f305694b@ipbaz.ping-box.com:8443?path=%2FTelegram%40V2rayAlpha%2F%3Fed%3D2560&security=tls&encryption=none&insecure=0&host=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net&type=ws&allowInsecure=0&sni=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net#@Capoit`
 ss://4c083010-6862-4598-b298-e762f09dfa3a@free.tan3.ir:443?security=reality&encryption=none&pbk=p8D0V1jYr98lK4kU8FlBYfQ1kMO6zgIx5qI_p5dr_Bc&headerType=none&fp=firefox&type=tcp&sni=tgju.org&sid=6ba85179e30d4fc2#@Capoit`

@@ -473,10 +473,7 @@ proxies:
   - {name: "Telegram: @wiki_tajrobe 6", server: 81.12.33.170, port: 1003, type: vless, tls: true, packet-encoding: xudp, uuid: 8736dfd0-2020-4dde-956c-6a3e8f1b3c39, host: myket.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "Telegram: @wiki_tajrobe 7", server: 92.119.58.47, port: 882, type: vless, tls: true, packet-encoding: xudp, uuid: a85f0c4c-2b9d-4d7d-b1f7-7fc55421cd02, host: skyroom.online%2Cgharar.ir%2Cigap.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "Telegram: @wiki_tajrobe 8", server: 46.38.147.4, port: 5122, type: vless, tls: true, packet-encoding: xudp, uuid: dc4651a0-39c9-4e09-81f9-ef95aa993c8e, host: TABRIZ.NET, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "Telegram: @wiki_tajrobe 9", server: 140.248.159.164, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn3.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "Telegram: @wiki_tajrobe 10", server: www.fastly.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn3.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "Telegram: @wiki_tajrobe 11", server: 37.202.232.39, port: 1131, type: vless, tls: true, packet-encoding: xudp, uuid: f81b3a44-d704-4173-a4bd-f935322b6a17, host: skyroom.online%2Cgharar.ir%2Cigap.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "Telegram: @wiki_tajrobe 12", server: 81.12.33.166, port: 1000, type: vmess, uuid: 5b20d5e8-3adf-4a2d-8384-8562963e8066, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Telegram: @wiki_tajrobe 9", server: 81.12.33.166, port: 1000, type: vmess, uuid: 5b20d5e8-3adf-4a2d-8384-8562963e8066, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -502,9 +499,6 @@ proxy-groups:
       - "Telegram: @wiki_tajrobe 7"
       - "Telegram: @wiki_tajrobe 8"
       - "Telegram: @wiki_tajrobe 9"
-      - "Telegram: @wiki_tajrobe 10"
-      - "Telegram: @wiki_tajrobe 11"
-      - "Telegram: @wiki_tajrobe 12"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -520,9 +514,6 @@ proxy-groups:
       - "Telegram: @wiki_tajrobe 7"
       - "Telegram: @wiki_tajrobe 8"
       - "Telegram: @wiki_tajrobe 9"
-      - "Telegram: @wiki_tajrobe 10"
-      - "Telegram: @wiki_tajrobe 11"
-      - "Telegram: @wiki_tajrobe 12"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -538,9 +529,6 @@ proxy-groups:
       - "Telegram: @wiki_tajrobe 7"
       - "Telegram: @wiki_tajrobe 8"
       - "Telegram: @wiki_tajrobe 9"
-      - "Telegram: @wiki_tajrobe 10"
-      - "Telegram: @wiki_tajrobe 11"
-      - "Telegram: @wiki_tajrobe 12"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -565,9 +553,6 @@ proxy-groups:
       - "Telegram: @wiki_tajrobe 7"
       - "Telegram: @wiki_tajrobe 8"
       - "Telegram: @wiki_tajrobe 9"
-      - "Telegram: @wiki_tajrobe 10"
-      - "Telegram: @wiki_tajrobe 11"
-      - "Telegram: @wiki_tajrobe 12"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -583,9 +568,6 @@ proxy-groups:
       - "Telegram: @wiki_tajrobe 7"
       - "Telegram: @wiki_tajrobe 8"
       - "Telegram: @wiki_tajrobe 9"
-      - "Telegram: @wiki_tajrobe 10"
-      - "Telegram: @wiki_tajrobe 11"
-      - "Telegram: @wiki_tajrobe 12"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -601,9 +583,6 @@ proxy-groups:
       - "Telegram: @wiki_tajrobe 7"
       - "Telegram: @wiki_tajrobe 8"
       - "Telegram: @wiki_tajrobe 9"
-      - "Telegram: @wiki_tajrobe 10"
-      - "Telegram: @wiki_tajrobe 11"
-      - "Telegram: @wiki_tajrobe 12"
   - name: دانلود منیجر 📥
     type: select
     proxies:

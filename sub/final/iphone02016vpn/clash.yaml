@@ -466,9 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@iphone02016vpn", server: 5.175.249.174, port: 35000, type: hysteria2, ports: 35000, password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, obfs: salamander, obfs-password: "%40JavidnamanIran-Javid-SHAH-KingRezaPahlavi", sni: api.kermanshahi.org, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 5.175.249.174:35000, server: 5.175.249.174, port: 35000, type: hysteria2, ports: 35000, password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, obfs: salamander, obfs-password: "%40JavidnamanIran-Javid-SHAH-KingRezaPahlavi", sni: api.kermanshahi.org, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ⚡Telegram***🆔***, server: 38.244.137.202, port: 45380, type: ss, cipher: chacha20-ietf-poly1305, password: 43fXf1uMKbIKkxoNYGQMtt, udp: true, tfo: false}
-  - {name: 🇬🇧 GB | SS | 🆔 @iphone02016vpn`, server: 82.38.31.210, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: 🆔 @iphone02016vpn`, server: 54.36.174.134, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
   - {name: "***🆔***", server: 104.20.1.252, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1a94fbd9-79d2-4aa7-bf1d-074f678d27ab, network: ws, ws-opts: {path: "/?ed", headers: {Host: EqUiPPed-phOToZkoA7K5e6P.eCoTOuRiss.Co.uk.}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "***🆔*** 2", server: OV-France1.09vpn.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0, network: ws, ws-opts: {path: /vless/, headers: {Host: OV-France1.09vpn.com}}, skip-cert-verify: false, udp: true, tfo: false}
@@ -494,16 +492,11 @@ proxies:
   - {name: "***🆔*** 11", server: 95.164.123.66, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 93100196-7f5a-496e-9b74-2d02f134b2bb, network: ws, ws-opts: {path: /upload}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "***🆔*** 12", server: www.speedtest.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 98d677be-b14b-4c14-a96b-4a39a3be645a, servername: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/eyJqdW5rIjoiZHJmTGlJSmciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560", headers: {Host: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ⚡Telegram***🆔*** 5, server: convera.com, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: a2a396c3-f40e-4dee-bdbb-b1201f12dc1c, servername: snippet.danfeng.de5.net, network: ws, ws-opts: {path: /danfeng, headers: {Host: snippet.danfeng.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ✅, server: 193.84.255.94, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a8b8c7b3-9ac3-4af4-84a8-445fa6bd3c8b, network: ws, ws-opts: {path: /, headers: {Host: soft98.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ⚡Telegram***🆔*** 6, server: faqatchai.global.ssl.fastly.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a9bac46a-2037-4ad1-a192-08c70927f4ad, servername: faqatchai.global.ssl.fastly.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /containers/fi, headers: {Host: faqatchai.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: nice.notrinoo.click:21836, server: nice.notrinoo.click, port: 21836, type: vless, tls: true, packet-encoding: xudp, uuid: c1021af1-7f10-4e06-b9f2-1e0aedd95991, host: nice.notrinoo.click, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 85.9.105.113:26480, server: 85.9.105.113, port: 26480, type: vless, tls: true, packet-encoding: xudp, uuid: c9369e89-b4c5-4cfb-8494-426f4afe70eb, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ⚡Telegram***🆔*** 7, server: 144.31.2.86, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ca569d6c-d206-4709-9ed9-8dda73932c22, servername: google.com, host: google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: PuHKrJNt4shNVTNZ_leD7SmOI0QhxJ9SVnkV70i1xho, short-id: cbdfef7f3ede2072}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ⚡Telegram***🆔*** 8, server: creativecommons.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d89d6641-3b1a-4f51-a194-9c9109fd21b6, servername: DiprOX.pages.DEV, network: ws, ws-opts: {path: /assets, headers: {Host: DiprOX.pages.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: fsl.narton.ir:443, server: fsl.narton.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, servername: mitivpn-s1.global.ssl.fastly.net, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn-s1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ✅ 2, server: www.fastly.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn3.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: www.fastly.com:80, server: www.fastly.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn3.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ✅ 3, server: 37.202.232.39, port: 1131, type: vless, tls: true, packet-encoding: xudp, uuid: f81b3a44-d704-4173-a4bd-f935322b6a17, host: skyroom.online%2Cgharar.ir%2Cigap.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "***🆔*** 13", server: s.pou-ria.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f8936cfc-44c6-f1a1-b79f-22dfd5cf0ccf, network: ws, ws-opts: {path: /ed=2560, headers: {Host: speedtest.net.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "***🆔*** 14", server: s.pou-ria.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f8936cfc-44c6-f1a1-b79f-22dfd5cf0ccf, network: ws, ws-opts: {path: /ed=2560, headers: {Host: speedtest.net.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -523,9 +516,7 @@ proxy-groups:
     type: select
     proxies:
       - "@iphone02016vpn"
-      - 5.175.249.174:35000
       - ⚡Telegram***🆔***
-      - 🇬🇧 GB | SS | 🆔 @iphone02016vpn`
       - 🆔 @iphone02016vpn`
       - "***🆔***"
       - "***🆔*** 2"
@@ -551,16 +542,11 @@ proxy-groups:
       - "***🆔*** 11"
       - "***🆔*** 12"
       - ⚡Telegram***🆔*** 5
-      - ✅
       - ⚡Telegram***🆔*** 6
       - nice.notrinoo.click:21836
       - 85.9.105.113:26480
       - ⚡Telegram***🆔*** 7
       - ⚡Telegram***🆔*** 8
-      - fsl.narton.ir:443
-      - ✅ 2
-      - www.fastly.com:80
-      - ✅ 3
       - "***🆔*** 13"
       - "***🆔*** 14"
   - name: خودکار (بهترین پینگ) 🤖
@@ -570,9 +556,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@iphone02016vpn"
-      - 5.175.249.174:35000
       - ⚡Telegram***🆔***
-      - 🇬🇧 GB | SS | 🆔 @iphone02016vpn`
       - 🆔 @iphone02016vpn`
       - "***🆔***"
       - "***🆔*** 2"
@@ -598,16 +582,11 @@ proxy-groups:
       - "***🆔*** 11"
       - "***🆔*** 12"
       - ⚡Telegram***🆔*** 5
-      - ✅
       - ⚡Telegram***🆔*** 6
       - nice.notrinoo.click:21836
       - 85.9.105.113:26480
       - ⚡Telegram***🆔*** 7
       - ⚡Telegram***🆔*** 8
-      - fsl.narton.ir:443
-      - ✅ 2
-      - www.fastly.com:80
-      - ✅ 3
       - "***🆔*** 13"
       - "***🆔*** 14"
   - name: پشتیبان (در صورت قطعی) 🧯
@@ -617,9 +596,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@iphone02016vpn"
-      - 5.175.249.174:35000
       - ⚡Telegram***🆔***
-      - 🇬🇧 GB | SS | 🆔 @iphone02016vpn`
       - 🆔 @iphone02016vpn`
       - "***🆔***"
       - "***🆔*** 2"
@@ -645,16 +622,11 @@ proxy-groups:
       - "***🆔*** 11"
       - "***🆔*** 12"
       - ⚡Telegram***🆔*** 5
-      - ✅
       - ⚡Telegram***🆔*** 6
       - nice.notrinoo.click:21836
       - 85.9.105.113:26480
       - ⚡Telegram***🆔*** 7
       - ⚡Telegram***🆔*** 8
-      - fsl.narton.ir:443
-      - ✅ 2
-      - www.fastly.com:80
-      - ✅ 3
       - "***🆔*** 13"
       - "***🆔*** 14"
   - name: اتصال پایدار 🔗
@@ -673,9 +645,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@iphone02016vpn"
-      - 5.175.249.174:35000
       - ⚡Telegram***🆔***
-      - 🇬🇧 GB | SS | 🆔 @iphone02016vpn`
       - 🆔 @iphone02016vpn`
       - "***🆔***"
       - "***🆔*** 2"
@@ -701,16 +671,11 @@ proxy-groups:
       - "***🆔*** 11"
       - "***🆔*** 12"
       - ⚡Telegram***🆔*** 5
-      - ✅
       - ⚡Telegram***🆔*** 6
       - nice.notrinoo.click:21836
       - 85.9.105.113:26480
       - ⚡Telegram***🆔*** 7
       - ⚡Telegram***🆔*** 8
-      - fsl.narton.ir:443
-      - ✅ 2
-      - www.fastly.com:80
-      - ✅ 3
       - "***🆔*** 13"
       - "***🆔*** 14"
   - name: توزیع بار (گردشی) 🔁
@@ -720,9 +685,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@iphone02016vpn"
-      - 5.175.249.174:35000
       - ⚡Telegram***🆔***
-      - 🇬🇧 GB | SS | 🆔 @iphone02016vpn`
       - 🆔 @iphone02016vpn`
       - "***🆔***"
       - "***🆔*** 2"
@@ -748,16 +711,11 @@ proxy-groups:
       - "***🆔*** 11"
       - "***🆔*** 12"
       - ⚡Telegram***🆔*** 5
-      - ✅
       - ⚡Telegram***🆔*** 6
       - nice.notrinoo.click:21836
       - 85.9.105.113:26480
       - ⚡Telegram***🆔*** 7
       - ⚡Telegram***🆔*** 8
-      - fsl.narton.ir:443
-      - ✅ 2
-      - www.fastly.com:80
-      - ✅ 3
       - "***🆔*** 13"
       - "***🆔*** 14"
   - name: توزیع بار (موقت) ⏳
@@ -767,9 +725,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@iphone02016vpn"
-      - 5.175.249.174:35000
       - ⚡Telegram***🆔***
-      - 🇬🇧 GB | SS | 🆔 @iphone02016vpn`
       - 🆔 @iphone02016vpn`
       - "***🆔***"
       - "***🆔*** 2"
@@ -795,16 +751,11 @@ proxy-groups:
       - "***🆔*** 11"
       - "***🆔*** 12"
       - ⚡Telegram***🆔*** 5
-      - ✅
       - ⚡Telegram***🆔*** 6
       - nice.notrinoo.click:21836
       - 85.9.105.113:26480
       - ⚡Telegram***🆔*** 7
       - ⚡Telegram***🆔*** 8
-      - fsl.narton.ir:443
-      - ✅ 2
-      - www.fastly.com:80
-      - ✅ 3
       - "***🆔*** 13"
       - "***🆔*** 14"
   - name: دانلود منیجر 📥
